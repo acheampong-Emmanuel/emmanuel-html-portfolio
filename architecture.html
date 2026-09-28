@@ -353,6 +353,8 @@ header.nav{animation:navDrop .9s var(--ease) backwards}
 .work .meta{font-family:var(--mono);font-size:10px;letter-spacing:.06em;color:rgba(244,243,238,.7);margin-top:10px}
 .work .corner{position:absolute;top:14px;left:14px;font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--paper);background:rgba(10,9,6,.45);padding:4px 9px;border-radius:20px;backdrop-filter:blur(4px);opacity:0;transition:opacity .4s}
 .work:hover .corner{opacity:1}
+.work[data-live="true"] .corner{opacity:1;left:auto;right:14px}
+.work[data-live="true"]:focus-visible{outline:2px solid var(--paper);outline-offset:4px}
 @media(max-width:980px){.works-grid{grid-template-columns:repeat(4,1fr)}.work{grid-column:span 2}.work.feat{grid-column:span 4;grid-row:auto;aspect-ratio:16/9}}
 @media(max-width:620px){.works-grid{grid-template-columns:1fr;gap:12px}.work,.work.feat{grid-column:auto;grid-row:auto;aspect-ratio:16/10}.work .ov{opacity:1;transform:none}.work .ov::before{background:linear-gradient(to top,rgba(10,9,6,.8) 0%,rgba(10,9,6,.34) 48%,rgba(10,9,6,0) 74%)}.work img{filter:grayscale(.15)}}
 
@@ -887,7 +889,8 @@ html{scrollbar-width:thin;scrollbar-color:rgba(108,104,94,.55) transparent}
 <script>
 /* ============ DATA ============ */
 const PROJECTS=[
- {img:"assets/architecture/images/001-660ceaf9.jpg",t:"Hotel & Event Centre",cat:"Hospitality · Mixed-Use",y:"2025",m:"Diagonal structural colonnade · Curved balconies · Lumion",feat:true},
+ {img:"assets/architecture/images/025-residences-at-santeo.jpg",t:"Residences at Santeo",cat:"Residential Development · Accra",y:"2026",m:"Apartments · Penthouse · 2–4 Bedroom Townhouses · Interactive Case Study",feat:true,url:"projects/residences-at-santeo/"},
+ {img:"assets/architecture/images/001-660ceaf9.jpg",t:"Hotel & Event Centre",cat:"Hospitality · Mixed-Use",y:"2025",m:"Diagonal structural colonnade · Curved balconies · Lumion"},
  {img:"assets/architecture/images/002-9c2c2394.jpg",t:"Seaside Apartment Residence",cat:"Apartment · Residential",y:"2025",m:"Beachfront · Mirrored white volumes · Timber stair screen · Lumion"},
  {img:"assets/architecture/images/003-4e6b7609.jpg",t:"Villa Cantilever — Glass & Concrete",cat:"Luxury Residence · Villa",y:"—",m:"Full-height glazing · 3ds Max"},
  {img:"assets/architecture/images/004-df0ea880.jpg",t:"Wave Facade Residential Block",cat:"Apartment Block · Mixed-Use",y:"2022",m:"Parametric timber louvre · Lumion"},
@@ -948,18 +951,26 @@ const HONOURS=[
 /* ============ RENDER ============ */
 const works=document.getElementById('works');
 PROJECTS.forEach((p,i)=>{
-  const el=document.createElement('article');
+  const el=document.createElement(p.url?'a':'article');
   el.className='work reveal'+(p.feat?' feat':'');
   el.setAttribute('data-d', (i%3));
   el.setAttribute('data-index', i);
-  el.setAttribute('role','button');
-  el.setAttribute('tabindex','0');
-  el.setAttribute('aria-label', `View ${p.t}, ${p.cat}`);
-  el.innerHTML=`<span class="corner">${String(i+1).padStart(2,'0')}</span>
+  if(p.url){
+    el.href=p.url;
+    el.setAttribute('data-live','true');
+    el.setAttribute('aria-label', `Open interactive website for ${p.t}, ${p.cat}`);
+  }else{
+    el.setAttribute('role','button');
+    el.setAttribute('tabindex','0');
+    el.setAttribute('aria-label', `View ${p.t}, ${p.cat}`);
+  }
+  el.innerHTML=`<span class="corner">${p.url?'Interactive site ↗':String(i+1).padStart(2,'0')}</span>
     <img src="${p.img.startsWith('assets/')?p.img:'data:image/jpeg;base64,'+p.img}" alt="${p.t} — ${p.cat}" loading="lazy">
     <div class="ov"><span class="cat">${p.cat}</span><span class="ttl">${p.t}</span><span class="meta">${p.m}${p.y!=="—"?" · "+p.y:""}</span></div>`;
-  el.addEventListener('click',()=>{if(window.openProject)window.openProject('work',i);else openLightbox(i);});
-  el.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();if(window.openProject)window.openProject('work',i);else openLightbox(i);}});
+  if(!p.url){
+    el.addEventListener('click',()=>{if(window.openProject)window.openProject('work',i);else openLightbox(i);});
+    el.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();if(window.openProject)window.openProject('work',i);else openLightbox(i);}});
+  }
   works.appendChild(el);
 });
 

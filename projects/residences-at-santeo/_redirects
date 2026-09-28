@@ -1,0 +1,7 @@
+# Retired or alternate paths -> anchors on the single page
+/film          /#film         301
+/apartments    /#apartments   301
+/townhouses    /#townhouses   301
+/amenities     /#amenities    301
+/contact       /#enquire      301
+/index.htm     /              301

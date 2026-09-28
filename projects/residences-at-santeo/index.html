@@ -1,0 +1,1354 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Residences at Santeo — Accra</title>
+<meta name="description" content="Contemporary apartments, a penthouse and 2–4 bedroom townhouses in Santeo, near East Legon Hills, Accra.">
+<meta name="theme-color" content="#161513">
+<link rel="canonical" href="https://acheampong-emmanuel.github.io/emmanuel-html-portfolio/projects/residences-at-santeo/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Residences at Santeo — Experience the Exceptional">
+<meta property="og:description" content="Apartments, a penthouse and townhouses in Santeo, near East Legon Hills, Accra.">
+<meta property="og:image" content="https://acheampong-emmanuel.github.io/emmanuel-html-portfolio/projects/residences-at-santeo/assets/share.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Residences at Santeo — Experience the Exceptional">
+<meta name="twitter:description" content="Apartments, a penthouse and townhouses in Santeo, near East Legon Hills, Accra.">
+<meta name="twitter:image" content="https://acheampong-emmanuel.github.io/emmanuel-html-portfolio/projects/residences-at-santeo/assets/share.jpg">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/icons/icon-32.png">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@90..110,400..700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/img/hero-01.jpg" fetchpriority="high">
+<style>
+/* ===== Tokens: materials of the project — charcoal stone, white concrete, timber ===== */
+:root{
+  --stone:#161513; --stone-2:#1f1d1b; --stone-3:#2a2724;
+  --concrete:#efece6; --concrete-2:#e4dfd6;
+  --bg:var(--stone); --surface:var(--stone-2); --surface-2:var(--stone-3);
+  --ink:#f4f1ec; --ink-2:#d8d2c8; --muted:#aaa398; --line:rgba(244,241,236,.12);
+  --accent:#c89063; --on-accent:#161513;
+  --display:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --text:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --ease:cubic-bezier(.32,.72,0,1); --t-fast:.3s; --t-med:.6s; --t-slow:1.2s;
+  --gut:clamp(16px,4vw,48px); --max:1280px; --radius:16px;
+  --sec:clamp(96px,12vw,160px);
+  color-scheme:dark;
+}
+.light{--bg:var(--concrete); --surface:#f8f6f2; --surface-2:var(--concrete-2); --ink:#1c1a17; --ink-2:#3b3732; --muted:#5f584e; --line:rgba(28,26,23,.13); --accent:#8a5a2f; --on-accent:#fff; background:var(--bg); color:var(--ink); color-scheme:light}
+.light.alt{--bg:var(--concrete-2)}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:hidden}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--text);overflow-x:hidden;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+img,video{display:block;max-width:100%}
+a{color:inherit}
+button{font:inherit;color:inherit;cursor:pointer}
+[hidden]{display:none!important}
+.btn-reset{appearance:none;-webkit-appearance:none;background:none;border:none;padding:0}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.skip{position:fixed;left:12px;top:-60px;z-index:200;background:var(--ink);color:var(--bg);padding:12px 18px;border-radius:999px;text-decoration:none;font-weight:600;transition:top .2s}
+.skip:focus{top:12px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gut)}
+section{position:relative;background:var(--bg)}
+.pad{padding:var(--sec) 0}
+
+/* ===== Type scale (7 steps) ===== */
+.label{font:600 13px/1.3 var(--text);color:var(--accent);letter-spacing:.01em}
+h1,h2,h3,.display{font-family:var(--display);font-weight:600;letter-spacing:-.03em;text-wrap:balance}
+h2{font-size:clamp(40px,6vw,80px);line-height:1.02}
+h3{font-size:clamp(26px,2.8vw,36px);line-height:1.1;letter-spacing:-.02em}
+.lede{font:500 clamp(20px,1.9vw,24px)/1.45 var(--text);color:var(--ink);letter-spacing:-.01em;max-width:34ch}
+.body{color:var(--muted);max-width:56ch}
+.small{font-size:15px;line-height:1.5;color:var(--muted)}
+.stack{display:flex;flex-direction:column;gap:24px}
+.stack>.label{margin-bottom:-8px}
+
+/* ===== Buttons (pills) ===== */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 24px;border-radius:999px;font:500 15px/1 var(--text);text-decoration:none;border:none;transition:background var(--t-fast) var(--ease),color var(--t-fast) var(--ease),transform var(--t-fast) var(--ease)}
+.btn:active{transform:scale(.97)}
+.btn svg{width:14px;height:14px}
+.btn-primary{background:var(--ink);color:var(--bg)}
+.btn-primary:hover{background:var(--accent);color:var(--on-accent)}
+.btn-secondary{background:color-mix(in srgb,var(--ink) 12%,transparent);color:var(--ink);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+.btn-secondary:hover{background:color-mix(in srgb,var(--ink) 20%,transparent)}
+.link{appearance:none;-webkit-appearance:none;background:none;border:none;padding:10px 0;min-height:44px;display:inline-flex;align-items:center;gap:6px;font:500 15px/1 var(--text);color:var(--accent);text-decoration:none}
+.link::after{content:"›";font-size:20px;line-height:0;transform:translateY(-1px);transition:transform var(--t-fast) var(--ease)}
+.link:hover::after{transform:translate(3px,-1px)}
+.chip{appearance:none;-webkit-appearance:none;border:none;min-height:44px;padding:0 18px;border-radius:999px;background:var(--surface-2);color:var(--ink-2);font:500 14px/1 var(--text);display:inline-flex;align-items:center;gap:8px;transition:background var(--t-fast) var(--ease),color var(--t-fast) var(--ease)}
+.chip:hover{color:var(--ink)}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.chip small{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.ic{width:44px;height:44px;display:grid;place-items:center;appearance:none;-webkit-appearance:none;border:none;border-radius:50%;background:color-mix(in srgb,var(--ink) 12%,transparent);color:var(--ink);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);transition:background var(--t-fast) var(--ease)}
+.ic:hover{background:color-mix(in srgb,var(--ink) 22%,transparent)}
+.ic svg{width:16px;height:16px}
+
+/* ===== Nav ===== */
+.nav{position:fixed;inset:0 0 auto 0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:calc(14px + env(safe-area-inset-top)) var(--gut) 14px;transition:background var(--t-med) var(--ease),transform var(--t-med) var(--ease)}
+.nav.solid{background:rgba(22,21,19,.72);-webkit-backdrop-filter:saturate(1.4) blur(20px);backdrop-filter:saturate(1.4) blur(20px)}
+.nav.hide{transform:translateY(-100%)}
+.nav.on-light{background:rgba(239,236,230,.78)}
+.nav.on-light .studio{filter:brightness(0) opacity(.88)}
+.menu-open .nav.on-light .studio{filter:none}
+.studio{height:28px;width:auto}
+.brand-sep{width:1px;height:20px;background:currentColor;opacity:.35}
+@media (max-width:420px){.studio{height:24px}.brand{gap:10px;font-size:14px}}
+.nav.on-light .brand,.nav.on-light ul a,.nav.on-light .menu-btn{color:#1c1a17}
+.menu-open .nav.on-light .brand,.menu-open .nav.on-light .menu-btn{color:#f4f1ec}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none;font:600 15px/1 var(--display);letter-spacing:-.01em;color:#f4f1ec}
+.nav ul{display:flex;gap:clamp(16px,2.4vw,32px);list-style:none}
+.nav ul a{font:400 14px/1 var(--text);text-decoration:none;color:rgba(244,241,236,.82);padding:10px 0;transition:color var(--t-fast)}
+.nav ul a:hover{color:#fff}
+.menu-btn{display:none;width:44px;height:44px;position:relative;color:#f4f1ec}
+.menu-btn i{position:absolute;left:12px;right:12px;height:1.5px;background:currentColor;border-radius:2px;transition:transform var(--t-fast) var(--ease),top var(--t-fast) var(--ease)}
+.menu-btn i:nth-child(1){top:18px}.menu-btn i:nth-child(2){top:25px}
+.menu-open .menu-btn i:nth-child(1){top:22px;transform:rotate(45deg)}
+.menu-open .menu-btn i:nth-child(2){top:22px;transform:rotate(-45deg)}
+@media (max-width:860px){
+  .menu-btn{display:block}
+  .nav ul{position:fixed;inset:0;flex-direction:column;justify-content:center;gap:8px;padding:0 var(--gut);background:rgba(22,21,19,.97);opacity:0;visibility:hidden;transition:opacity var(--t-fast),visibility var(--t-fast)}
+  .nav ul a{font:600 32px/1.2 var(--display);letter-spacing:-.02em;color:#f4f1ec}
+  .menu-open .nav ul{opacity:1;visibility:visible}
+  .menu-open .nav ul a,.menu-open .nav.on-light ul a{color:#f4f1ec}
+  .nav .brand,.nav .menu-btn{position:relative;z-index:2}
+}
+
+/* ===== Hero ===== */
+.hero{height:100vh;height:100svh;min-height:640px;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;background:#000;color:#f4f1ec}
+.hero-slides{position:absolute;inset:0}
+.hs{position:absolute;inset:0;margin:0;opacity:0;transition:opacity 1.6s var(--ease)}
+.hs.on{opacity:1}
+.hs img{width:100%;height:100%;object-fit:cover}
+.hero-scrim{position:absolute;inset:0;pointer-events:none;background:
+  linear-gradient(90deg,rgba(10,9,8,.72) 0%,rgba(10,9,8,.42) 38%,rgba(10,9,8,0) 68%),
+  linear-gradient(180deg,rgba(10,9,8,.45) 0%,rgba(10,9,8,0) 20%,rgba(10,9,8,0) 58%,rgba(10,9,8,.85) 100%)}
+.hero-inner{position:relative;z-index:1;width:100%;flex:1;display:flex;flex-direction:column;justify-content:center;gap:24px;padding-top:120px;padding-bottom:40px}
+.hero-kicker{font:500 15px/1.3 var(--text);color:rgba(244,241,236,.85);opacity:0;animation:fadeUp var(--t-slow) var(--ease) .1s forwards}
+.hero-title{font:700 clamp(56px,10vw,144px)/.92 var(--display);letter-spacing:-.045em;max-width:13ch}
+.hero-title .ln{display:block;overflow:hidden;padding-bottom:.06em}
+.hero-title .ln>span{display:inline-block;transform:translateY(105%);animation:lineUp 1.1s var(--ease) forwards}
+.hero-title .ln:nth-child(2)>span{animation-delay:.1s}
+.hero-title .accent{color:#d9a578}
+.hero-sub{max-width:40ch;font:400 clamp(17px,1.4vw,20px)/1.55 var(--text);color:rgba(244,241,236,.88);opacity:0;animation:fadeUp var(--t-slow) var(--ease) .4s forwards}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px;opacity:0;animation:fadeUp var(--t-slow) var(--ease) .5s forwards}
+.hero .btn-primary{background:#f4f1ec;color:#161513}
+.hero .btn-primary:hover{background:#d9a578}
+.hero .btn-secondary{background:rgba(244,241,236,.14);color:#f4f1ec}
+.hero-bar{position:relative;z-index:1;background:rgba(22,21,19,.42);-webkit-backdrop-filter:saturate(1.4) blur(20px);backdrop-filter:saturate(1.4) blur(20px);opacity:0;animation:fadeIn var(--t-slow) var(--ease) .7s forwards}
+.hero-bar-in{display:grid;grid-template-columns:repeat(3,minmax(0,1fr)) auto;align-items:center;gap:0 24px}
+.offer{display:flex;flex-direction:column;gap:6px;padding:20px 0;text-decoration:none;min-height:44px}
+.offer .label{color:rgba(244,241,236,.7);font-weight:500}
+.offer b{font:600 clamp(17px,1.5vw,21px)/1.2 var(--display);letter-spacing:-.015em;transition:color var(--t-fast)}
+.offer:hover b{color:#d9a578}
+.hero-ctrl{display:flex;align-items:center;gap:8px}
+.hero-cap{font:400 13px/1.3 var(--text);color:rgba(244,241,236,.75);margin-right:8px;white-space:nowrap}
+.dots{display:flex}
+.dots button{width:36px;height:44px;position:relative;appearance:none;-webkit-appearance:none;background:none;border:none;padding:0}
+.dots button::before{content:"";position:absolute;left:6px;right:6px;top:21px;height:2px;border-radius:2px;background:rgba(244,241,236,.3)}
+.dots button i{position:absolute;left:6px;top:21px;height:2px;border-radius:2px;width:0;background:#f4f1ec}
+.dots button[aria-current="true"] i{animation:fill var(--dur,7s) linear forwards}
+.paused .dots button[aria-current="true"] i{animation-play-state:paused}
+@keyframes fill{to{width:calc(100% - 12px)}}
+.hero .ic{background:rgba(244,241,236,.14);color:#f4f1ec}
+.hero-pause svg{width:12px;height:12px}
+@keyframes fadeIn{to{opacity:1}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes lineUp{to{transform:none}}
+@media (max-width:860px){
+  .hero-bar-in{grid-template-columns:repeat(3,minmax(0,1fr));gap:0 12px}
+  .hero-ctrl{grid-column:1/-1;order:-1;justify-content:flex-end;border-bottom:1px solid rgba(244,241,236,.12);padding:2px 0}
+  .offer{padding:14px 0 16px}
+  .offer b{font-size:15px}
+  .hero-scrim{background:linear-gradient(180deg,rgba(10,9,8,.55) 0%,rgba(10,9,8,.3) 35%,rgba(10,9,8,.5) 60%,rgba(10,9,8,.9) 100%)}
+}
+@media (max-width:520px){.hero-cap{display:none}}
+
+/* ===== Split sections ===== */
+.split{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(40px,6vw,96px);align-items:center}
+.split.rev{grid-template-columns:minmax(0,7fr) minmax(0,5fr)}
+@media (max-width:860px){.split,.split.rev{grid-template-columns:1fr}}
+.figure{position:relative;overflow:hidden;background:var(--surface-2);border-radius:var(--radius);aspect-ratio:16/10}
+.figure img{width:100%;height:100%;object-fit:cover}
+.figure figcaption{position:absolute;left:16px;bottom:14px;font:500 13px/1 var(--text);color:#fff;text-shadow:0 1px 10px rgba(0,0,0,.5)}
+.facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px;margin-top:clamp(64px,8vw,112px)}
+.facts b{display:block;font:600 clamp(44px,5vw,64px)/1 var(--display);letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+.facts span{display:block;margin-top:12px;font-size:15px;line-height:1.45;color:var(--muted);max-width:22ch}
+@media (max-width:760px){.facts{grid-template-columns:1fr 1fr}}
+.loc-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(40px,6vw,96px);align-items:end}
+@media (max-width:860px){.loc-grid{grid-template-columns:1fr}}
+.loc-list{list-style:none}
+.loc-list li{display:flex;justify-content:space-between;gap:24px;padding:16px 0;border-bottom:1px solid var(--line);font-size:15px}
+.loc-list li:first-child{border-top:1px solid var(--line)}
+.loc-list li span:first-child{color:var(--muted)}
+.loc-list li span:last-child{text-align:right}
+
+
+/* ===== Overview (page two) ===== */
+.ov-head{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:32px clamp(40px,6vw,96px);align-items:end}
+.ov-title{font-size:clamp(48px,7.4vw,112px);line-height:.95;letter-spacing:-.045em;max-width:15ch}
+.ov-intro{display:flex;flex-direction:column;gap:16px;padding-bottom:8px}
+@media (max-width:860px){.ov-head{grid-template-columns:1fr}}
+.plan-wrap{padding:clamp(56px,7vw,96px) clamp(8px,2vw,24px) 0;max-width:1520px;margin:0 auto}
+.plan{position:relative;margin:0;border-radius:24px;overflow:hidden;background:var(--surface-2);transform:scale(var(--ps,1));transform-origin:50% 0;will-change:transform}
+.plan img{width:100%;height:auto;aspect-ratio:2400/1349;object-fit:cover}
+.plan figcaption{position:absolute;left:20px;bottom:18px;font:500 13px/1.3 var(--text);color:#fff;background:rgba(22,21,19,.55);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);padding:8px 12px;border-radius:999px}
+.pin{position:absolute;left:var(--px);top:var(--py);transform:translate(-22px,-22px);display:flex;align-items:center;gap:10px;min-height:44px;text-decoration:none;color:#161513}
+.pin i{flex:none;width:44px;height:44px;display:grid;place-items:center;font:600 14px/1 var(--display);font-style:normal;color:#161513;position:relative}
+.pin i::before{content:"";position:absolute;inset:8px;border-radius:50%;background:#f4f1ec;box-shadow:0 2px 12px rgba(0,0,0,.3);z-index:-1}
+.pin i::after{content:"";position:absolute;inset:8px;border-radius:50%;border:1.5px solid #f4f1ec;animation:pulse 2.6s var(--ease) infinite;z-index:-2}
+@keyframes pulse{0%{transform:scale(1);opacity:.9}100%{transform:scale(1.9);opacity:0}}
+.pin span{display:flex;flex-direction:column;gap:2px;background:rgba(244,241,236,.92);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);padding:10px 14px;border-radius:14px;font:400 13px/1.3 var(--text);color:#5f584e;box-shadow:0 6px 24px rgba(0,0,0,.18);transition:transform var(--t-fast) var(--ease)}
+.pin b{font:600 15px/1.2 var(--display);letter-spacing:-.01em;color:#161513}
+.pin:hover span,.pin:focus-visible span{transform:translateX(4px)}
+@media (max-width:760px){
+  .plan{border-radius:16px}
+  .pin span{display:none}
+  .plan figcaption{display:none}
+}
+.seq{list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;margin-top:clamp(56px,7vw,96px)}
+.seq li{display:flex;flex-direction:column;gap:8px;padding-top:20px;border-top:1px solid var(--line)}
+.seq-n{font:600 13px/1 var(--display);color:var(--accent);font-variant-numeric:tabular-nums}
+.seq h3{font-size:clamp(24px,2.4vw,32px)}
+.seq p{color:var(--muted);font-size:17px;max-width:30ch}
+@media (max-width:760px){.seq{grid-template-columns:1fr;gap:24px}}
+.plan-legend{display:none}
+@media (max-width:760px){
+  .plan-legend{display:grid;list-style:none;gap:0;margin:16px var(--gut) 0}
+  .plan-legend a{display:flex;align-items:center;gap:14px;min-height:52px;text-decoration:none;border-bottom:1px solid var(--line);font-size:15px;color:var(--muted)}
+  .plan-legend a b{font:600 16px/1.2 var(--display);color:var(--ink);letter-spacing:-.01em}
+  .plan-legend i{flex:none;width:28px;height:28px;border-radius:50%;background:var(--ink);color:var(--bg);display:grid;place-items:center;font:600 13px/1 var(--display);font-style:normal}
+}
+/* ===== Film ===== */
+.film-intro{padding:var(--sec) 0 clamp(48px,6vw,72px)}
+.film-intro .row{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:32px}
+.chapters{display:flex;flex-wrap:wrap;gap:8px;margin-top:40px}
+.film{position:relative}
+.film-stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:#000;color:#f4f1ec}
+.film-stage video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;will-change:transform,filter,opacity}
+.film-stage video.on{opacity:1}
+.film-dark{position:absolute;inset:0;background:#000;opacity:0;pointer-events:none}
+.film-shade{position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(0,0,0,.3) 0%,rgba(0,0,0,0) 20%,rgba(0,0,0,0) 64%,rgba(0,0,0,.55) 100%)}
+.film-hud{position:absolute;left:var(--gut);right:var(--gut);bottom:calc(clamp(28px,5vh,48px) + env(safe-area-inset-bottom));display:flex;align-items:flex-end;justify-content:space-between;gap:24px;pointer-events:none}
+.film-cap{max-width:30ch}
+.film-cap .label{display:block;margin-bottom:8px;color:rgba(244,241,236,.75);font-weight:500}
+.film-cap p{font:600 clamp(24px,3vw,40px)/1.1 var(--display);letter-spacing:-.025em;text-shadow:0 2px 24px rgba(0,0,0,.4)}
+.film-prog{position:absolute;left:0;right:0;bottom:0;height:3px;background:rgba(255,255,255,.14)}
+.film-prog i{position:absolute;left:0;top:0;bottom:0;width:0;background:#f4f1ec}
+/* controls appear on activity */
+.chrome-x{opacity:0;visibility:hidden;transition:opacity var(--t-med) var(--ease),visibility var(--t-med)}
+.chrome .chrome-x,.film-stage:focus-within .chrome-x{opacity:1;visibility:visible}
+.film-count{font:500 13px/1 var(--text);color:rgba(244,241,236,.8);white-space:nowrap;font-variant-numeric:tabular-nums}
+.film-rail{position:absolute;left:var(--gut);right:var(--gut);top:calc(20px + env(safe-area-inset-top));display:flex;gap:6px}
+.film-rail button{flex:var(--w) 1 0;height:32px;position:relative;appearance:none;-webkit-appearance:none;background:none;border:none;padding:0}
+.film-rail button::before,.film-rail button i{content:"";position:absolute;left:0;right:0;top:22px;height:2px;border-radius:2px;background:rgba(255,255,255,.25)}
+.film-rail button i{right:auto;width:0;background:#f4f1ec}
+.film-rail button span{position:absolute;left:0;top:0;font:500 12px/1 var(--text);color:rgba(255,255,255,.65);white-space:nowrap;transition:color var(--t-fast)}
+.film-rail button.cur span,.film-rail button:hover span{color:#fff}
+@media (max-width:760px){.film-rail button span{display:none}}
+.film-skip{position:absolute;right:var(--gut);top:calc(68px + env(safe-area-inset-top));min-height:40px;padding:0 16px;font-size:14px}
+.film-pause{position:absolute;left:var(--gut);top:calc(66px + env(safe-area-inset-top))}
+.film-hint{position:absolute;left:50%;bottom:10vh;transform:translateX(-50%);text-align:center;font:500 13px/1.6 var(--text);color:#fff;pointer-events:none;transition:opacity var(--t-med)}
+.film-hint i{display:block;width:1px;height:44px;margin:12px auto 0;background:linear-gradient(#fff,transparent);animation:drip 2.2s var(--ease) infinite}
+@keyframes drip{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+/* chapter title cards */
+.t-num{font:600 15px/1 var(--display);color:#d9a578;font-variant-numeric:tabular-nums;letter-spacing:.02em}
+.t-num span{color:rgba(244,241,236,.5)}
+.t-title{font:700 clamp(48px,8vw,112px)/.95 var(--display);letter-spacing:-.045em;text-wrap:balance}
+.t-desc{font:400 clamp(17px,1.4vw,20px)/1.55 var(--text);color:rgba(244,241,236,.82);max-width:34ch}
+.t-meta{font:500 13px/1 var(--text);color:rgba(244,241,236,.55)}
+.inter{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;text-align:center;padding:0 var(--gut);pointer-events:none;opacity:0;visibility:hidden}
+.inter>*{transform:translateY(calc((1 - var(--o,1)) * 16px))}
+.cover{position:fixed;inset:0;z-index:60;background:#000;color:#f4f1ec;opacity:0;visibility:hidden;transition:opacity var(--t-med) var(--ease),visibility var(--t-med);display:flex;align-items:flex-end}
+.cover.on{opacity:1;visibility:visible}
+.cover>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.45;transition:opacity var(--t-med) var(--ease)}
+.cover.ready>img{opacity:.8}
+.cover::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.78),rgba(0,0,0,.3) 60%,rgba(0,0,0,.1)),linear-gradient(0deg,rgba(0,0,0,.6),rgba(0,0,0,0) 45%)}
+.cover-in{position:relative;width:100%;display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:end;gap:48px;padding:0 var(--gut) clamp(56px,10vh,112px)}
+.cover-main{display:flex;flex-direction:column;gap:16px}
+.cover-main>*{opacity:0;transform:translateY(16px);transition:opacity var(--t-med) var(--ease),transform var(--t-med) var(--ease)}
+.cover.on .cover-main>*{opacity:1;transform:none}
+.cover.on .cover-main>*:nth-child(2){transition-delay:.06s}.cover.on .cover-main>*:nth-child(3){transition-delay:.12s}
+.cover-list{list-style:none;display:grid;gap:4px;min-width:220px}
+.cover-list li{font:500 15px/1.9 var(--text);color:rgba(244,241,236,.45);display:flex;gap:12px;align-items:baseline}
+.cover-list li span{font-size:13px;font-variant-numeric:tabular-nums;color:rgba(244,241,236,.35)}
+.cover-list li.cur{color:#f4f1ec}.cover-list li.cur span{color:#d9a578}
+.cover-load{position:absolute;left:0;right:0;bottom:0;height:3px;background:rgba(244,241,236,.12)}
+.cover-load i{position:absolute;left:0;top:0;bottom:0;width:0;background:#f4f1ec}
+.cover.on .cover-load i{animation:load 2.6s var(--ease) forwards}
+.cover.ready .cover-load i{animation:none;width:100%;transition:width .4s}
+@keyframes load{to{width:88%}}
+@media (max-width:760px){.cover-list{display:none}.cover-in{grid-template-columns:1fr}}
+
+/* ===== Galleries ===== */
+.quote{font:600 clamp(28px,3.6vw,48px)/1.15 var(--display);letter-spacing:-.03em;max-width:24ch}
+.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:12px;grid-auto-rows:clamp(170px,21vw,320px)}
+.tile{grid-column:span 4;overflow:hidden;background:var(--surface-2);position:relative;border-radius:12px}
+.tile.w8{grid-column:span 8}.tile.w6{grid-column:span 6}.tile.w12{grid-column:span 12}
+.tile button{display:block;position:relative;width:100%;height:100%;appearance:none;-webkit-appearance:none;background:none;border:none;padding:0;cursor:zoom-in}
+.tile img{width:100%;height:100%;object-fit:cover;transition:transform var(--t-slow) var(--ease),opacity var(--t-med);opacity:0}
+.tile img.ld{opacity:1}
+.tile:hover img{transform:scale(1.03)}
+@media (max-width:760px){.grid{grid-auto-rows:auto}.grid .tile,.grid .tile.w6,.grid .tile.w8,.grid .tile.w12{grid-column:span 12;aspect-ratio:16/10}}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 24px}
+.gal-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px 24px;margin:clamp(72px,9vw,120px) 0 32px}
+
+/* ===== Residences: pinned image, scrolling specs ===== */
+.spec{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(40px,6vw,96px);margin-top:16px}
+.spec-media{position:relative}
+.spec-stick{position:sticky;top:calc(50vh - min(34vw,440px)*.5);aspect-ratio:4/3;border-radius:var(--radius);overflow:hidden;background:var(--surface-2);cursor:zoom-in}
+.spec-img{position:absolute;inset:0;opacity:0;transition:opacity .8s var(--ease)}
+.spec-img.on{opacity:1}
+.spec-img img{width:100%;height:100%;object-fit:cover}
+.spec-img .c{position:absolute;inset:0}
+.spec-list{display:flex;flex-direction:column}
+.spec-item{min-height:78vh;display:flex;flex-direction:column;justify-content:center;gap:16px;padding:48px 0;opacity:.35;transition:opacity var(--t-med) var(--ease)}
+.spec-item.on{opacity:1}
+.spec-item:first-child{min-height:60vh}
+.spec-item:last-child{min-height:70vh}
+.spec-item .label{color:var(--muted);font-weight:500}
+.spec-size{font:600 clamp(56px,6vw,88px)/.95 var(--display);letter-spacing:-.045em;font-variant-numeric:tabular-nums}
+.spec-size small{font:500 20px/1 var(--text);letter-spacing:0;color:var(--muted);margin-left:8px}
+.spec-rows{display:grid;grid-template-columns:auto 1fr;gap:8px 24px;font-size:15px;padding:16px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.spec-rows dt{color:var(--muted)}
+.spec-feat{font-size:15px;line-height:1.55;color:var(--muted);max-width:36ch}
+.spec-thumb{display:none}
+@media (max-width:900px){
+  .spec{grid-template-columns:1fr}
+  .spec-media{display:none}
+  .spec-item,.spec-item:first-child,.spec-item:last-child{min-height:0;opacity:1;padding:32px 0;border-top:1px solid var(--line)}
+  .spec-thumb{display:block;position:relative;aspect-ratio:4/3;border-radius:var(--radius);overflow:hidden;background:var(--surface-2);margin-bottom:8px}
+  .spec-thumb img{width:100%;height:100%;object-fit:cover}
+}
+
+/* ===== Amenities ===== */
+.amen{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px;margin-top:56px}
+.amen .tile{grid-column:span 2;aspect-ratio:4/5}
+.amen .tile:nth-child(-n+2){grid-column:span 3;aspect-ratio:3/2}
+.amen .tile figcaption{position:absolute;left:0;right:0;bottom:0;padding:48px 20px 18px;background:linear-gradient(transparent,rgba(0,0,0,.6));font:600 20px/1.15 var(--display);letter-spacing:-.015em;color:#fff;pointer-events:none}
+@media (max-width:760px){.amen{grid-template-columns:1fr 1fr}.amen .tile,.amen .tile:nth-child(-n+2){grid-column:auto;aspect-ratio:4/5}.amen .tile:first-child{grid-column:1/-1;aspect-ratio:3/2}}
+@media (max-width:460px){.amen{grid-template-columns:1fr}.amen .tile,.amen .tile:nth-child(-n+2){aspect-ratio:4/3}}
+
+/* ===== Closing ===== */
+.closing{min-height:100vh;display:flex;align-items:center;overflow:hidden;padding:clamp(120px,14vw,180px) 0 clamp(80px,9vw,128px);background:#000;color:#f4f1ec}
+.closing>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.75}
+.closing::after{content:"";position:absolute;inset:0;background:
+  linear-gradient(90deg,rgba(22,21,19,.92) 0%,rgba(22,21,19,.72) 45%,rgba(22,21,19,.35) 100%),
+  linear-gradient(180deg,rgba(22,21,19,.85) 0%,rgba(22,21,19,0) 25%,rgba(22,21,19,0) 70%,rgba(22,21,19,.95) 100%)}
+.closing .wrap{position:relative;z-index:1;width:100%}
+.closing-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(40px,7vw,112px);align-items:center}
+.closing h2{font-size:clamp(48px,6.6vw,96px);line-height:.96;max-width:11ch}
+.contact{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+.glance{background:rgba(31,29,27,.7);-webkit-backdrop-filter:saturate(1.4) blur(24px);backdrop-filter:saturate(1.4) blur(24px);border-radius:20px;padding:clamp(24px,2.6vw,36px)}
+.glance-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding-bottom:12px}
+.glance-head h3{font-size:22px}
+.glance-head span{font-size:13px;color:var(--muted)}
+.glance ul{list-style:none}
+.glance li a{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:baseline;gap:2px 16px;padding:14px 0;border-top:1px solid var(--line);text-decoration:none;transition:color var(--t-fast)}
+.glance li a:hover .n,.glance li a:focus-visible .n{color:#d9a578}
+.glance .k{font-size:13px;color:var(--muted);grid-column:1/-1}
+.glance .n{font:600 19px/1.2 var(--display);letter-spacing:-.015em;transition:color var(--t-fast)}
+.glance .v{font:600 19px/1 var(--display);font-variant-numeric:tabular-nums;white-space:nowrap}
+.glance .v small{font:500 13px/1 var(--text);color:var(--muted);margin-left:4px}
+.glance-foot{margin-top:16px;font-size:13px;line-height:1.55;color:var(--muted)}
+@media (max-width:900px){.closing-grid{grid-template-columns:1fr}.closing::after{background:linear-gradient(180deg,rgba(22,21,19,.9) 0%,rgba(22,21,19,.7) 40%,rgba(22,21,19,.9) 100%)}}
+
+/* ===== Footer ===== */
+footer{padding:clamp(56px,6vw,80px) 0 calc(32px + env(safe-area-inset-bottom));font-size:15px;color:var(--muted);background:var(--stone)}
+.foot-grid{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr) minmax(0,1fr);gap:32px 48px;padding-bottom:40px;border-bottom:1px solid var(--line)}
+.foot-name{font:600 24px/1.1 var(--display);letter-spacing:-.02em;color:var(--ink)}
+.foot-grid h3{font:600 13px/1 var(--text);letter-spacing:.01em;color:var(--ink);margin-bottom:12px}
+.foot-grid ul{list-style:none;display:grid}
+.foot-grid ul a{display:inline-block;padding:8px 0;text-decoration:none;color:var(--muted);transition:color var(--t-fast)}
+.foot-grid ul a:hover{color:var(--ink)}
+.foot-base{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;padding-top:24px;font-size:13px}
+/* studio credit */
+.foot-studio{display:flex;align-items:center;gap:16px;padding:32px 0;border-bottom:1px solid var(--line);font-size:13px}
+.foot-studio img{height:44px;width:auto}
+@media (max-width:760px){.foot-grid{grid-template-columns:1fr 1fr}.foot-grid>div:first-child{grid-column:1/-1}}
+
+/* ===== Lightbox ===== */
+.lb{position:fixed;inset:0;z-index:100;background:rgba(14,13,12,.97);color:#f4f1ec;display:none;flex-direction:column;--ink:#f4f1ec}
+.lb.on{display:flex}
+.lb-top{display:flex;justify-content:space-between;align-items:center;padding:calc(12px + env(safe-area-inset-top)) var(--gut) 12px;gap:16px}
+.lb-title{font:600 19px/1.2 var(--display);letter-spacing:-.015em}
+.lb-count{font-size:13px;color:#aaa398;margin-left:12px;font-variant-numeric:tabular-nums}
+.lb-stage{flex:1;position:relative;display:flex;align-items:center;justify-content:center;padding:0 clamp(8px,6vw,96px) 16px;min-height:0;touch-action:pan-y}
+.lb-stage img{max-width:100%;max-height:100%;object-fit:contain;border-radius:8px;transition:opacity var(--t-fast)}
+.lb-prev,.lb-next{position:absolute;top:50%;transform:translateY(-50%)}
+.lb-prev{left:clamp(8px,2vw,24px)}.lb-next{right:clamp(8px,2vw,24px)}
+.lb-thumbs{display:flex;gap:8px;overflow-x:auto;padding:0 var(--gut) calc(16px + env(safe-area-inset-bottom));scrollbar-width:none}
+.lb-thumbs button{flex:0 0 auto;width:80px;height:56px;appearance:none;-webkit-appearance:none;background:none;border:2px solid transparent;border-radius:8px;overflow:hidden;padding:0;opacity:.5;transition:opacity var(--t-fast),border-color var(--t-fast)}
+.lb-thumbs button[aria-current="true"]{opacity:1;border-color:#f4f1ec}
+.lb-thumbs img{width:100%;height:100%;object-fit:cover}
+@media (hover:none),(pointer:coarse){.lb-prev,.lb-next{display:none}}
+
+/* ===== Muted-colour images with a colour spotlight ===== */
+@property --r{syntax:"<length>";inherits:true;initial-value:0px}
+.bw{--r:0px;transition:--r .8s var(--ease)}
+.bw .g{filter:saturate(.2) contrast(1.03) brightness(.97)}
+.bw .c{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;clip-path:circle(var(--r) at var(--x,50%) var(--y,50%));pointer-events:none}
+.bw.hot{--r:200px}
+.bw.lit,.bw:focus-within{--r:150vmax}
+.cursor{position:fixed;left:0;top:0;z-index:90;pointer-events:none;width:12px;height:12px;margin:-6px 0 0 -6px;border-radius:50%;background:#f4f1ec;display:grid;place-items:center;opacity:0;transition:width .45s var(--ease),height .45s var(--ease),margin .45s var(--ease),opacity var(--t-fast)}
+.cursor span{font:600 13px/1 var(--text);color:#161513;opacity:0;transition:opacity .2s}
+.cursor.on{opacity:1;width:80px;height:80px;margin:-40px 0 0 -40px;background:rgba(244,241,236,.92)}
+.cursor.on span{opacity:1}
+@media (hover:hover) and (pointer:fine){.bw,.bw *{cursor:none!important}}
+@media (hover:none),(pointer:coarse){.cursor{display:none}}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity var(--t-slow) var(--ease),transform var(--t-slow) var(--ease)}
+.reveal.in{opacity:1;transform:none}
+.noscript-note{padding:20px var(--gut);background:#2a1f15;color:#f3e2cc;font-size:15px}
+
+
+/* ===== Phone and tablet tuning ===== */
+@media (hover:none){
+  .tile:hover img,.figure:hover img{transform:none}
+  .film-skip,.film-pause{opacity:1;visibility:visible}
+}
+@media (max-width:860px){
+  .brand{min-height:44px}
+  .dots button{width:44px}
+}
+@media (max-width:760px){
+  /* galleries become swipeable rows instead of long stacks */
+  .grid{display:flex;gap:10px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scroll-padding:0 var(--gut);margin:0 calc(-1 * var(--gut));padding:0 var(--gut) 4px;scrollbar-width:none;grid-auto-rows:auto}
+  .grid::-webkit-scrollbar{display:none}
+  .grid .tile,.grid .tile.w6,.grid .tile.w8,.grid .tile.w12{flex:0 0 86%;aspect-ratio:4/3;scroll-snap-align:start}
+  .swipe-note{display:block}
+  /* chip rows scroll sideways on one line */
+  .filters,.chapters{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin-left:calc(-1 * var(--gut));margin-right:calc(-1 * var(--gut));padding:0 var(--gut)}
+  .filters::-webkit-scrollbar,.chapters::-webkit-scrollbar{display:none}
+  .chip{flex:none}
+  .gal-head{margin-top:64px}
+  .pad{padding:clamp(72px,18vw,96px) 0}
+  .spec-size{font-size:56px}
+}
+.swipe-note{display:none;margin-top:12px;font-size:13px;color:var(--muted)}
+/* landscape phones: keep the hero inside the screen */
+@media (max-height:520px) and (orientation:landscape){
+  .hero{min-height:0;height:auto}
+  .hero-inner{padding-top:84px;padding-bottom:24px;gap:14px}
+  .hero-title{font-size:clamp(40px,7vw,64px)}
+  .hero-sub{display:none}
+  .offer{padding:12px 0}
+  .film-cap p{font-size:22px}
+  .t-title{font-size:44px}
+  .inter{gap:10px}
+  .closing{min-height:0}
+}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .hero-title .ln>span{transform:none}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  .reveal{opacity:1;transform:none}
+  .pin i::after{display:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav" id="nav">
+  <a class="brand" href="#top" aria-label="Astrix. Residences at Santeo, back to top"><img class="studio" src="assets/img/astrix-logo.png" alt="" width="480" height="263"><span class="brand-sep" aria-hidden="true"></span><span>Residences at Santeo</span></a>
+  <nav aria-label="Primary">
+    <ul id="menu">
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#film">Film</a></li>
+      <li><a href="#apartments">Apartments</a></li>
+      <li><a href="#amenities">Amenities</a></li>
+      <li><a href="#townhouses">Townhouses</a></li>
+      <li><a href="#enquire">At a glance</a></li>
+    </ul>
+  </nav>
+  <button class="menu-btn btn-reset" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><i></i><i></i></button>
+</header>
+
+<main id="main">
+<section class="hero" id="top" aria-label="Introduction">
+  <div class="hero-slides" id="heroSlides" aria-roledescription="carousel" aria-label="Featured views">
+    <figure class="hs on" aria-roledescription="slide"><img src="assets/img/hero-01.jpg" alt="The apartment block at dusk, its timber-screened balconies lit from within" width="2400" height="1349" fetchpriority="high"></figure>
+    <figure class="hs" aria-roledescription="slide"><img data-src="assets/img/aerial-01.jpg" alt="Aerial view of the masterplan: apartment block and townhouse streets among trees" width="2400" height="1349"></figure>
+    <figure class="hs" aria-roledescription="slide"><img data-src="assets/img/th4res-01.jpg" alt="A four-bedroom residence with a cantilevered white frame and glazed balcony" width="2400" height="1349"></figure>
+    <figure class="hs" aria-roledescription="slide"><img data-src="assets/img/apartment-02.jpg" alt="The apartment block rising above its white ground-floor arches" width="2400" height="1350"></figure>
+  </div>
+  <div class="hero-scrim" aria-hidden="true"></div>
+  <div class="hero-inner wrap">
+    <p class="hero-kicker">Santeo, East Legon Hills, Accra</p>
+    <h1 class="hero-title"><span class="ln"><span>Experience</span></span><span class="ln"><span>the <span class="accent">exceptional.</span></span></span></h1>
+    <p class="hero-sub">Apartments, a penthouse and two-storey townhouses, designed around light, timber and shade.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#film">Watch the film</a>
+      <a class="btn btn-secondary" href="#apartments">Explore the homes</a>
+    </div>
+  </div>
+  <div class="hero-bar">
+    <div class="wrap hero-bar-in">
+      <a class="offer" href="#apartments"><span class="label">Apartments</span><b>1–3 bed and penthouse</b></a>
+      <a class="offer" href="#townhouses"><span class="label">Townhouses</span><b>2–4 bedroom homes</b></a>
+      <a class="offer" href="#amenities"><span class="label">Amenities</span><b>Pool, play and lounge</b></a>
+      <div class="hero-ctrl">
+        <span class="hero-cap" id="heroCap" aria-live="off">The apartment at dusk</span>
+        <div class="dots" id="heroDots" role="group" aria-label="Choose slide"></div>
+        <button class="ic hero-pause" id="heroPause" aria-label="Pause slideshow" aria-pressed="false">
+          <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><rect x="4" y="3" width="2.2" height="10"/><rect x="9.8" y="3" width="2.2" height="10"/></svg></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<noscript><div class="noscript-note">This site uses JavaScript for its film and galleries. Please turn it on to see them.</div></noscript>
+
+<section class="pad light" id="overview">
+  <div class="wrap">
+    <div class="ov-head">
+      <h2 class="ov-title reveal">Architecture as choreography.</h2>
+      <div class="ov-intro reveal">
+        <p class="lede">What does it mean to build somewhere without erasing what makes that place itself?</p>
+        <p class="body">The design is a sequence you walk through, not an object you look at. It reveals itself gradually and asks you to slow down.</p>
+      </div>
+    </div>
+  </div>
+  <div class="plan-wrap">
+    <figure class="plan" id="plan">
+      <img src="assets/img/aerial-01.jpg" srcset="assets/img/aerial-01-t.jpg 900w, assets/img/aerial-01.jpg 2400w" sizes="(max-width:860px) 100vw, 60vw" alt="Aerial view of the masterplan: the apartment block, a row of townhouses and detached residences among trees" width="2400" height="1349" loading="lazy">
+      <a class="pin" href="#apartments" style="--px:57%;--py:25%"><i aria-hidden="true">1</i><span><b>Apartment block</b>29 homes on four floors</span></a>
+      <a class="pin" href="#townhouses" style="--px:60%;--py:63%"><i aria-hidden="true">2</i><span><b>Row townhouses</b>2 to 4 bedrooms</span></a>
+      <a class="pin" href="#townhouses" style="--px:24%;--py:44%"><i aria-hidden="true">3</i><span><b>Residences</b>Detached and semi-detached</span></a>
+      <figcaption>The masterplan. Select a label to jump to that part of the site.</figcaption>
+    </figure>
+    <ol class="plan-legend">
+      <li><a href="#apartments"><i>1</i><span><b>Apartment block</b><br>29 homes on four floors</span></a></li>
+      <li><a href="#townhouses"><i>2</i><span><b>Row townhouses</b><br>2 to 4 bedrooms</span></a></li>
+      <li><a href="#townhouses"><i>3</i><span><b>Residences</b><br>Detached and semi-detached</span></a></li>
+    </ol>
+  </div>
+  <div class="wrap">
+    <ol class="seq">
+      <li class="reveal"><span class="seq-n">01</span><h3>Approach</h3><p>A compressed street between the homes draws you in.</p></li>
+      <li class="reveal"><span class="seq-n">02</span><h3>Threshold</h3><p>White arches lift the ground floor and mark the way through.</p></li>
+      <li class="reveal"><span class="seq-n">03</span><h3>Release</h3><p>The site opens onto gardens, the pool and places to play.</p></li>
+    </ol>
+    <div class="facts reveal" id="facts"></div>
+  </div>
+</section>
+
+<section class="pad light alt" id="location">
+  <div class="wrap loc-grid">
+    <div class="stack reveal">
+      <h2>Santeo, Accra.</h2>
+      <p class="lede">A fast-growing residential suburb on the East Legon Hills.</p>
+      <p class="body">Santeo sits in the Kpone Katamanso District of Greater Accra. It is known for modern architecture, serviced plots and gated communities.</p>
+    </div>
+    <ul class="loc-list reveal">
+      <li><span>Address</span><span>Santeo, near East Legon Hills</span></li>
+      <li><span>District</span><span>Kpone Katamanso</span></li>
+      <li><span>Region</span><span>Greater Accra</span></li>
+      <li><span>Setting</span><span>Residential, gated communities</span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="film" aria-label="Scroll-driven film of the development">
+  <div class="film-intro wrap">
+    <div class="row">
+      <div class="stack reveal">
+        <p class="label">The film</p>
+        <h2>Walk the streets<br>before they exist.</h2>
+      </div>
+      <p class="body reveal" style="max-width:36ch" id="filmHow">Scroll to move the camera forward, and back to reverse it. You can also jump to a chapter.</p>
+    </div>
+    <div class="chapters reveal" id="chapters" role="group" aria-label="Film chapters"></div>
+  </div>
+  <div class="film" id="filmScroller">
+    <div class="film-stage" id="stage">
+      <div id="videos"></div>
+      <div class="film-dark" id="dark" aria-hidden="true"></div>
+      <div class="inter" id="inter" aria-hidden="true">
+        <p class="t-num" id="interNum"></p>
+        <p class="t-title" id="interTitle"></p>
+        <p class="t-desc" id="interDesc"></p>
+        <p class="t-meta" id="interMeta"></p>
+      </div>
+      <div class="film-shade" aria-hidden="true"></div>
+      <div class="film-rail chrome-x" id="rail" aria-label="Film chapters"></div>
+      <button class="btn btn-secondary film-skip chrome-x" id="skipFilm">Skip film</button>
+      <button class="ic film-pause chrome-x" id="filmPause" aria-label="Pause film" aria-pressed="false" hidden><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><rect x="4" y="3" width="2.2" height="10"/><rect x="9.8" y="3" width="2.2" height="10"/></svg></button>
+      <div class="film-hint" id="hint" aria-hidden="true">Scroll<i></i></div>
+      <div class="film-hud">
+        <div class="film-cap" aria-live="polite"><span class="label" id="capCh"></span><p id="capTx"></p></div>
+        <div class="film-count chrome-x" id="count" aria-hidden="true"></div>
+      </div>
+      <div class="film-prog" aria-hidden="true"><i id="prog"></i></div>
+    </div>
+  </div>
+</section>
+
+<section class="pad" id="apartments">
+  <div class="wrap">
+    <div class="split rev">
+      <figure class="figure reveal">
+        <img src="assets/img/apartment-01.jpg" srcset="assets/img/apartment-01-t.jpg 900w, assets/img/apartment-01.jpg 2400w" sizes="(max-width:860px) 100vw, 60vw" alt="The apartment block facade with vertical timber slats and planted balconies" width="2400" height="1350" loading="lazy">
+      </figure>
+      <div class="stack reveal">
+        <p class="label">The apartment</p>
+        <h2>Depth, shadow, movement.</h2>
+        <p class="lede">Vertical timber slats shade the glass, keep the heat out and leave the views open.</p>
+      </div>
+    </div>
+
+    <div class="pad" style="padding-bottom:0">
+      <blockquote class="quote reveal">Timber screens move across a white concrete frame like wind through a forest canopy.</blockquote>
+      <p class="body reveal" style="margin-top:24px">At the back, tall white arches lift the ground floor and give cars and people a sheltered way in.</p>
+    </div>
+
+    <div class="gal-head"><h3 class="reveal">Exterior</h3><p class="small reveal">Select an image to enlarge it.</p></div>
+    <div class="grid" id="galApt"></div>
+    <p class="swipe-note">Swipe for more images.</p>
+
+    <div class="gal-head"><h3 class="reveal">Homes in the block</h3><p class="small reveal">Scroll through each type. Select the image for plans and interiors.</p></div>
+    <div class="spec" id="specApt"></div>
+  </div>
+</section>
+
+<section class="pad light" id="amenities">
+  <div class="wrap">
+    <div class="split">
+      <div class="reveal"><h2>Simply luxury.</h2></div>
+      <p class="lede reveal">Natural light, chosen materials and rooms that flow into one another, with space to swim, play and meet.</p>
+    </div>
+    <div class="amen" id="amen"></div>
+  </div>
+</section>
+
+<section class="pad" id="townhouses">
+  <div class="wrap">
+    <div class="split">
+      <div class="stack reveal">
+        <p class="label">The townhouses</p>
+        <h2>Refined minimalism.</h2>
+        <p class="lede">Cantilevered white frames create private, deeply recessed balconies.</p>
+        <p class="body">White concrete, charcoal stone and vertical timber give each home its own character. Carports and partition walls keep the street calm and consistent.</p>
+      </div>
+      <figure class="figure reveal">
+        <img src="assets/img/th4res-01.jpg" srcset="assets/img/th4res-01-t.jpg 900w, assets/img/th4res-01.jpg 2400w" sizes="(max-width:860px) 100vw, 60vw" alt="A four-bedroom residence with a cantilevered white frame and glazed balcony" width="2400" height="1349" loading="lazy">
+      </figure>
+    </div>
+
+    <div class="gal-head"><h3 class="reveal">Homes on the street</h3></div>
+    <div class="filters" id="thFilters" role="group" aria-label="Filter townhouse images"></div>
+    <div class="grid" id="galTh"></div>
+    <p class="swipe-note">Swipe for more images.</p>
+
+    <div class="gal-head"><h3 class="reveal">Two storeys, three sizes</h3><p class="small reveal">Three- and four-bedroom homes come detached or as row housing.</p></div>
+    <div class="spec" id="specTh"></div>
+  </div>
+</section>
+
+<section class="closing" id="enquire" aria-labelledby="closingTitle">
+  <img src="assets/img/night-01.jpg" alt="" width="2400" height="1449" loading="lazy">
+  <div class="wrap closing-grid">
+    <div class="stack reveal">
+      <h2 id="closingTitle">This is where your next journey begins.</h2>
+      <p class="lede" style="color:rgba(244,241,236,.85)">Designed to inspire and built to endure.</p>
+      <div class="contact" id="contact"></div>
+    </div>
+    <aside class="glance reveal" aria-labelledby="glanceTitle">
+      <div class="glance-head"><h3 id="glanceTitle">At a glance</h3><span>Floor area</span></div>
+      <ul>
+        <li><a href="#apartments"><span class="k">Apartment</span><span class="n">1 Bedroom</span><span class="v">56.3<small>m²</small></span></a></li>
+        <li><a href="#apartments"><span class="k">Apartment</span><span class="n">2 Bedroom</span><span class="v">80.8<small>m²</small></span></a></li>
+        <li><a href="#apartments"><span class="k">Apartment</span><span class="n">3 Bedroom</span><span class="v">138.8<small>m²</small></span></a></li>
+        <li><a href="#apartments"><span class="k">Penthouse, 4th floor</span><span class="n">3 Bedroom Executive</span><span class="v">383.3–416.8<small>m²</small></span></a></li>
+        <li><a href="#townhouses"><span class="k">Townhouse</span><span class="n">2 Bedroom</span><span class="v">109.8<small>m²</small></span></a></li>
+        <li><a href="#townhouses"><span class="k">Townhouse</span><span class="n">3 Bedroom</span><span class="v">136.6<small>m²</small></span></a></li>
+        <li><a href="#townhouses"><span class="k">Townhouse</span><span class="n">4 Bedroom</span><span class="v">176.3<small>m²</small></span></a></li>
+      </ul>
+      <p class="glance-foot">Shared by residents: swimming pool, indoor and outdoor playgrounds, reception lounge and basement parking for 30 cars.</p>
+    </aside>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <p class="foot-name">Residences at Santeo</p>
+        <p style="margin-top:12px;max-width:32ch">Santeo, near East Legon Hills, Kpone Katamanso District, Greater Accra.</p>
+      </div>
+      <nav aria-label="Footer">
+        <h3>Explore</h3>
+        <ul><li><a href="#overview">Overview</a></li><li><a href="#film">The film</a></li><li><a href="#apartments">Apartments</a></li><li><a href="#townhouses">Townhouses</a></li></ul>
+      </nav>
+      <div>
+        <h3>Homes</h3>
+        <ul><li><a href="#apartments">1–3 bedroom apartments</a></li><li><a href="#apartments">Penthouse</a></li><li><a href="#townhouses">2–4 bedroom townhouses</a></li><li><a href="#amenities">Amenities</a></li></ul>
+      </div>
+    </div>
+    <div class="foot-studio">
+      <p>Presentation by</p>
+      <img src="assets/img/astrix-logo.png" alt="Astrix" width="480" height="263">
+    </div>
+    <div class="foot-base">
+      <p>Images are artist's impressions. Specifications may change.</p>
+      <a class="link" href="#top">Back to top</a>
+    </div>
+  </div>
+</footer>
+
+<div class="cursor" id="cursor" aria-hidden="true"><span>View</span></div>
+
+<div class="cover" id="cover" aria-hidden="true">
+  <img id="coverImg" alt="">
+  <div class="cover-in">
+    <div class="cover-main">
+      <p class="t-num" id="coverNum"></p>
+      <p class="t-title" id="coverCh"></p>
+      <p class="t-desc" id="coverTx"></p>
+    </div>
+    <ol class="cover-list" id="coverList"></ol>
+  </div>
+  <div class="cover-load"><i></i></div>
+</div>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-labelledby="lbTitle" hidden>
+  <div class="lb-top">
+    <p><span class="lb-title" id="lbTitle"></span><span class="lb-count" id="lbCount"></span></p>
+    <button class="ic" id="lbClose" aria-label="Close gallery"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3.5 3.5l9 9M12.5 3.5l-9 9"/></svg></button>
+  </div>
+  <div class="lb-stage" id="lbStage">
+    <img id="lbImg" alt="">
+    <button class="ic lb-prev" id="lbPrev" aria-label="Previous image"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M10 3L5 8l5 5"/></svg></button>
+    <button class="ic lb-next" id="lbNext" aria-label="Next image"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 3l5 5-5 5"/></svg></button>
+  </div>
+  <div class="lb-thumbs" id="lbThumbs"></div>
+</div>
+
+<script>
+(function(){
+'use strict';
+var root = document.documentElement;
+var IMG = 'assets/img/', FILM = 'assets/film/';
+var touch = matchMedia('(hover: none), (pointer: coarse)').matches;
+var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+var $ = function(id){ return document.getElementById(id); };
+function el(tag, attrs, html){ var e=document.createElement(tag); if(attrs) for(var k in attrs){ if(k==='class') e.className=attrs[k]; else e.setAttribute(k,attrs[k]); } if(html!=null) e.innerHTML=html; return e; }
+function range(prefix, n){ var a=[]; for(var i=1;i<=n;i++) a.push(prefix+'-'+(i<10?'0':'')+i); return a; }
+
+/* Optional contact details. Fill in before launch; empty values stay hidden. */
+var CONTACT = { email: '', phone: '', whatsapp: '' };
+
+/* ---------------- content ---------------- */
+var FACTS = [
+  ['29', 'apartments on four floors, including two penthouses'],
+  ['3', 'townhouse sizes: 2, 3 and 4 bedrooms'],
+  ['30', 'parking spaces in the basement'],
+  ['4', 'shared amenities, from the pool to the playgrounds']
+];
+
+var APT_GAL = [
+  ['apartment-02','w8','Apartment block and arched ground floor'],
+  ['apartment-03','','Street view of the apartment block'],
+  ['apartment-04','','Timber-screened balconies'],
+  ['apartment-05','','Apartment block from the lane'],
+  ['apartment-09','','Apartment facade detail'],
+  ['apartment-06','w6','Apartment block with outdoor playground'],
+  ['apartment-07','w6','Pool terrace and cabana'],
+  ['aerial-02','w8','Aerial view of the apartment and townhouses'],
+  ['apartment-08','','Pool deck beside the block']
+];
+
+var AMEN = [
+  ['amenity-01','Penthouse'],
+  ['amenity-07','Outdoor playground'],
+  ['amenity-04','Indoor playground'],
+  ['amenity-05','Reception & lounge'],
+  ['amenity-06','Basement parking']
+];
+
+var TH_TYPES = [
+  ['th2','2 Bedroom row', 9],
+  ['th3row','3 Bedroom row', 4],
+  ['th3res','3 Bedroom residence', 3],
+  ['th4row','4 Bedroom row', 5],
+  ['th4res','4 Bedroom residence', 2]
+];
+
+/* images per unit: floor plan first, then interiors (rendered 3D plans left out) */
+var KEEP = {u1:[1,2,3,4], u2:[1,2,4], u3:[1,2,4], u4:[1,2,3], u5:[1,2,4], u6:[1,4,5], u7:[1,2,3], u8:[1,3,4,6,7]};
+function unitImgs(key, n, title){
+  return KEEP[key].map(function(k, i){ return [key+'-0'+k, i===0 ? title+': floor plan' : title+': interior '+i]; });
+}
+var UNITS_APT = [
+  { k:'u1', n:6, t:'1 Bedroom', size:'56.3', rows:[['Floors','1st to 3rd'],['Homes','12']], f:['Living area','Kitchenette','Dining area','Walk-in closet'], cover:'u1-02' },
+  { k:'u2', n:5, t:'2 Bedroom', size:'80.8', rows:[['Floors','1st to 3rd'],['Homes','12']], f:['Living area','Kitchenette','Dining area','Closet'], cover:'u2-02' },
+  { k:'u3', n:4, t:'3 Bedroom', size:'138.8', rows:[['Floors','1st to 3rd'],['Homes','3']], f:['Master bedroom','Living area','Kitchenette','Dining area','Walk-in closet'], cover:'u3-02' },
+  { k:'u8', n:7, t:'Penthouse', sub:'3 Bedroom Executive', size:'383.3–416.8', rows:[['Floor','4th, top floor'],['Homes','2']], f:['Three bedrooms','Two residences share the floor'], cover:'u8-04', wide:true },
+  { k:'u7', n:5, t:'Basement', size:'1,357.3', rows:[['Level','Below ground'],['Parking','30 cars']], f:['Resident parking beneath the block'], cover:'u7-03' }
+];
+var UNITS_TH = [
+  { k:'u4', n:5, t:'2 Bedroom', size:'109.8', rows:[['Ground floor','52.2 m²'],['First floor','57.6 m²']], f:['Living area','Kitchen','Dining area','Closet'], cover:'u4-03' },
+  { k:'u5', n:5, t:'3 Bedroom', size:'136.6', rows:[['Ground floor','60.8 m²'],['First floor','75.8 m²'],['Types','Detached or row']], f:['Living area','Family area','Kitchen','Dining area','Garage','Walk-in closets'], cover:'u5-02' },
+  { k:'u6', n:5, t:'4 Bedroom', size:'176.3', rows:[['Ground floor','72.9 m²'],['First floor','103.4 m²'],['Types','Detached or row']], f:['Living area','Family area','Kitchen','Dining area','Garage','Walk-in closets'], cover:'u6-04' }
+];
+
+/* Film: shot number, duration (s), chapter index, caption */
+var CHAPTERS = ['Arrival','The Apartment','Amenities','The Townhouses','The Residences','Departure'];
+var SHOTS = [
+  ['01',15.1,0,'The masterplan from above'],
+  ['02',9.1,0,'Descending into the streets'],
+  ['03',3.13,1,'Timber screens on a white frame'],
+  ['04',3.13,1,'Balconies like a forest canopy'],
+  ['05',3.13,1,'Under the arches'],
+  ['06',3.13,1,'Along the frontage'],
+  ['07',18.1,1,'Through the arch to the block'],
+  ['08',27.13,2,'Pool and cabanas'],
+  ['09',9.1,2,'The play garden'],
+  ['10',9.1,2,'Outdoor playground'],
+  ['11',12.1,2,'From the gardens to the rooftops'],
+  ['12',18.1,3,'Row housing'],
+  ['13',3.13,3,'Lit carports'],
+  ['14',15.1,3,'Recessed balconies'],
+  ['15',12.1,3,'The courtyard street'],
+  ['16',21.1,3,'Cantilevered white frames'],
+  ['17',12.1,3,'Stone, timber and glass'],
+  ['18',5.13,3,'Terrace level'],
+  ['19',5.13,3,'Private frontage'],
+  ['20',3.13,4,'A residence at rest'],
+  ['21',5.13,4,'Double-height glazing'],
+  ['22',15.1,4,'Garage and entrance'],
+  ['23',6.13,4,'Rooftop terraces'],
+  ['24',18.1,4,'Balcony living'],
+  ['25',18.1,4,'The residential lane'],
+  ['26',15.1,4,'Arrival court'],
+  ['27',5.13,4,'Garden edge'],
+  ['28',9.1,4,'Towards the apartment block'],
+  ['29',18.1,5,'Rising over the community']
+];
+
+/* ---------------- render static content ---------------- */
+$('facts').innerHTML = FACTS.map(function(f){ return '<div><b>'+f[0]+'</b><span>'+f[1]+'</span></div>'; }).join('');
+
+var lazyImgs = [];
+/* grey image + colour twin revealed by the cursor spotlight */
+function bwPair(host, src, alt, before){
+  var g = el('img', {alt:alt, loading:'lazy', decoding:'async', 'class':'g'});
+  var c = el('img', {alt:'', 'aria-hidden':'true', loading:'lazy', decoding:'async', 'class':'c'});
+  function ok(){ g.classList.add('ld'); c.classList.add('ld'); }
+  g.onload = ok; g.src = src; c.src = src; if(g.complete) ok();
+  host.insertBefore(g, before || null); host.insertBefore(c, before || null);
+  return g;
+}
+function tile(id, cls, alt, gallery, index, title){
+  var t = el('div', {'class':'tile reveal'+(cls?' '+cls:'')});
+  var b = el('button', {'aria-label':'Enlarge: '+alt});
+  t.classList.add('bw');
+  bwPair(b, IMG+id+'-t.jpg', alt);
+  t.appendChild(b);
+  b.addEventListener('click', function(){ openLB(gallery, index, title); });
+  return t;
+}
+
+(function(){
+  var g = APT_GAL.map(function(a){ return [a[0], a[2]]; });
+  var host = $('galApt');
+  APT_GAL.forEach(function(a,i){ host.appendChild(tile(a[0], a[1], a[2], g, i, 'The Apartment')); });
+})();
+
+(function(){
+  var g = AMEN.map(function(a){ return [a[0], a[1]]; });
+  var host = $('amen');
+  AMEN.forEach(function(a,i){
+    var t = tile(a[0], '', a[1], g, i, 'Amenities');
+    t.appendChild(el('figcaption', {'aria-hidden':'true'}, a[1]));
+    host.appendChild(t);
+  });
+})();
+
+(function(){
+  var host = $('galTh'), fh = $('thFilters');
+  var all = [];
+  TH_TYPES.forEach(function(t){ range(t[0], t[2]).forEach(function(id){ all.push([id, t[1]+' townhouse', t[0]]); }); });
+  function layout(n){
+    var P = ['w8','','','','','w6','w6'];
+    var TAIL = {0:[],1:['w12'],2:['w8',''],3:['','',''],4:['w6','w6','w6','w6'],5:['w8','','','',''],6:['w8','','','','','w12']};
+    var out = [];
+    for(var g=0; g+7<=n; g+=7) out = out.concat(P);
+    return out.concat(TAIL[n%7]);
+  }
+  function draw(filter){
+    host.innerHTML = '';
+    var list = all.filter(function(a){ return !filter || a[2]===filter; });
+    var g = list.map(function(a){ return [a[0], a[1]]; });
+    var L = layout(list.length);
+    list.forEach(function(a,i){
+      var cls = L[i];
+      var tl = tile(a[0], cls, a[1], g, i, 'The Townhouses'); tl.classList.add('in'); host.appendChild(tl);
+    });
+    if(window.__bwWatch) window.__bwWatch();
+  }
+  var chips = [['','All']].concat(TH_TYPES.map(function(t){ return [t[0], t[1]]; }));
+  chips.forEach(function(c){
+    var b = el('button', {'class':'chip','aria-pressed': c[0]==='' ? 'true':'false'}, c[1]);
+    b.addEventListener('click', function(){
+      [].forEach.call(fh.children, function(x){ x.setAttribute('aria-pressed','false'); });
+      b.setAttribute('aria-pressed','true'); draw(c[0]);
+    });
+    fh.appendChild(b);
+  });
+  draw('');
+})();
+
+/* Homes: a pinned image beside scrolling specs (stacked cards on small screens) */
+function sentence(list){ var l = list.map(function(x, i){ return i ? x.toLowerCase() : x; }); return l.length > 1 ? l.slice(0,-1).join(', ') + ' and ' + l[l.length-1] + '.' : l[0] + '.'; }
+function buildSpec(host, units, group){
+  var media = el('div', {'class':'spec-media'}), stick = el('div', {'class':'spec-stick bw', role:'button', tabindex:'0'});
+  var list = el('div', {'class':'spec-list'}), imgs = [], items = [], cur = 0;
+  media.appendChild(stick); host.appendChild(media); host.appendChild(list);
+  function open(k){ var u = units[k], t = u.t + (u.sub ? ', ' + u.sub : ''); openLB(unitImgs(u.k, u.n, t), 0, t); }
+  units.forEach(function(u, k){
+    var title = u.t + (u.sub ? ', ' + u.sub : '');
+    var layer = el('div', {'class':'spec-img' + (k === 0 ? ' on' : '')});
+    bwPair(layer, IMG + u.cover + '.jpg', title + ', interior'); stick.appendChild(layer); imgs.push(layer);
+    var it = el('article', {'class':'spec-item' + (k === 0 ? ' on' : '')});
+    var th = el('div', {'class':'spec-thumb bw'}); bwPair(th, IMG + u.cover + '-t.jpg', title + ', interior');
+    th.addEventListener('click', function(){ open(k); });
+    it.appendChild(th);
+    var body = el('div', {'class':'stack', style:'gap:16px'});
+    body.innerHTML = '<p class="label">' + group + '</p><h3>' + u.t + (u.sub ? '<br><span style="color:var(--muted)">' + u.sub + '</span>' : '') + '</h3>' +
+      '<p class="spec-size">' + u.size + '<small>m²</small></p>' +
+      '<dl class="spec-rows">' + u.rows.map(function(r){ return '<dt>' + r[0] + '</dt><dd>' + r[1] + '</dd>'; }).join('') + '</dl>' +
+      '<p class="spec-feat">' + sentence(u.f) + '</p>';
+    var b = el('button', {'class':'link', 'aria-label':'View plan and interiors: ' + title}, 'View plan and interiors');
+    b.addEventListener('click', function(){ open(k); });
+    body.appendChild(b); it.appendChild(body); list.appendChild(it); items.push(it);
+  });
+  stick.setAttribute('aria-label', 'Open plan and interiors');
+  stick.addEventListener('click', function(){ open(cur); });
+  stick.addEventListener('keydown', function(e){ if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); open(cur); } });
+  if('IntersectionObserver' in window){
+    var ob = new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if(!e.isIntersecting) return;
+        var k = items.indexOf(e.target); if(k < 0 || k === cur) return;
+        imgs[cur].classList.remove('on'); items[cur].classList.remove('on');
+        cur = k; imgs[cur].classList.add('on'); items[cur].classList.add('on');
+      });
+    }, {rootMargin:'-45% 0px -45% 0px'});
+    items.forEach(function(n){ ob.observe(n); });
+  }
+}
+buildSpec($('specApt'), UNITS_APT, 'Apartment');
+buildSpec($('specTh'), UNITS_TH, 'Townhouse');
+
+(function(){
+  var h = $('contact'), any = false;
+  function add(href, label){ any = true; h.appendChild(el('a', {'class':'btn btn-secondary', href:href}, label)); }
+  if(CONTACT.email) add('mailto:'+CONTACT.email, 'Email us');
+  if(CONTACT.phone) add('tel:'+CONTACT.phone.replace(/\s+/g,''), 'Call '+CONTACT.phone);
+  if(CONTACT.whatsapp) add('https://wa.me/'+CONTACT.whatsapp.replace(/\D/g,''), 'WhatsApp');
+  if(!any){ any = true; h.appendChild(el('a', {'class':'btn btn-primary', href:'#film'}, 'Watch the film again')); add('#apartments', 'Revisit the homes'); }
+})();
+
+/* static figures join the black & white treatment */
+[].forEach.call(document.querySelectorAll('.figure'), function(f){
+  var g = f.querySelector('img'); if(!g) return;
+  g.classList.add('g'); f.classList.add('bw');
+  var c = el('img', {alt:'', 'aria-hidden':'true', loading:'lazy', decoding:'async', 'class':'c'}); if(g.getAttribute('srcset')){ c.setAttribute('srcset', g.getAttribute('srcset')); c.setAttribute('sizes', g.getAttribute('sizes') || '100vw'); } c.src = g.getAttribute('src');
+  g.parentNode.insertBefore(c, g.nextSibling);
+});
+
+/* cursor spotlight (fine pointers) / colour-on-scroll (touch) */
+(function(){
+  var cur = $('cursor'), over = null, mx = 0, my = 0, raf = 0;
+  if(!touch){
+    document.addEventListener('pointermove', function(e){
+      if(e.pointerType && e.pointerType !== 'mouse') return;
+      mx = e.clientX; my = e.clientY;
+      var b = e.target.closest ? e.target.closest('.bw') : null;
+      if(b !== over){
+        if(over) over.classList.remove('hot');
+        over = b;
+        if(over) over.classList.add('hot');
+        cur.classList.toggle('on', !!over);
+      }
+      if(!raf) raf = requestAnimationFrame(function(){
+        raf = 0;
+        cur.style.transform = 'translate('+mx+'px,'+my+'px)';
+        if(over){ var r = over.getBoundingClientRect(); over.style.setProperty('--x', (mx - r.left)+'px'); over.style.setProperty('--y', (my - r.top)+'px'); }
+      });
+    }, {passive:true});
+    document.addEventListener('pointerleave', function(){ if(over) over.classList.remove('hot'); over = null; cur.classList.remove('on'); });
+    window.addEventListener('scroll', function(){ if(over){ over.classList.remove('hot'); over = null; cur.classList.remove('on'); } }, {passive:true});
+  } else if('IntersectionObserver' in window){
+    var lit = new IntersectionObserver(function(es){ es.forEach(function(e){ e.target.classList.toggle('lit', e.isIntersecting); }); }, {rootMargin:'-38% 0px -38% 0px'});
+    var watch = function(){ [].forEach.call(document.querySelectorAll('.bw:not([data-w])'), function(n){ n.setAttribute('data-w','1'); lit.observe(n); }); };
+    watch(); window.__bwWatch = watch;
+  }
+})();
+
+/* ---------------- hero slideshow ---------------- */
+(function(){
+  var slides = [].slice.call(document.querySelectorAll('#heroSlides .hs'));
+  var caps = ['The apartment at dusk','The masterplan','The residences','Arches & timber'];
+  var DUR = 7000, i = 0, timer = 0, paused = reduce, hero = $('top'), dots = $('heroDots'), pb = $('heroPause');
+  hero.style.setProperty('--dur', DUR+'ms');
+  function ensure(k){ var im = slides[k].querySelector('img'); if(im.dataset.src){ im.src = im.dataset.src; im.removeAttribute('data-src'); } }
+  var btns = slides.map(function(s, k){
+    var b = el('button', {'aria-label':'Show slide '+(k+1)+': '+caps[k], 'aria-current': k===0 ? 'true':'false'}, '<i></i>');
+    b.addEventListener('click', function(){ go(k); });
+    dots.appendChild(b); return b;
+  });
+  function go(k){
+    ensure(k); ensure((k+1)%slides.length);
+    slides[i].classList.remove('on'); i = k; slides[i].classList.add('on');
+    btns.forEach(function(b, n){ b.setAttribute('aria-current', 'false'); b.firstChild.style.animation = 'none'; void b.offsetWidth; b.firstChild.style.animation = ''; });
+    btns[i].setAttribute('aria-current', 'true');
+    $('heroCap').textContent = caps[i];
+    schedule();
+  }
+  function schedule(){ clearTimeout(timer); if(!paused) timer = setTimeout(function(){ go((i+1)%slides.length); }, DUR); }
+  function setPaused(p){
+    paused = p; hero.classList.toggle('paused', p);
+    pb.setAttribute('aria-pressed', p ? 'true':'false'); pb.setAttribute('aria-label', p ? 'Play slideshow':'Pause slideshow');
+    pb.innerHTML = p ? '<svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 2.5v11l9-5.5z"/></svg>' : '<svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><rect x="4" y="3" width="2.2" height="10"/><rect x="9.8" y="3" width="2.2" height="10"/></svg>';
+    if(p) clearTimeout(timer); else schedule();
+  }
+  pb.addEventListener('click', function(){ setPaused(!paused); });
+  window.addEventListener('load', function(){ ensure(1); });
+  setPaused(paused);
+  /* pause while the hero is off-screen */
+  if('IntersectionObserver' in window) new IntersectionObserver(function(es){
+    var vis = es[0].isIntersecting; if(!vis) clearTimeout(timer); else if(!paused) schedule();
+  }).observe(hero);
+})();
+
+/* masterplan settles to full size as it scrolls into view */
+(function(){
+  var plan = $('plan'); if(!plan || reduce) return;
+  var tk = false;
+  function upd(){
+    tk = false;
+    var r = plan.getBoundingClientRect(), vh = window.innerHeight;
+    var p = clamp((vh - r.top) / (vh * 0.9), 0, 1);
+    plan.style.setProperty('--ps', (0.9 + 0.1 * (1 - Math.pow(1 - p, 3))).toFixed(4));
+  }
+  window.addEventListener('scroll', function(){ if(!tk){ tk = true; requestAnimationFrame(upd); } }, {passive:true});
+  window.addEventListener('resize', upd); upd();
+})();
+
+/* ---------------- reveal on scroll ---------------- */
+var io = ('IntersectionObserver' in window) ? new IntersectionObserver(function(es){
+  es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+}, {rootMargin:'0px 0px -8% 0px'}) : null;
+[].forEach.call(document.querySelectorAll('.reveal'), function(n){ if(io && !reduce) io.observe(n); else n.classList.add('in'); });
+
+/* ---------------- scrolling helpers ---------------- */
+function pageTop(n){ return n.getBoundingClientRect().top + window.scrollY; }
+function jumpTo(y){ var prev = root.style.scrollBehavior; root.style.scrollBehavior = 'auto'; window.scrollTo(0, y); root.style.scrollBehavior = prev; }
+function goTo(y){
+  if(reduce || Math.abs(y - window.scrollY) > 3*window.innerHeight) jumpTo(y);
+  else window.scrollTo({top:y, behavior:'smooth'});
+}
+
+/* nav */
+var nav = $('nav'), menuBtn = $('menuBtn');
+function closeMenu(){ document.body.classList.remove('menu-open'); if(!cur) root.style.overflow = ''; menuBtn.setAttribute('aria-expanded','false'); menuBtn.setAttribute('aria-label','Open menu'); }
+menuBtn.addEventListener('click', function(){
+  var open = !document.body.classList.contains('menu-open');
+  document.body.classList.toggle('menu-open', open);
+  root.style.overflow = open ? 'hidden' : '';
+  menuBtn.setAttribute('aria-expanded', open ? 'true':'false');
+  menuBtn.setAttribute('aria-label', open ? 'Close menu':'Open menu');
+});
+[].forEach.call(document.querySelectorAll('a[href^="#"]'), function(a){
+  a.addEventListener('click', function(ev){
+    var id = a.getAttribute('href').slice(1); var t = id ? document.getElementById(id) : null;
+    if(!t) return;
+    ev.preventDefault(); closeMenu();
+    goTo(id==='top' ? 0 : pageTop(t));
+    if(history.replaceState) history.replaceState(null, '', '#'+id);
+    if(id==='main' || id==='top'){ t.setAttribute('tabindex','-1'); t.focus({preventScroll:true}); }
+  });
+});
+
+/* ---------------- lightbox ---------------- */
+var lb = $('lb'), lbImg = $('lbImg'), lbThumbs = $('lbThumbs'), cur = null, lastFocus = null;
+function openLB(list, i, title){
+  lastFocus = document.activeElement;
+  cur = {list:list, i:i};
+  $('lbTitle').textContent = title;
+  lbThumbs.innerHTML = '';
+  list.forEach(function(it, j){
+    var b = el('button', {'aria-label':'Show image '+(j+1)+': '+it[1]});
+    var im = el('img', {alt:'', loading:'lazy'}); im.src = IMG+it[0]+'-t.jpg';
+    b.appendChild(im); b.addEventListener('click', function(){ show(j); }); lbThumbs.appendChild(b);
+  });
+  lb.hidden = false; lb.classList.add('on'); document.documentElement.style.overflow = 'hidden';
+  show(i); $('lbClose').focus();
+}
+function show(i){
+  var n = cur.list.length; i = (i+n)%n; cur.i = i;
+  var it = cur.list[i];
+  lbImg.style.opacity = 0;
+  var pre = new Image();
+  pre.onload = pre.onerror = function(){ if(cur && cur.i===i){ lbImg.src = pre.src; lbImg.alt = it[1]; lbImg.style.opacity = 1; } };
+  pre.src = IMG+it[0]+'.jpg';
+  $('lbCount').textContent = (i+1)+' / '+n;
+  [].forEach.call(lbThumbs.children, function(b, j){ b.setAttribute('aria-current', j===i ? 'true':'false'); if(j===i && b.scrollIntoView) b.scrollIntoView({block:'nearest', inline:'center'}); });
+  var nx = cur.list[(i+1)%n]; if(nx) (new Image()).src = IMG+nx[0]+'.jpg';
+  var multi = n > 1; $('lbPrev').hidden = !multi; $('lbNext').hidden = !multi;
+}
+function closeLB(){ lb.classList.remove('on'); lb.hidden = true; document.documentElement.style.overflow = ''; cur = null; if(lastFocus) lastFocus.focus(); }
+$('lbClose').addEventListener('click', closeLB);
+$('lbPrev').addEventListener('click', function(){ show(cur.i-1); });
+$('lbNext').addEventListener('click', function(){ show(cur.i+1); });
+$('lbStage').addEventListener('click', function(e){ if(e.target === this) closeLB(); });
+document.addEventListener('keydown', function(e){
+  if(e.key === 'Escape'){ if(cur) closeLB(); else closeMenu(); }
+  if(!cur) return;
+  if(e.key === 'ArrowRight') show(cur.i+1);
+  if(e.key === 'ArrowLeft') show(cur.i-1);
+  if(e.key === 'Tab'){
+    var f = [].slice.call(lb.querySelectorAll('button:not([hidden])'));
+    var a = f[0], z = f[f.length-1];
+    if(e.shiftKey && document.activeElement === a){ e.preventDefault(); z.focus(); }
+    else if(!e.shiftKey && document.activeElement === z){ e.preventDefault(); a.focus(); }
+  }
+});
+(function(){
+  var x0 = null;
+  $('lbStage').addEventListener('touchstart', function(e){ x0 = e.touches[0].clientX; }, {passive:true});
+  $('lbStage').addEventListener('touchend', function(e){
+    if(x0 === null || !cur) return; var dx = e.changedTouches[0].clientX - x0; x0 = null;
+    if(Math.abs(dx) > 40) show(cur.i + (dx < 0 ? 1 : -1));
+  });
+})();
+
+/* ---------------- scroll-scrubbed film ---------------- */
+var scroller = $('filmScroller'), vbox = $('videos'), dark = $('dark'), cap = document.querySelector('.film-cap');
+var TR = touch ? 0.18 : 0.15, TRC = touch ? 0.36 : 0.32;
+/* a shot that ends a chapter gets a longer hand-over, which holds on the next chapter's title card */
+var CUT = SHOTS.map(function(s, i){ return i < SHOTS.length-1 && SHOTS[i+1][2] !== s[2]; });
+var TRS = CUT.map(function(c){ return c ? TRC : TR; });
+var SPAN = SHOTS.map(function(s, i){ return Math.max(1.7, s[1]*0.16) / (1 - TRS[i]); });
+var CH_DESC = [
+  'Approaching the masterplan from the air.',
+  'Timber screens, white frames and the arched ground floor.',
+  'Water, gardens and places to play.',
+  'Row housing with cantilevered frames and carports.',
+  'Detached homes along the residential lane.',
+  'Rising over the finished community.'
+];
+var WORDS = ['one','two','three','four','five','six'];
+var OFF = [], acc = 0; SPAN.forEach(function(s){ OFF.push(acc); acc += s; });
+var TOTAL = acc;
+scroller.style.height = ((TOTAL + 1) * 100) + 'vh';
+
+var vids = SHOTS.map(function(s, i){
+  var v = el('video', {muted:'', playsinline:'', 'webkit-playsinline':'', preload:'none', 'aria-hidden':'true', disablepictureinpicture:''});
+  v.muted = true; v.playsInline = true;
+  v.dataset.src = FILM + 'shot-' + s[0] + (touch ? '-m' : '') + '.mp4';
+  v.dataset.poster = FILM + 'shot-' + s[0] + '.jpg';
+  vbox.appendChild(v);
+  return v;
+});
+function load(i){
+  var v = vids[i]; if(!v || v.dataset.loaded) return;
+  v.dataset.loaded = '1'; v.poster = v.dataset.poster; v.preload = (touch && i !== active) ? 'metadata' : 'auto'; v.src = v.dataset.src;
+  try { v.load(); } catch(e){}
+}
+
+/* chapter rail + chips */
+var chStart = [], chSpan = [];
+CHAPTERS.forEach(function(c, ci){
+  var first = -1, sum = 0;
+  SHOTS.forEach(function(s, i){ if(s[2]===ci){ if(first<0) first = i; sum += SPAN[i]; } });
+  chStart.push(first); chSpan.push(sum);
+});
+var railBtns = CHAPTERS.map(function(c, ci){
+  var b = el('button', {'aria-label':'Jump to chapter: '+c}); b.style.setProperty('--w', chSpan[ci].toFixed(2));
+  b.innerHTML = '<i></i><span>'+c+'</span>';
+  b.addEventListener('click', function(){ enterShot(chStart[ci]); });
+  $('rail').appendChild(b); return b;
+});
+CHAPTERS.forEach(function(c, ci){
+  var b = el('button', {'class':'chip'}, '<small>0'+(ci+1)+'</small>'+c);
+  b.addEventListener('click', function(){ enterShot(chStart[ci]); });
+  $('chapters').appendChild(b);
+});
+$('skipFilm').addEventListener('click', function(){ jumpTo(pageTop($('apartments'))); });
+if(touch) $('filmHow').textContent = 'Scroll through the film and each scene plays as you reach it. You can also jump to a chapter.';
+
+function easeIO(t){ return t<.5 ? 2*t*t : 1 - Math.pow(-2*t+2, 2)/2; }
+function clamp(x,a,b){ return x<a?a:(x>b?b:x); }
+
+var active = -1, shownCap = -1, ticking = false, pendingSeek = false, filmPaused = false;
+if(touch){
+  var fp = $('filmPause'); fp.hidden = false;
+  fp.addEventListener('click', function(){
+    filmPaused = !filmPaused;
+    fp.setAttribute('aria-pressed', filmPaused ? 'true':'false');
+    fp.setAttribute('aria-label', filmPaused ? 'Play film':'Pause film');
+    fp.innerHTML = filmPaused ? '<svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 2.5v11l9-5.5z"/></svg>' : '<svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><rect x="4" y="3" width="2.2" height="10"/><rect x="9.8" y="3" width="2.2" height="10"/></svg>';
+    if(active >= 0){ if(filmPaused) vids[active].pause(); else req(); }
+  });
+}
+/* controls show on activity, then step back so the film leads */
+(function(){
+  var st = $('stage'), t = 0;
+  function wake(){ st.classList.add('chrome'); clearTimeout(t); t = setTimeout(function(){ st.classList.remove('chrome'); }, 2400); }
+  st.addEventListener('pointermove', wake, {passive:true});
+  st.addEventListener('touchstart', wake, {passive:true});
+  st.addEventListener('focusin', wake);
+})();
+function filmY(){ return -scroller.getBoundingClientRect().top / window.innerHeight; }
+
+var inter = $('inter'), cardShown = -1;
+function setCard(ci, o){
+  if(o <= 0.001){ if(inter.style.visibility !== 'hidden'){ inter.style.visibility = 'hidden'; inter.style.opacity = 0; } return; }
+  if(ci !== cardShown){
+    cardShown = ci;
+    $('interNum').innerHTML = 'Chapter 0' + (ci + 1) + ' <span>of 0' + CHAPTERS.length + '</span>';
+    $('interTitle').textContent = CHAPTERS[ci];
+    $('interDesc').textContent = CH_DESC[ci];
+    var n = SHOTS.filter(function(s){ return s[2] === ci; }).length;
+    $('interMeta').textContent = n + (n === 1 ? ' scene' : ' scenes');
+  }
+  inter.style.visibility = 'visible';
+  inter.style.opacity = o.toFixed(3);
+  inter.style.setProperty('--o', o.toFixed(3));
+}
+function setCap(i){
+  if(i === shownCap) return; shownCap = i;
+  $('capCh').textContent = CHAPTERS[SHOTS[i][2]];
+  $('capTx').textContent = SHOTS[i][3];
+  $('count').textContent = SHOTS[i][0] + ' / ' + SHOTS.length;
+}
+
+function seek(v, t){
+  if(v.readyState < 1 || !isFinite(v.duration)) { pendingSeek = true; return; }
+  t = clamp(t, 0, v.duration - 0.05);
+  if(v.seeking){ pendingSeek = true; return; }
+  if(Math.abs(v.currentTime - t) > 0.015){
+    v.currentTime = t;
+  }
+}
+
+function render(){
+  ticking = false;
+  var y = filmY();
+  var inView = y > -1.2 && y < TOTAL + 1;
+  if(!inView){
+    if(active >= 0 && touch) vids[active].pause();
+    return;
+  }
+  var yy = clamp(y, 0, TOTAL - 1e-6);
+  var seg = 0; while(seg < SHOTS.length-1 && yy >= OFF[seg+1]) seg++;
+  var u = (yy - OFF[seg]) / SPAN[seg];
+  var tr = TRS[seg], cut = CUT[seg];
+  var p = Math.min(u / (1 - tr), 1);
+  var t = (u > 1 - tr && seg < SHOTS.length-1) ? (u - (1 - tr)) / tr : 0;
+  var idx = t > 0.5 ? seg + 1 : seg;
+  var d, kOut, kIn, card = 0, cardCh = SHOTS[seg][2];
+  if(t <= 0){ d = 0; kOut = 0; kIn = 0; }
+  else if(cut){
+    /* fade to black, hold on the chapter card, fade into the new chapter */
+    d = t < .3 ? easeIO(t/.3) : (t < .7 ? 1 : 1 - easeIO((t-.7)/.3));
+    kOut = easeIO(Math.min(t/.3, 1)); kIn = 1 - easeIO(clamp((t-.7)/.3, 0, 1));
+    card = t < .5 ? clamp((t-.2)/.16, 0, 1) : clamp((.8-t)/.16, 0, 1);
+    cardCh = SHOTS[seg+1][2];
+  } else {
+    d = t < .5 ? easeIO(t/.5) : 1 - easeIO((t-.5)/.5);
+    kOut = easeIO(Math.min(t/.5, 1)); kIn = 1 - easeIO(clamp((t-.5)/.5, 0, 1));
+  }
+  /* opening title card over the first moments of the film */
+  if(seg === 0 && t <= 0){ card = 1 - clamp((u - .05)/.12, 0, 1); cardCh = 0; d = Math.max(d, .72*card); }
+
+  /* lazy-load around the playhead */
+  for(var i=0;i<vids.length;i++){ if((OFF[i] - yy < 1.15 && OFF[i] + SPAN[i] > yy - 1.15) || Math.abs(i - idx) <= 1) load(i); }
+
+  if(idx !== active){
+    if(active >= 0){ vids[active].classList.remove('on'); vids[active].style.transform = ''; vids[active].style.filter = ''; if(touch) vids[active].pause(); }
+    active = idx; vids[active].classList.add('on');
+    if(touch){ var v0 = vids[active]; try{ v0.currentTime = 0; }catch(e){} if(!filmPaused){ var pr = v0.play(); if(pr && pr.catch) pr.catch(function(){}); } }
+  }
+  var v = vids[active];
+  if(!touch){ seek(v, idx === seg ? p * (v.duration || SHOTS[seg][1]) : 0); }
+  else if(!filmPaused && v.paused && !v.ended && y >= 0 && y < TOTAL){ var pr2 = v.play(); if(pr2 && pr2.catch) pr2.catch(function(){}); }
+
+  if(!reduce){
+    if(t > 0){ var k = idx === seg ? kOut : kIn; v.style.transform = 'scale('+(1+.05*k)+')'; v.style.filter = 'blur('+(10*k).toFixed(1)+'px)'; }
+    else { v.style.transform = ''; v.style.filter = ''; }
+  }
+  dark.style.opacity = d.toFixed(3);
+  setCap(idx);
+  var capO = Math.min(t > 0 ? 1 - Math.min(1, d*1.6) : 1, 1 - card);
+  cap.style.opacity = capO.toFixed(3);
+  setCard(cardCh, card);
+  $('hint').style.opacity = y < 0.25 ? 1 : 0;
+
+  /* rail */
+  var chCur = SHOTS[idx][2];
+  railBtns.forEach(function(b, ci){
+    var s = OFF[chStart[ci]], f = clamp((yy - s) / chSpan[ci], 0, 1);
+    b.firstChild.style.width = (f*100).toFixed(2)+'%';
+    if(ci === 0) $('prog').style.width = (yy / TOTAL * 100).toFixed(2) + '%';
+    b.classList.toggle('cur', ci === chCur);
+  });
+
+  if(pendingSeek){ pendingSeek = false; req(); }
+}
+function req(){ if(!ticking){ ticking = true; requestAnimationFrame(render); } }
+window.addEventListener('scroll', req, {passive:true});
+window.addEventListener('resize', req);
+vids.forEach(function(v){ v.addEventListener('loadedmetadata', req); v.addEventListener('seeked', function(){ if(pendingSeek) req(); }); });
+
+/* chapter hand-off: cover, teleport, wait for footage, lift */
+var cover = $('cover');
+function enterShot(i){
+  var target = pageTop(scroller) + (OFF[i] + 0.002) * window.innerHeight;
+  load(i); if(i+1 < vids.length) load(i+1);
+  if(reduce){ jumpTo(target); return; }
+  var ci = SHOTS[i][2];
+  $('coverImg').src = FILM + 'shot-' + SHOTS[i][0] + '.jpg';
+  $('coverNum').innerHTML = 'Chapter 0' + (ci + 1) + ' <span>of 0' + CHAPTERS.length + '</span>';
+  $('coverCh').textContent = CHAPTERS[ci];
+  $('coverTx').textContent = CH_DESC[ci];
+  var list = $('coverList'); list.innerHTML = '';
+  CHAPTERS.forEach(function(c, k){ var li = el('li', k === ci ? {'class':'cur'} : null, '<span>0'+(k+1)+'</span>'+c); list.appendChild(li); });
+  cover.classList.remove('ready'); cover.classList.add('on');
+  setTimeout(function(){
+    jumpTo(target); req();
+    var v = vids[i], t0 = Date.now();
+    (function wait(){
+      if(v.readyState >= 2 || Date.now() - t0 > 2600){ cover.classList.add('ready'); setTimeout(function(){ cover.classList.remove('on'); }, 700); return; }
+      setTimeout(wait, 80);
+    })();
+  }, 520);
+}
+
+/* nav: solid after hero; hide while inside the film */
+var lightSecs = [].slice.call(document.querySelectorAll('section.light'));
+function navState(){
+  var y = window.scrollY, fy = filmY();
+  nav.classList.toggle('solid', y > window.innerHeight * 0.6);
+  var lightUnder = false;
+  for(var k = 0; k < lightSecs.length; k++){ var r = lightSecs[k].getBoundingClientRect(); if(r.top <= 30 && r.bottom > 30){ lightUnder = true; break; } }
+  nav.classList.toggle('on-light', lightUnder && y > window.innerHeight * 0.6);
+  nav.classList.toggle('hide', fy > 0.02 && fy < TOTAL - 0.02 && !document.body.classList.contains('menu-open'));
+}
+window.addEventListener('scroll', navState, {passive:true});
+navState(); req();
+})();
+
+</script>
+</body>
+</html>
