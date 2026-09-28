@@ -1,0 +1,1339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>A2 Broiler Project — Ahinsan, Ashanti Region, Ghana</title>
+<meta name="description" content="An integrated broiler production and processing facility on a single 66.59-acre site at Ahinsan, Ashanti Region, Ghana. Thirty grow-out houses, a 3,000-bird-per-hour processing plant, cold storage and by-product rendering.">
+<meta name="author" content="Astrix+ | Interstellar Architects">
+<meta name="theme-color" content="#14180f">
+<meta name="color-scheme" content="dark light">
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/brand/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="canonical" href="https://acheampong-emmanuel.github.io/emmanuel-html-portfolio/projects/a2-broiler-project/">
+<meta name="apple-mobile-web-app-title" content="A2 Broiler Project">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="A2 Broiler Project">
+<meta property="og:title" content="A2 Broiler Project — Ahinsan, Ghana">
+<meta property="og:description" content="A complete broiler value chain on a single 66.59-acre site: thirty grow-out houses, a 3,000-bird-per-hour processing plant, cold storage and by-product rendering.">
+<meta property="og:image" content="https://acheampong-emmanuel.github.io/emmanuel-html-portfolio/projects/a2-broiler-project/assets/brand/share-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="A2 Broiler Project — Ahinsan, Ghana">
+<meta name="twitter:description" content="A complete broiler value chain on a single 66.59-acre site, from grow-out to cold store.">
+<meta name="twitter:image" content="https://acheampong-emmanuel.github.io/emmanuel-html-portfolio/projects/a2-broiler-project/assets/brand/share-card.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@90..110,400..700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/full/aerial-view-08.jpg" fetchpriority="high">
+<style>
+/* ============ TOKENS — sampled from the renders ============
+   charcoal green-black shadow, cool white cladding, field green  */
+:root{
+  --stone:#14180f; --stone-2:#1d211b; --stone-3:#282d26;
+  --concrete:#eceef0; --concrete-2:#dfe3e8;
+  --bg:var(--stone); --surface:var(--stone-2); --surface-2:var(--stone-3);
+  --ink:#f2f4f2; --ink-2:#d6dad3; --muted:#a3a89d; --line:rgba(242,244,242,.12);
+  --accent:#6ba85f; --on-accent:#14180f;
+  --display:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --text:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --ease:cubic-bezier(.32,.72,0,1); --t-fast:.3s; --t-med:.6s; --t-slow:1.2s;
+  --gut:clamp(16px,4vw,48px); --max:1280px; --radius:16px; --sec:clamp(96px,12vw,160px);
+  color-scheme:dark;
+}
+.light{--bg:var(--concrete); --surface:#f6f7f8; --surface-2:var(--concrete-2);
+  --ink:#171a15; --ink-2:#343830; --muted:#585d51; --line:rgba(23,26,21,.14);
+  --accent:#2f6b34; --on-accent:#fff; background:var(--bg); color:var(--ink); color-scheme:light}
+.light.alt{--bg:var(--concrete-2)}
+
+*{margin:0;padding:0;box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scrollbar-width:none;-ms-overflow-style:none;-webkit-text-size-adjust:100%}
+html::-webkit-scrollbar,body::-webkit-scrollbar{width:0;height:0;display:none}
+body{background:var(--bg);color:var(--ink);font-family:var(--text);font-size:17px;line-height:1.6;
+  overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body.lock{overflow:hidden}
+img,video{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+section{background:var(--bg);color:var(--ink);position:relative}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gut)}
+.pad{padding:var(--sec) 0}
+
+/* ============ TYPE — seven steps ============ */
+.label{font-size:13px;font-weight:600;letter-spacing:.01em;color:var(--accent)}
+.small{font-size:15px;color:var(--muted)}
+.body{font-size:17px;color:var(--ink-2)}
+.lede{font-size:clamp(20px,2.2vw,24px);font-weight:500;line-height:1.45;color:var(--ink-2);text-wrap:balance}
+h1,h2,h3{font-family:var(--display);font-weight:700;letter-spacing:-.035em;text-wrap:balance}
+h1{font-size:clamp(56px,9vw,144px);line-height:.92;letter-spacing:-.045em}
+h2{font-size:clamp(40px,5.6vw,80px);line-height:1.02}
+h3{font-size:clamp(26px,3vw,36px);line-height:1.1;font-weight:600;letter-spacing:-.03em}
+.num{font-variant-numeric:tabular-nums}
+
+/* ============ BUTTONS ============ */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;
+  padding:0 24px;border-radius:999px;font-size:15px;font-weight:500;font-family:var(--text);
+  border:none;cursor:pointer;transition:transform var(--t-fast) var(--ease),background var(--t-fast),opacity var(--t-fast)}
+.btn:active{transform:scale(.98)}
+.btn-primary{background:var(--ink);color:var(--bg)}
+.btn-primary:hover{opacity:.88}
+.btn-secondary{background:rgba(242,244,242,.12);color:var(--ink);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.light .btn-secondary{background:rgba(23,26,21,.1)}
+.btn-secondary:hover{background:rgba(242,244,242,.2)}
+.light .btn-secondary:hover{background:rgba(23,26,21,.16)}
+.tlink{color:var(--accent);font-size:15px;font-weight:500;display:inline-flex;align-items:center;gap:6px;min-height:44px}
+.tlink::after{content:"›";font-size:18px;transition:transform var(--t-fast) var(--ease)}
+.tlink:hover::after{transform:translateX(3px)}
+.chip{appearance:none;border:none;cursor:pointer;font-family:var(--text);font-size:14px;font-weight:500;
+  padding:10px 18px;min-height:44px;border-radius:999px;background:rgba(242,244,242,.1);color:var(--ink-2);
+  white-space:nowrap;transition:background var(--t-fast),color var(--t-fast)}
+.light .chip{background:rgba(23,26,21,.07)}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.iconbtn{width:44px;height:44px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;
+  border:none;cursor:pointer;background:rgba(242,244,242,.14);color:var(--ink);backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);font-size:15px;transition:background var(--t-fast)}
+.iconbtn:hover{background:rgba(242,244,242,.26)}
+
+/* ============ A11Y ============ */
+:focus{outline:none}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+#skip{position:absolute;left:-9999px;top:0;z-index:3000;background:var(--ink);color:var(--stone);
+  padding:14px 20px;border-radius:0 0 12px 0;font-size:14px;font-weight:600}
+#skip:focus{left:0;top:0}
+.sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+
+/* ============ NAV ============ */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:calc(12px + env(safe-area-inset-top)) 0 12px;
+  transition:background var(--t-med),backdrop-filter var(--t-med)}
+nav.solid{background:rgba(20,24,15,.72);backdrop-filter:saturate(1.4) blur(20px);-webkit-backdrop-filter:saturate(1.4) blur(20px)}
+nav.on-light{background:rgba(236,238,240,.76)}
+nav.on-light .brandtxt,nav.on-light .nlinks a,nav.on-light .burger{color:#171a15}
+nav.on-light .brandmark{filter:brightness(0) opacity(.88)}
+nav.hidden-film{opacity:0;pointer-events:none}
+.nrow{display:flex;align-items:center;justify-content:space-between;gap:16px;
+  max-width:var(--max);margin:0 auto;padding:0 var(--gut)}
+.brand{display:flex;align-items:center;gap:12px;min-height:44px}
+.brandmark{height:28px;width:auto;transition:filter var(--t-med)}
+.bdiv{width:1px;height:20px;background:var(--line)}
+.brandtxt{font-family:var(--display);font-size:15px;font-weight:600;letter-spacing:-.02em;color:var(--ink);white-space:nowrap}
+.nlinks{display:none;gap:28px}
+@media(min-width:1000px){.nlinks{display:flex}}
+.nlinks a{font-size:15px;color:var(--ink-2);min-height:44px;display:inline-flex;align-items:center;transition:color var(--t-fast)}
+.nlinks a:hover{color:var(--ink)}
+.burger{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border:none;
+  background:none;color:var(--ink);cursor:pointer;font-size:22px}
+@media(min-width:1000px){.burger{display:none}}
+#menu{position:fixed;inset:0;z-index:1200;background:var(--stone);display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:8px;opacity:0;visibility:hidden;transition:opacity var(--t-med) var(--ease),visibility var(--t-med)}
+#menu.open{opacity:1;visibility:visible}
+#menu a{font-family:var(--display);font-size:32px;font-weight:600;letter-spacing:-.03em;color:var(--ink);padding:10px 0;min-height:52px}
+#menu .iconbtn{position:absolute;top:calc(18px + env(safe-area-inset-top));right:var(--gut)}
+
+/* ============ HERO ============ */
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;
+  overflow:hidden;background:#0d1109}
+.hslides{position:absolute;inset:0}
+.hslide{position:absolute;inset:0;opacity:0;transition:opacity 1.6s var(--ease)}
+.hslide.on{opacity:1}
+.hslide img{width:100%;height:100%;object-fit:cover}
+.hveil{position:absolute;inset:0;background:
+  linear-gradient(180deg,rgba(13,17,9,.72) 0%,rgba(13,17,9,.18) 26%,rgba(13,17,9,.30) 58%,rgba(13,17,9,.92) 100%),
+  linear-gradient(100deg,rgba(13,17,9,.78) 0%,rgba(13,17,9,.34) 38%,rgba(13,17,9,0) 70%)}
+.hbody{position:relative;z-index:2;padding:0 var(--gut) clamp(28px,5vw,56px);max-width:var(--max);margin:0 auto;width:100%}
+.kicker{font-size:13px;font-weight:600;color:var(--ink-2);margin-bottom:18px}
+.hero h1{margin-bottom:22px;color:#fff}
+.hero h1 .accent{color:var(--accent)}
+.lmask{display:block;overflow:hidden}
+.lmask span{display:block;transform:translateY(100%);animation:rise 1.1s var(--ease) forwards}
+.lmask:nth-of-type(2) span{animation-delay:.12s}
+@keyframes rise{to{transform:translateY(0)}}
+.hero .lede{max-width:46ch;color:rgba(242,244,242,.9);margin-bottom:30px}
+.hbtns{display:flex;flex-wrap:wrap;gap:12px}
+.hbar{position:relative;z-index:2;border-top:1px solid rgba(242,244,242,.14);
+  background:rgba(13,17,9,.42);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+  padding:14px var(--gut) calc(14px + env(safe-area-inset-bottom))}
+.hbarin{max-width:var(--max);margin:0 auto;display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.hoffers{display:flex;gap:22px;flex:1;min-width:0;overflow-x:auto;scrollbar-width:none}
+.hoffers::-webkit-scrollbar{display:none}
+.hoffers a{font-size:14px;color:rgba(242,244,242,.82);white-space:nowrap;min-height:44px;display:inline-flex;align-items:center;gap:7px}
+.hoffers a:hover{color:#fff}
+.hoffers .dot{width:5px;height:5px;border-radius:50%;background:var(--accent);flex:none}
+.hmeta{display:flex;align-items:center;gap:14px}
+.hcap{font-size:13px;color:rgba(242,244,242,.7);white-space:nowrap}
+.hdots{display:flex;gap:7px}
+.hdots button{width:44px;height:44px;border:none;background:none;cursor:pointer;padding:0;display:grid;place-items:center}
+.hdots i{display:block;width:26px;height:2px;background:rgba(242,244,242,.3);transition:background var(--t-fast)}
+.hdots button[aria-current="true"] i{background:var(--accent)}
+@media(min-width:760px){.hdots button{width:30px}}
+
+/* ============ SECTION HEADS ============ */
+.shead{display:grid;gap:22px;margin-bottom:clamp(40px,6vw,72px)}
+@media(min-width:900px){.shead{grid-template-columns:1.05fr .95fr;gap:56px;align-items:end}}
+.shead h2{max-width:15ch}
+
+/* ============ MASTERPLAN ============ */
+.plan{position:relative;max-width:1520px;margin:0 auto;padding:0 var(--gut)}
+.planbox{position:relative;border-radius:24px;overflow:hidden;transform:scale(.9);transition:transform var(--t-slow) var(--ease)}
+.planbox.in{transform:scale(1)}
+.planbox img{width:100%;height:auto}
+.pin{position:absolute;left:var(--px);top:var(--py);transform:translate(-50%,-50%);width:44px;height:44px;
+  display:grid;place-items:center;border:none;background:none;cursor:pointer;padding:0;z-index:3}
+.pin i{width:16px;height:16px;border-radius:50%;background:var(--accent);color:var(--on-accent);
+  display:grid;place-items:center;font-size:10px;font-weight:700;font-style:normal;font-family:var(--display);position:relative;z-index:2}
+.pin::before{content:"";position:absolute;width:16px;height:16px;border-radius:50%;background:var(--accent);
+  animation:pulse 2.8s var(--ease) infinite}
+@keyframes pulse{0%{transform:scale(1);opacity:.6}70%{transform:scale(2.6);opacity:0}100%{opacity:0}}
+.pin b{position:absolute;left:28px;top:50%;transform:translateY(-50%);white-space:nowrap;font-size:13px;font-weight:600;
+  background:rgba(20,24,15,.72);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:#f2f4f2;
+  padding:7px 12px;border-radius:999px;opacity:0;transition:opacity var(--t-fast)}
+.pin:hover b,.pin:focus-visible b{opacity:1}
+.legend{display:none;margin-top:22px;gap:10px;flex-direction:column}
+.legend a{display:flex;gap:12px;align-items:center;font-size:15px;color:var(--ink-2);min-height:44px}
+.legend em{font-style:normal;width:22px;height:22px;border-radius:50%;background:var(--accent);color:var(--on-accent);
+  display:grid;place-items:center;font-size:11px;font-weight:700;font-family:var(--display);flex:none}
+@media(max-width:860px){.pin b{display:none}.legend{display:flex}}
+
+/* ============ SEQUENCE + FACTS ============ */
+.seq{display:grid;gap:34px;margin-top:clamp(56px,8vw,96px)}
+@media(min-width:800px){.seq{grid-template-columns:repeat(3,1fr);gap:44px}}
+.seq h3{margin:14px 0 10px}
+.facts{display:grid;grid-template-columns:repeat(2,1fr);gap:28px 20px;margin-top:clamp(56px,8vw,96px);
+  padding-top:40px;border-top:1px solid var(--line)}
+@media(min-width:800px){.facts{grid-template-columns:repeat(4,1fr)}}
+.facts .f{font-family:var(--display);font-size:clamp(34px,4.4vw,56px);font-weight:700;letter-spacing:-.04em;line-height:1}
+.facts .l{font-size:14px;color:var(--muted);margin-top:10px}
+
+/* ============ ZONES — pinned image, scrolling specs ============ */
+.zones{display:grid;gap:0}
+@media(min-width:900px){.zones{grid-template-columns:7fr 5fr;gap:clamp(40px,5vw,72px);align-items:start}}
+.zpin{display:none}
+@media(min-width:900px){
+  .zpin{display:block;position:sticky;top:0;height:100svh;padding:clamp(80px,9vw,120px) 0 clamp(40px,5vw,60px)}
+  .zstack{position:relative;width:100%;aspect-ratio:4/3;border-radius:var(--radius);overflow:hidden;cursor:pointer;background:var(--surface)}
+  .zlayer{position:absolute;inset:0;opacity:0;transition:opacity var(--t-med) var(--ease)}
+  .zlayer.on{opacity:1}
+  .zlayer img{width:100%;height:100%;object-fit:cover}
+  .zhint{margin-top:16px;font-size:14px;color:var(--muted)}
+}
+.zspecs{display:grid}
+.zitem{padding:clamp(40px,7vw,64px) 0;opacity:1;transition:opacity var(--t-med) var(--ease)}
+@media(min-width:900px){.zitem{min-height:78vh;display:flex;flex-direction:column;justify-content:center;opacity:.35}
+  .zitem.on{opacity:1}}
+.zitem h3 small{display:block;font-size:.58em;font-weight:500;color:var(--muted);margin-top:8px;letter-spacing:-.02em}
+.zsize{font-family:var(--display);font-size:clamp(44px,6vw,72px);font-weight:700;letter-spacing:-.045em;line-height:1;margin:22px 0}
+.zsize span{font-size:.4em;font-weight:600;color:var(--muted);letter-spacing:-.02em}
+.zitem dl{display:grid;grid-template-columns:auto 1fr;gap:12px 24px;padding:20px 0;
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:20px}
+.zitem dt{font-size:14px;color:var(--muted)}
+.zitem dd{font-size:15px;text-align:right;font-variant-numeric:tabular-nums}
+.zitem p{margin-bottom:18px}
+.zthumb{display:block;margin-bottom:22px;border-radius:var(--radius);overflow:hidden;aspect-ratio:4/3;background:var(--surface)}
+.zthumb img{width:100%;height:100%;object-fit:cover}
+@media(min-width:900px){.zthumb{display:none}}
+
+/* ============ SPOTLIGHT IMAGES ============ */
+@property --r{syntax:"<length>";inherits:true;initial-value:0px}
+.bw{--r:0px;transition:--r .8s var(--ease);position:relative;overflow:hidden}
+.bw .g{filter:saturate(.2) contrast(1.03) brightness(.97);transition:filter var(--t-med)}
+.bw .c{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  clip-path:circle(var(--r) at var(--x,50%) var(--y,50%));pointer-events:none}
+.bw.hot{--r:200px}
+.bw.lit,.bw:focus-within{--r:150vmax}
+#vcur{position:fixed;top:0;left:0;z-index:900;width:12px;height:12px;border-radius:50%;background:var(--accent);
+  pointer-events:none;transform:translate(-50%,-50%);display:grid;place-items:center;opacity:0;
+  transition:width var(--t-fast) var(--ease),height var(--t-fast) var(--ease),opacity var(--t-fast)}
+#vcur span{font-size:12px;font-weight:600;color:var(--on-accent);opacity:0;transition:opacity var(--t-fast)}
+#vcur.big{width:80px;height:80px}
+#vcur.big span{opacity:1}
+@media(hover:none),(pointer:coarse){#vcur{display:none}}
+
+/* ============ GALLERY ============ */
+.chiprow{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding-bottom:4px;margin-bottom:28px}
+.chiprow::-webkit-scrollbar{display:none}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:12px}
+.tile{position:relative;border-radius:var(--radius);overflow:hidden;cursor:pointer;background:var(--surface);
+  border:none;padding:0;display:block;width:100%}
+.tile img{width:100%;height:100%;object-fit:cover;transition:transform var(--t-slow) var(--ease)}
+.tile:hover img{transform:scale(1.04)}
+@media(hover:none){.tile:hover img{transform:none}}
+.tile figcaption{position:absolute;left:0;right:0;bottom:0;padding:16px;font-size:14px;color:#fff;text-align:left;
+  background:linear-gradient(180deg,transparent,rgba(13,17,9,.8));opacity:0;transition:opacity var(--t-fast)}
+.tile:hover figcaption,.tile:focus-visible figcaption{opacity:1}
+.swipenote{display:none;font-size:14px;color:var(--muted);margin-top:14px}
+@media(max-width:760px){
+  .grid{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;
+    margin-left:calc(var(--gut) * -1);margin-right:calc(var(--gut) * -1);padding:0 var(--gut)}
+  .grid::-webkit-scrollbar{display:none}
+  .tile{flex:0 0 86%;aspect-ratio:4/3;scroll-snap-align:center;grid-column:auto!important;grid-row:auto!important}
+  .tile figcaption{opacity:1}
+  .swipenote{display:block}
+}
+
+/* ============ LIGHTBOX ============ */
+.lb{position:fixed;inset:0;z-index:1500;background:rgba(9,11,7,.97);opacity:0;visibility:hidden;
+  transition:opacity var(--t-med) var(--ease),visibility var(--t-med);display:flex;flex-direction:column;
+  padding:calc(16px + env(safe-area-inset-top)) 0 calc(16px + env(safe-area-inset-bottom))}
+.lb.open{opacity:1;visibility:visible}
+.lbtop{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:0 var(--gut);margin-bottom:12px}
+.lbtitle{font-family:var(--display);font-size:17px;font-weight:600;letter-spacing:-.02em;color:#f2f4f2}
+.lbsub{font-size:13px;color:#a3a89d}
+.lbstage{flex:1;position:relative;min-height:0;margin:0 var(--gut)}
+.lbstage img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+.lbnav{position:absolute;top:50%;transform:translateY(-50%);z-index:2}
+.lbprev{left:8px}.lbnext{right:8px}
+@media(hover:none),(pointer:coarse){.lbnav{display:none}}
+.lbstrip{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding:14px var(--gut) 0}
+.lbstrip::-webkit-scrollbar{display:none}
+.lbthumb{flex:0 0 78px;height:52px;border-radius:8px;overflow:hidden;border:none;padding:0;cursor:pointer;
+  opacity:.4;transition:opacity var(--t-fast);background:none}
+.lbthumb.on{opacity:1}
+.lbthumb img{width:100%;height:100%;object-fit:cover}
+
+/* ============ FILM ============ */
+#filmsec{background:var(--stone);color:var(--ink)}
+#filmScroll{position:relative}
+.fstage{position:sticky;top:0;height:100svh;overflow:hidden;background:#0a0d07}
+.fshot{position:absolute;inset:0;opacity:0;visibility:hidden}
+.fshot.live{opacity:1;visibility:visible}
+.fmedia{position:absolute;inset:0;will-change:transform,filter}
+.fshot video,.fposter{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.fposter{z-index:1;transition:opacity var(--t-med) var(--ease)}
+.fshot.ready .fposter{opacity:0}
+.fshot video{z-index:0}
+.ftint{position:absolute;inset:0;z-index:2;pointer-events:none;background:
+  linear-gradient(180deg,rgba(10,13,7,.5) 0%,rgba(10,13,7,0) 26%,rgba(10,13,7,0) 52%,rgba(10,13,7,.9) 100%)}
+.fcap{position:absolute;left:0;bottom:0;z-index:4;padding:0 var(--gut) clamp(76px,9vw,104px);max-width:min(640px,64vw)}
+@media(max-width:860px){.fcap{max-width:100%;padding-bottom:104px}}
+.fcap .fk{font-size:13px;font-weight:600;color:var(--accent);margin-bottom:12px}
+.fcap h3{color:#fff;margin-bottom:12px}
+.fcap p{font-size:16px;color:rgba(242,244,242,.82);max-width:46ch}
+.fbar{position:absolute;left:0;right:0;bottom:0;height:3px;background:rgba(242,244,242,.14);z-index:7}
+.fbar i{display:block;height:100%;width:0;background:var(--accent)}
+.chrome-x{opacity:0;transition:opacity var(--t-med) var(--ease)}
+.fstage.act .chrome-x{opacity:1}
+.frail{position:absolute;left:var(--gut);top:50%;transform:translateY(-50%);z-index:6;display:flex;flex-direction:column;gap:9px}
+@media(max-width:1000px){.frail{display:none}}
+.frail button{width:22px;height:2px;border:none;padding:0;cursor:pointer;background:rgba(242,244,242,.24);transition:background var(--t-fast),width var(--t-med) var(--ease)}
+.frail button.on{background:var(--accent);width:36px}
+.fhud{position:absolute;right:var(--gut);top:calc(84px + env(safe-area-inset-top));z-index:6;display:flex;gap:8px;align-items:center}
+.fcount{font-size:13px;color:rgba(242,244,242,.6);font-variant-numeric:tabular-nums}
+.fskip{position:absolute;right:var(--gut);bottom:calc(24px + env(safe-area-inset-bottom));z-index:6}
+@media(hover:none),(pointer:coarse){.fstage .fskip,.fstage .fpause{opacity:1}}
+.fhint{position:absolute;left:var(--gut);bottom:calc(24px + env(safe-area-inset-bottom));z-index:6;
+  font-size:13px;color:rgba(242,244,242,.55);display:flex;align-items:center;gap:10px}
+.fhint i{display:block;width:1px;height:26px;background:linear-gradient(var(--accent),transparent);animation:cue 2.4s ease-in-out infinite;transform-origin:top}
+@keyframes cue{0%,100%{transform:scaleY(.35);opacity:.45}50%{transform:scaleY(1);opacity:1}}
+/* chapter title card */
+#fcard{position:absolute;inset:0;z-index:8;background:#0a0d07;opacity:0;visibility:hidden;pointer-events:none}
+#fcard.on{visibility:visible}
+#fcardin{position:absolute;inset:0;z-index:9;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;padding:0 var(--gut);opacity:0;pointer-events:none;visibility:hidden}
+#fcardin.on{visibility:visible}
+#fcardin .ck{font-size:13px;font-weight:600;letter-spacing:.02em;color:var(--accent);margin-bottom:20px}
+#fcardin .ct{font-family:var(--display);font-size:clamp(40px,7vw,104px);font-weight:700;letter-spacing:-.045em;line-height:.95;color:#fff;max-width:14ch}
+#fcardin .cl{font-size:15px;color:rgba(242,244,242,.62);margin-top:22px}
+@media(max-height:520px) and (orientation:landscape){#fcardin .ct{font-size:clamp(32px,7vw,54px)}}
+/* jump cover */
+#fjump{position:fixed;inset:0;z-index:1400;opacity:0;visibility:hidden;background:#0a0d07;
+  transition:opacity var(--t-med) var(--ease),visibility var(--t-med)}
+#fjump.on{opacity:1;visibility:visible}
+#fjump.out{opacity:0}
+#fjump .jbg{position:absolute;inset:0;overflow:hidden}
+#fjump .jbg img{width:100%;height:100%;object-fit:cover;opacity:.45;transform:scale(1.08);
+  transition:transform 1.8s var(--ease),opacity var(--t-med)}
+#fjump.on .jbg img{transform:scale(1.01);opacity:.8}
+#fjump .jgrad{position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,13,7,.92) 0%,rgba(10,13,7,.5) 55%,rgba(10,13,7,.2) 100%)}
+#fjump .jin{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:0 var(--gut);max-width:var(--max);margin:0 auto}
+#fjump .jk,#fjump .jt,#fjump .jd,#fjump .jlist{opacity:0;transform:translateY(16px);transition:opacity var(--t-med) var(--ease),transform var(--t-med) var(--ease)}
+#fjump.on .jk{opacity:1;transform:none;transition-delay:.06s}
+#fjump.on .jt{opacity:1;transform:none;transition-delay:.14s}
+#fjump.on .jd{opacity:1;transform:none;transition-delay:.22s}
+#fjump.on .jlist{opacity:1;transform:none;transition-delay:.3s}
+#fjump .jk{font-size:13px;font-weight:600;color:var(--accent);margin-bottom:16px}
+#fjump .jt{font-family:var(--display);font-size:clamp(40px,6.4vw,88px);font-weight:700;letter-spacing:-.045em;line-height:.96;color:#fff;max-width:12ch}
+#fjump .jd{font-size:17px;color:rgba(242,244,242,.76);max-width:44ch;margin-top:20px}
+#fjump .jlist{display:flex;flex-wrap:wrap;gap:8px;margin-top:34px}
+#fjump .jlist span{font-size:13px;padding:8px 14px;border-radius:999px;background:rgba(242,244,242,.1);color:rgba(242,244,242,.6)}
+#fjump .jlist span.cur{background:var(--accent);color:var(--on-accent);font-weight:600}
+#fjump .jload{position:absolute;left:0;right:0;bottom:0;height:3px;background:rgba(242,244,242,.14)}
+#fjump .jload i{display:block;height:100%;width:0;background:var(--accent);transition:width .5s linear}
+
+/* ============ CLOSING + FOOTER ============ */
+.closing{position:relative;min-height:88svh;display:flex;align-items:center;overflow:hidden;background:#0d1109}
+.closing .cbg{position:absolute;inset:0}
+.closing .cbg img{width:100%;height:100%;object-fit:cover}
+.closing .cgrad{position:absolute;inset:0;background:linear-gradient(90deg,rgba(13,17,9,.94) 0%,rgba(13,17,9,.66) 52%,rgba(13,17,9,.3) 100%)}
+.cin{position:relative;z-index:2;display:grid;gap:44px;width:100%;max-width:var(--max);margin:0 auto;padding:clamp(72px,9vw,112px) var(--gut)}
+@media(min-width:900px){.cin{grid-template-columns:1.08fr .92fr;gap:64px;align-items:center}}
+.closing h2{color:#fff;max-width:14ch}
+.cbtns{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.glance{background:rgba(242,244,242,.08);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+  border-radius:20px;padding:clamp(24px,3vw,34px)}
+.glance .label{margin-bottom:20px}
+.glance a{display:flex;justify-content:space-between;align-items:baseline;gap:18px;padding:13px 0;
+  border-bottom:1px solid rgba(242,244,242,.12);font-size:15px;color:rgba(242,244,242,.9);min-height:44px}
+.glance a:last-of-type{border-bottom:none}
+.glance a b{font-family:var(--display);font-weight:600;font-variant-numeric:tabular-nums;white-space:nowrap}
+.glance p{font-size:14px;color:rgba(242,244,242,.6);margin-top:18px}
+footer{background:var(--stone-2);color:var(--ink);padding:clamp(56px,7vw,88px) 0 calc(28px + env(safe-area-inset-bottom))}
+.frow{display:grid;gap:40px;margin-bottom:48px}
+@media(min-width:820px){.frow{grid-template-columns:1.4fr 1fr 1fr 1.2fr}}
+.fcol h5{font-size:13px;font-weight:600;color:var(--muted);margin-bottom:16px}
+.fcol a{display:block;font-size:15px;color:var(--ink-2);padding:7px 0;min-height:40px;transition:color var(--t-fast)}
+.fcol a:hover{color:var(--ink)}
+.credit img{height:44px;width:auto;opacity:.9;margin-top:10px}
+.fbot{display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center;
+  padding-top:26px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+
+@media(max-height:520px) and (orientation:landscape){
+  .hero{min-height:auto;padding-top:96px}
+  .hero h1{font-size:clamp(40px,7vw,64px)}
+  .hero .lede{display:none}
+  .fcap h3{font-size:clamp(22px,4vw,32px)}
+  .fcap p{display:none}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition-duration:.01ms!important}
+  .lmask span{transform:none}
+}
+</style>
+</head>
+<body>
+
+<a href="#overview" id="skip">Skip to content</a>
+<div id="vcur" aria-hidden="true"><span>View</span></div>
+
+<nav id="nav">
+  <div class="nrow">
+    <a href="#top" class="brand">
+      <img class="brandmark" src="assets/brand/a2-agro-allied-logo.png" alt="A2 Agro Allied">
+      <span class="bdiv" aria-hidden="true"></span>
+      <span class="brandtxt">A2 Broiler Project</span>
+    </a>
+    <div class="nlinks">
+      <a href="#overview">Overview</a>
+      <a href="#filmsec">Film</a>
+      <a href="#zones">Zones</a>
+      <a href="#process">Process</a>
+      <a href="#gallery">Renders</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">☰</button>
+  </div>
+</nav>
+
+<div id="menu">
+  <button class="iconbtn" id="menuClose" aria-label="Close menu">✕</button>
+  <a href="#overview">Overview</a>
+  <a href="#filmsec">Film</a>
+  <a href="#zones">Zones</a>
+  <a href="#process">Process</a>
+  <a href="#gallery">Renders</a>
+</div>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="top">
+  <div class="hslides" id="hslides" aria-hidden="true"></div>
+  <div class="hveil"></div>
+  <div class="hbody">
+    <div class="kicker">Ahinsan · Ashanti Region · Ghana</div>
+    <h1>
+      <span class="lmask"><span>One site.</span></span>
+      <span class="lmask"><span>Every <span class="accent">stage</span>.</span></span>
+    </h1>
+    <p class="lede">A complete broiler value chain on a single 66.59-acre landholding. Birds are grown, processed, chilled and rendered without ever leaving the property.</p>
+    <div class="hbtns">
+      <a href="#filmsec" class="btn btn-primary" data-film="administration">Watch the film</a>
+      <a href="#zones" class="btn btn-secondary">Explore the site</a>
+    </div>
+  </div>
+  <div class="hbar">
+    <div class="hbarin">
+      <div class="hoffers">
+        <a href="#zones"><span class="dot"></span>30 grow-out houses</a>
+        <a href="#process"><span class="dot"></span>3,000 birds per hour</a>
+        <a href="#overview"><span class="dot"></span>66.59-acre landholding</a>
+      </div>
+      <div class="hmeta">
+        <span class="hcap" id="hcap">Aerial view</span>
+        <div class="hdots" id="hdots" role="tablist" aria-label="Hero images"></div>
+        <button class="iconbtn" id="hpause" aria-label="Pause slideshow">❚❚</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ OVERVIEW (light) ============ -->
+<section class="pad light" id="overview">
+  <div class="wrap">
+    <div class="shead">
+      <h2>A value chain that never leaves the property.</h2>
+      <div>
+        <p class="lede">What does it change when nothing has to travel?</p>
+        <p class="body" style="margin-top:16px">Live birds move from the farm zone to the processing plant on one short internal journey. No public road, no second handling, and a biosecurity line drawn once at the perimeter rather than at every gate.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="plan">
+    <div class="planbox" id="planbox">
+      <img src="assets/full/top-view-01.jpg" srcset="assets/thumb/top-view-01.jpg 640w, assets/full/top-view-01.jpg 2000w" sizes="(max-width:860px) 100vw, 90vw" alt="Master site plan of the A2 Broiler Project" loading="lazy" decoding="async">
+      <button class="pin" style="--px:76.5%;--py:31%" data-go="#zones"><i>1</i><b>Broiler farm · 46.61 ac</b></button>
+      <button class="pin" style="--px:11.5%;--py:54.5%" data-go="#zones"><i>2</i><b>Processing plant · 4.78 ac</b></button>
+      <button class="pin" style="--px:16%;--py:48%" data-go="#zones"><i>3</i><b>Rendering house · 3.74 ac</b></button>
+      <button class="pin" style="--px:6.5%;--py:43%" data-go="#zones"><i>4</i><b>Administration</b></button>
+      <button class="pin" style="--px:51%;--py:36.5%" data-go="#zones"><i>5</i><b>Warehouse &amp; cold rooms</b></button>
+      <button class="pin" style="--px:49%;--py:31%" data-go="#zones"><i>6</i><b>Workers' zone · 6.12 ac</b></button>
+      <button class="pin" style="--px:47%;--py:57%" data-go="#zones"><i>7</i><b>Planted buffer · 5.95 ac</b></button>
+    </div>
+    <div class="legend">
+      <a href="#zones"><em>1</em>Broiler farm · 46.61 ac</a>
+      <a href="#zones"><em>2</em>Processing plant · 4.78 ac</a>
+      <a href="#zones"><em>3</em>Rendering house · 3.74 ac</a>
+      <a href="#zones"><em>4</em>Administration</a>
+      <a href="#zones"><em>5</em>Warehouse &amp; cold rooms</a>
+      <a href="#zones"><em>6</em>Workers' zone · 6.12 ac</a>
+      <a href="#zones"><em>7</em>Planted buffer · 5.95 ac</a>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="seq">
+      <div>
+        <div class="label">Approach</div>
+        <h3>One opening in the line.</h3>
+        <p class="body">Every vehicle, visitor and delivery clears security, registration, disinfection and the weighbridge at a single gatehouse off the Dompoase–Agogose road.</p>
+      </div>
+      <div>
+        <div class="label">Threshold</div>
+        <h3>Clean and dirty never cross.</h3>
+        <p class="body">Production sits west, processing and rendering east beside the road. Raw material and finished product run on separate aprons that never meet.</p>
+      </div>
+      <div>
+        <div class="label">Release</div>
+        <h3>A buffer, then home.</h3>
+        <p class="body">A 5.95-acre planted windbreak screens the workers' village from the line, so the people who run the site around the clock live apart from it.</p>
+      </div>
+    </div>
+
+    <div class="facts">
+      <div><div class="f num">66.59</div><div class="l">Acres, total site</div></div>
+      <div><div class="f num">30</div><div class="l">Broiler houses</div></div>
+      <div><div class="f num">3,000</div><div class="l">Birds per hour</div></div>
+      <div><div class="f num">1,050<span style="font-size:.5em"> m³</span></div><div class="l">Water storage</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FILM (dark) ============ -->
+<section id="filmsec">
+  <div class="wrap pad" style="padding-bottom:0">
+    <div class="shead">
+      <h2>Scroll to move the camera.</h2>
+      <div>
+        <p class="lede">Twelve passes across the site, cut into six chapters.</p>
+        <p class="body" style="margin-top:16px">Your scroll drives the footage. Move down and the camera goes forward; move back up and it reverses.</p>
+      </div>
+    </div>
+  </div>
+  <div id="filmScroll"><div class="fstage" id="fstage"></div></div>
+</section>
+
+<!-- ============ ZONES (dark) ============ -->
+<section class="pad" id="zones">
+  <div class="wrap">
+    <div class="shead">
+      <div class="label">The site</div>
+      <h2>Seven zones, one line of flow.</h2>
+    </div>
+    <div class="zones">
+      <div class="zpin">
+        <div class="zstack" id="zstack" role="button" tabindex="0" aria-label="Open renders for the active zone"></div>
+        <p class="zhint">Click the image to open that zone's renders.</p>
+      </div>
+      <div class="zspecs" id="zspecs"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESS (light) ============ -->
+<section class="pad light alt" id="process">
+  <div class="wrap">
+    <div class="shead">
+      <div class="label">Poultry processing plant</div>
+      <h2>Three thousand birds an hour.</h2>
+    </div>
+    <div class="seq" style="margin-top:0;grid-template-columns:repeat(auto-fit,minmax(210px,1fr))">
+      <div><div class="label num">01</div><h3>Receiving</h3><p class="body">Live-bird receiving platform at the plant.</p></div>
+      <div><div class="label num">02</div><h3>Slaughter</h3><p class="body">Bleeding, scalding and dehairing.</p></div>
+      <div><div class="label num">03</div><h3>Evisceration</h3><p class="body">Full evisceration line.</p></div>
+      <div><div class="label num">04</div><h3>Pre-chill</h3><p class="body">Immediate pre-cooling.</p></div>
+      <div><div class="label num">05</div><h3>Cut-up</h3><p class="body">Carcass, cut-up and packing.</p></div>
+      <div><div class="label num">06</div><h3>Freezing</h3><p class="body">Blast freezing at −35 °C.</p></div>
+      <div><div class="label num">07</div><h3>Cold store</h3><p class="body">Three rooms at 170 t, held at −18 °C.</p></div>
+    </div>
+
+    <div class="shead" style="margin-top:clamp(72px,9vw,120px)">
+      <div class="label">Value recovered</div>
+      <h2>Nothing leaves as waste.</h2>
+    </div>
+    <div class="seq" style="margin-top:0;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))">
+      <div><h3>Meat &amp; bone meal</h3><p class="body">Protein feed input.</p></div>
+      <div><h3>Feather meal</h3><p class="body">High-protein feed input.</p></div>
+      <div><h3>Blood meal</h3><p class="body">Feed and fertiliser.</p></div>
+      <div><h3>Poultry oil &amp; fat</h3><p class="body">Feed, biodiesel, industry.</p></div>
+      <div><h3>Treated effluent</h3><p class="body">Screened, treated and reused on site.</p></div>
+    </div>
+
+    <div class="facts">
+      <div><div class="f num">−35<span style="font-size:.5em"> °C</span></div><div class="l">Blast freezing</div></div>
+      <div><div class="f num">3 × 170<span style="font-size:.5em"> t</span></div><div class="l">Cold storage</div></div>
+      <div><div class="f num">60,000<span style="font-size:.5em"> m²</span></div><div class="l">Roof harvesting rain</div></div>
+      <div><div class="f num">5.95</div><div class="l">Acres planted buffer</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY (dark) ============ -->
+<section class="pad" id="gallery">
+  <div class="wrap">
+    <div class="shead">
+      <div class="label">Renders</div>
+      <h2>Every view of the facility.</h2>
+    </div>
+    <div class="chiprow" id="chips" role="group" aria-label="Filter renders"></div>
+    <div class="grid" id="grid"></div>
+    <p class="swipenote">Swipe for more images.</p>
+  </div>
+</section>
+
+<!-- ============ CLOSING ============ -->
+<section class="closing" id="closing">
+  <div class="cbg"><img src="assets/full/aerial-view-03.jpg" alt="" loading="lazy" decoding="async"></div>
+  <div class="cgrad"></div>
+  <div class="cin">
+    <div>
+      <div class="label">Ahinsan, Ashanti Region</div>
+      <h2 style="margin-top:14px">This is where the value chain closes.</h2>
+      <div class="cbtns" id="cbtns"></div>
+    </div>
+    <div class="glance">
+      <div class="label">At a glance</div>
+      <a href="#zones">Broiler farm <b class="num">46.61 ac</b></a>
+      <a href="#zones">Slaughtering zone <b class="num">4.78 ac</b></a>
+      <a href="#zones">Rendering house <b class="num">3.74 ac</b></a>
+      <a href="#zones">Workers' zone <b class="num">6.12 ac</b></a>
+      <a href="#zones">Planted buffer <b class="num">5.95 ac</b></a>
+      <a href="#zones">Sand-wave reserve <b class="num">15.64 ac</b></a>
+      <p>Administration with QC laboratory and a 160-seat training centre, warehouse and cold rooms, canteen and clubhouse, and four executive bungalows.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="frow">
+      <div class="fcol">
+        <div class="brandtxt" style="font-size:17px">A2 Broiler Project</div>
+        <p class="small" style="margin-top:10px">Ahinsan, off the Dompoase–Agogose road,<br>Ashanti Region, Ghana.</p>
+      </div>
+      <div class="fcol">
+        <h5>Explore</h5>
+        <a href="#overview">Overview</a>
+        <a href="#filmsec">The film</a>
+        <a href="#zones">Zones</a>
+      </div>
+      <div class="fcol">
+        <h5>Detail</h5>
+        <a href="#process">Process</a>
+        <a href="#gallery">Renders</a>
+        <a href="#top">Back to top</a>
+      </div>
+      <div class="fcol credit">
+        <h5>Presentation by</h5>
+        <img src="assets/brand/astrix-logo-white.png" alt="Astrix+ | Interstellar Architects">
+      </div>
+    </div>
+    <div class="fbot">
+      <div>© <span id="yr"></span> A2 Agro Allied</div>
+      <div>Artist's impressions. The design is current and subject to change.</div>
+    </div>
+  </div>
+</footer>
+
+<!-- lightbox -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Render viewer">
+  <div class="lbtop">
+    <div><div class="lbtitle" id="lbTitle"></div><div class="lbsub" id="lbSub"></div></div>
+    <button class="iconbtn" id="lbClose" aria-label="Close viewer">✕</button>
+  </div>
+  <div class="lbstage">
+    <img id="lbImg" alt="">
+    <button class="iconbtn lbnav lbprev" id="lbPrev" aria-label="Previous render">‹</button>
+    <button class="iconbtn lbnav lbnext" id="lbNext" aria-label="Next render">›</button>
+  </div>
+  <div class="lbstrip" id="lbStrip"></div>
+</div>
+
+<!-- film chapter jump cover -->
+<div id="fjump" aria-hidden="true">
+  <div class="jbg"><img alt=""></div>
+  <div class="jgrad"></div>
+  <div class="jin">
+    <div class="jk"></div>
+    <div class="jt"></div>
+    <div class="jd"></div>
+    <div class="jlist"></div>
+  </div>
+  <div class="jload"><i></i></div>
+</div>
+
+<script>
+/* =====================================================================
+   A2 Broiler Project — presentation site
+   Material design system. Facts carried from the project brief.
+   ===================================================================== */
+const $  = id => document.getElementById(id);
+const esc = s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+const touch  = matchMedia('(hover: none), (pointer: coarse)').matches;
+const slowMo = matchMedia('(prefers-reduced-motion: reduce)').matches;
+$('yr').textContent = new Date().getFullYear();
+
+/* Never invent these. Empty = fall back to navigation pills. */
+const CONTACT = { email:'', phone:'', whatsapp:'' };
+
+/* ---------- DATA ---------- */
+const RENDERS = [
+  ['entrance','main-entrance-01','Main Entrance','The approach from the Dompoase–Agogose road.'],
+  ['entrance','main-entrance-02','Main Entrance','Dusk at the gate, with the vertical screen wall.'],
+  ['entrance','main-entrance-03','Main Entrance','Security, registration and disinfection in one building.'],
+  ['entrance','main-entrance-04','Main Entrance','Wheel wash and weighbridge inside the line.'],
+  ['admin','administration-01','Administration','A low white mass on a landscaped forecourt.'],
+  ['admin','administration-02','Administration','The green entrance wall carries the A2 mark.'],
+  ['admin','administration-03','Administration','The office wing, with the QC laboratory inside.'],
+  ['admin','administration-04','Administration','Parking, drop-off and the 160-seat training centre.'],
+  ['farm','penhouse-01','Pen House','16 m × 120 m, 2.4 m eaves to a 4.32 m ridge.'],
+  ['farm','penhouse-02','Pen House','Banks of 1.4 m gable fans drive tunnel ventilation.'],
+  ['farm','penhouse-03','Pen House','Oriented east–west so sun lands on roof, not wall.'],
+  ['farm','penhouse-streetview-01','Pen Houses','Elevated 5,000 L tanks on 6 m towers.'],
+  ['farm','penhouse-streetview-02','Pen Houses','Ten metres between houses, one controlled farm gate.'],
+  ['slaughter','slaughter-house-01','Processing Plant','23 m × 94 m at the eastern edge of the site.'],
+  ['slaughter','slaughter-house-02','Processing Plant','Live-bird receiving, one short internal journey.'],
+  ['slaughter','slaughter-house-03','Processing Plant','The dispatch face and the refrigerated fleet.'],
+  ['slaughter','slaughter-house-04','Processing Plant','An apron sized for a 16.5 m articulated truck.'],
+  ['slaughter','slaughter-house-05','Processing Plant','Service elevation, with the cold chain behind.'],
+  ['slaughter','slaughter-house-06','Processing Plant','The plant in its landscape setting.'],
+  ['rendering','rendering-house-01','Rendering House','About 6,000 m² organised as a one-way line.'],
+  ['rendering','rendering-house-02','Rendering House','Receiving, metres from the slaughterhouse.'],
+  ['rendering','rendering-house-03','Rendering House','Utilities, odour control and trench drains.'],
+  ['warehouse','warehouse-01','Warehouse','Cold rooms, power rooms and mezzanine offices.'],
+  ['warehouse','warehouse-02','Warehouse','Numbered bays with dedicated apron space.'],
+  ['warehouse','warehouse-03','Warehouse','The rear elevation and service yard.'],
+  ['warehouse','warehouse-and-cafeteria-streetview-01','Warehouse &amp; Cafeteria','Facing each other across the internal street.'],
+  ['warehouse','warehouse-and-cafeteria-streetview-02','Warehouse &amp; Cafeteria','Looking toward the staff accommodation.'],
+  ['cafeteria','cafeteria-01','Cafeteria','Kitchen, dining and a clubhouse.'],
+  ['cafeteria','cafeteria-02','Cafeteria','Timber screening and planting to the yard.'],
+  ['cafeteria','cafeteria-03','Cafeteria','Dining opens onto landscaping, not the apron.'],
+  ['cafeteria','cafeteria-04','Cafeteria','The approach from staff parking.'],
+  ['housing','staff-accomodation-type01-01','Staff Accommodation','Type 01, screened by the planted buffer.'],
+  ['housing','staff-accomodation-type01-02','Staff Accommodation','Type 01, the courtyard side.'],
+  ['housing','staff-accomodation-type02-01','Staff Accommodation','Type 02, with 16 to 20 rooms.'],
+  ['housing','staff-accomodation-type02-02','Staff Accommodation','Type 02, the entrance elevation.'],
+  ['housing','staff-accomodation-type02-03','Staff Accommodation','Type 02, looking along the block.'],
+  ['housing','staff-accomodation-streetview-01','Staff Accommodation','The workers’ village street.'],
+  ['amenities','shared-washroom-01','Shared Washroom','Welfare provision for the production zone.'],
+  ['amenities','transition-space-between-rendering-and-slaughter-house-01','Transition Space','Between rendering and the slaughterhouse.'],
+  ['aerial','aerial-view-01','Aerial View','The complex from above.'],
+  ['aerial','aerial-view-02','Aerial View','The farm zone and its clusters.'],
+  ['aerial','aerial-view-03','Aerial View','Night over the whole landholding.'],
+  ['aerial','aerial-view-04','Aerial View','Processing and rendering beside the road.'],
+  ['aerial','aerial-view-05','Aerial View','The workers’ zone behind the buffer.'],
+  ['aerial','aerial-view-06','Aerial View','The full 66.59-acre site.'],
+  ['aerial','aerial-view-07','Aerial View','Looking across the grow-out clusters.'],
+  ['aerial','aerial-view-08','Aerial View','The establishing view of the complex.'],
+  ['aerial','top-view-01','Master Site Plan','The zoning diagram from directly above.']
+];
+const CATS = {
+  entrance:'Main Entrance', admin:'Administration', farm:'Pen Houses',
+  slaughter:'Processing Plant', rendering:'Rendering House',
+  warehouse:'Warehouse', cafeteria:'Cafeteria', housing:'Staff Accommodation',
+  amenities:'Amenities', aerial:'Aerial &amp; Site Plan'
+};
+
+const ZONES = [
+  {cat:'farm', img:'penhouse-streetview-01', label:'Production', name:'Broiler farm', sub:'Thirty grow-out houses',
+   size:'46.61', unit:'acres',
+   dl:[['Houses','30 units'],['House size','16 m × 120 m'],['Orientation','East–west'],['Ventilation','Tunnel, 1.4 m gable fans']],
+   text:'Climate-managed houses in operational clusters, stocked in rotation so the line never waits for birds. Elevated 5,000 L tanks on 6 m towers give every house gravity-fed water redundancy.'},
+  {cat:'slaughter', img:'slaughter-house-03', label:'Processing', name:'Processing plant', sub:'Live receiving to cold store',
+   size:'4.78', unit:'acres',
+   dl:[['Capacity','3,000 birds / hr'],['Footprint','23 m × 94 m'],['Blast freezing','−35 °C'],['Cold store','3 × 170 t']],
+   text:'Positioned at the eastern edge so finished product leaves the site without ever crossing the farm. Clean and dirty platforms never share an apron.'},
+  {cat:'rendering', img:'rendering-house-01', label:'By-products', name:'Rendering house', sub:'A one-way line',
+   size:'3.74', unit:'acres',
+   dl:[['Floor area','± 6,000 m²'],['Flow','One-way'],['Exhaust','Ducted odour control'],['Outputs','Four meals plus oil']],
+   text:'Raw material never crosses finished product. By-products return to the farm as meat and bone meal, feather meal, blood meal and poultry oil.'},
+  {cat:'admin', img:'administration-02', label:'Operations', name:'Administration', sub:'The civic face',
+   size:'160', unit:'seat training centre',
+   dl:[['Includes','QC laboratory'],['Also','Reception and pay point'],['Retail','On-site shop'],['Position','Beside the main gate']],
+   text:'Quality control sits beside management rather than buried in the plant. The training centre gives the site somewhere to build local skills.'},
+  {cat:'warehouse', img:'warehouse-02', label:'Storage', name:'Warehouse &amp; cold rooms', sub:'Dispatch and storage',
+   size:'3', unit:'cold rooms',
+   dl:[['Bays','Numbered, dedicated apron'],['Includes','Power rooms'],['Offices','Mezzanine'],['Serves','Refrigerated fleet']],
+   text:'Cold rooms, power rooms and mezzanine offices in one line, sized around the fleet that serves them, and held off the clean dispatch route.'},
+  {cat:'housing', img:'staff-accomodation-type01-01', label:'People', name:'Workers’ zone', sub:'Accommodation and welfare',
+   size:'6.12', unit:'acres',
+   dl:[['Rooms','16–20 per block'],['Bungalows','4 executive'],['Welfare','Canteen and clubhouse'],['Screening','5.95-acre buffer']],
+   text:'Accommodation for the workforce that runs the site around the clock, screened from production by the full width of the planted buffer.'},
+  {cat:'aerial', img:'aerial-view-06', label:'Land', name:'Buffer &amp; reserve', sub:'What is left unbuilt',
+   size:'21.59', unit:'acres held open',
+   dl:[['Planted buffer','5.95 acres'],['Sand-wave reserve','15.64 acres'],['Role','Windbreak and habitat'],['Rainwater','± 60,000 m² of roof']],
+   text:'The buffer works as windbreak and habitat as well as screening. Rainwater is harvested from the roofs and treated effluent is reused on site.'}
+];
+
+/* Film: 12 shots grouped into 6 chapters. A shot that ends a chapter
+   gets the longer hand-over and a title card. */
+const CHAPTERS = [
+  {n:'01', t:'Arrival',        d:'The road in, the gate, and the building that runs the place.'},
+  {n:'02', t:'Grow-Out',       d:'Thirty houses across forty-six acres of managed climate.'},
+  {n:'03', t:'Processing',     d:'Three thousand birds an hour, receiving through cold store.'},
+  {n:'04', t:'By-Products',    d:'A one-way line that turns what is left into feed.'},
+  {n:'05', t:'Support',        d:'Storage, dispatch and the places people eat.'},
+  {n:'06', t:'People & Site',  d:'Where the workforce lives, and the whole landholding at once.'}
+];
+const SHOTS = [
+  {f:'administration',         d:11.05,  ch:0, t:'Operations',     h:'Administration',            c:'Reception, pay point, offices, a QC laboratory beside management, and a 160-seat training centre.'},
+  {f:'streetview',             d:15.067, ch:0, t:'Approach',       h:'Street view',               c:'The complex reads as a single continuous frontage long before the gate.'},
+  {f:'main-entrance',          d:6.05,   ch:0, t:'Arrival',        h:'Main entrance',             c:'The single controlled opening in the perimeter. Every vehicle clears each step without a second stop.', end:true},
+  {f:'penhouse',               d:18.067, ch:1, t:'Grow-out',       h:'Pen houses',                c:'Thirty climate-managed houses, each 16 by 120 metres, tunnel-ventilated and oriented east–west.', end:true},
+  {f:'slaughter-house-01',     d:9.05,   ch:2, t:'Processing',     h:'Processing plant',          c:'A 23 by 94 metre plant at the eastern edge. Live birds arrive on one short internal journey.'},
+  {f:'slaughter-house-02',     d:9.05,   ch:2, t:'Cold chain',     h:'Dispatch &amp; cold store', c:'Pre-chilling through blast freezing into three cold stores. Clean and dirty platforms never share an apron.', end:true},
+  {f:'rendering-house',        d:6.05,   ch:3, t:'By-products',    h:'Rendering house',           c:'About 6,000 m² organised so raw material never crosses finished product.', end:true},
+  {f:'warehouse',              d:12.067, ch:4, t:'Storage',        h:'Warehouse',                 c:'Cold rooms, power rooms and mezzanine offices in one line, with numbered bays.'},
+  {f:'cafeteria',              d:12.067, ch:4, t:'Welfare',        h:'Cafeteria',                 c:'Kitchen, dining and a clubhouse for a workforce that lives on site.', end:true},
+  {f:'staff-accommodation-01', d:12.067, ch:5, t:'People',         h:'Staff accommodation',       c:'Six acres of accommodation, screened from production by the full width of the planted buffer.'},
+  {f:'staff-accommodation-02', d:12.067, ch:5, t:'People',         h:'Executive bungalows',       c:'Four executive bungalows and the senior accommodation.'},
+  {f:'aerial-view',            d:24.067, ch:5, t:'The whole site', h:'Aerial view',               c:'Pulling back over all of it. One landholding, one continuous value chain.'}
+];
+
+const src = (n,s) => 'assets/' + s + '/' + n + '.jpg';
+const SET = n => 'assets/thumb/' + n + '.jpg 640w, assets/full/' + n + '.jpg 2000w';
+
+/* ---------- NAV ---------- */
+const nav = $('nav'), menu = $('menu');
+$('burger').addEventListener('click', () => {
+  const open = menu.classList.toggle('open');
+  document.body.classList.toggle('lock', open);
+  $('burger').setAttribute('aria-expanded', open ? 'true' : 'false');
+});
+$('menuClose').addEventListener('click', () => {
+  menu.classList.remove('open'); document.body.classList.remove('lock');
+  $('burger').setAttribute('aria-expanded','false');
+});
+menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  menu.classList.remove('open'); document.body.classList.remove('lock');
+  $('burger').setAttribute('aria-expanded','false');
+}));
+const lightSections = [...document.querySelectorAll('section.light')];
+function navState(){
+  const y = window.scrollY;
+  nav.classList.toggle('solid', y > 30);
+  const overLight = lightSections.some(s => {
+    const r = s.getBoundingClientRect();
+    return r.top <= 30 && r.bottom >= 30;
+  });
+  nav.classList.toggle('on-light', overLight && y > 30);
+}
+window.addEventListener('scroll', navState, {passive:true});
+navState();
+
+/* ---------- HERO ---------- */
+const HERO = [
+  ['aerial-view-08','Aerial view'],
+  ['penhouse-streetview-01','Pen houses'],
+  ['main-entrance-02','Main entrance'],
+  ['slaughter-house-03','Processing plant']
+];
+const hs = $('hslides'), hdots = $('hdots'), hcap = $('hcap');
+hs.innerHTML = HERO.map((h,i) =>
+  '<div class="hslide' + (i===0?' on':'') + '">' +
+  '<img ' + (i===0
+    ? 'src="' + src(h[0],'full') + '" fetchpriority="high"'
+    : 'data-src="' + src(h[0],'full') + '" loading="lazy"') +
+  ' alt="" decoding="async"></div>').join('');
+hdots.innerHTML = HERO.map((h,i) =>
+  '<button role="tab" data-i="' + i + '" aria-label="Show ' + esc(h[1]) + '"' +
+  (i===0?' aria-current="true"':'') + '><i></i></button>').join('');
+const hSlides = [...hs.children], hDots = [...hdots.children];
+let hI = 0, hTimer = null, hPaused = slowMo;
+function hShow(i){
+  hI = (i + HERO.length) % HERO.length;
+  const nx = hSlides[(hI+1) % HERO.length].querySelector('img');
+  if (nx && nx.dataset.src){ nx.src = nx.dataset.src; delete nx.dataset.src; }
+  hSlides.forEach((s,k) => s.classList.toggle('on', k===hI));
+  hDots.forEach((d,k) => d.setAttribute('aria-current', k===hI ? 'true' : 'false'));
+  hcap.textContent = HERO[hI][1];
+}
+function hTick(){ if (!hPaused) hShow(hI+1); }
+function hStart(){ clearInterval(hTimer); if (!slowMo) hTimer = setInterval(hTick, 7000); }
+hDots.forEach(d => d.addEventListener('click', () => { hShow(+d.dataset.i); hStart(); }));
+$('hpause').addEventListener('click', () => {
+  hPaused = !hPaused;
+  $('hpause').textContent = hPaused ? '▶' : '❚❚';
+  $('hpause').setAttribute('aria-label', hPaused ? 'Play slideshow' : 'Pause slideshow');
+});
+hShow(0); hStart();
+/* stop the timer while the hero is off-screen */
+new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) hStart(); else clearInterval(hTimer); }))
+  .observe($('top'));
+
+/* ---------- MASTERPLAN ---------- */
+new IntersectionObserver((es,o) => es.forEach(e => {
+  if (e.isIntersecting){ e.target.classList.add('in'); o.unobserve(e.target); }
+}), {threshold:.2}).observe($('planbox'));
+document.querySelectorAll('.pin').forEach(p => p.addEventListener('click', () => {
+  const el = document.querySelector(p.dataset.go);
+  if (el) el.scrollIntoView({behavior: slowMo ? 'auto' : 'smooth'});
+}));
+
+/* ---------- ZONES ---------- */
+const zstack = $('zstack'), zspecs = $('zspecs');
+zstack.innerHTML = ZONES.map((z,i) =>
+  '<div class="zlayer' + (i===0?' on':'') + '"><img src="' + src(z.img,'thumb') + '" srcset="' + SET(z.img) +
+  '" sizes="(max-width:900px) 100vw, 55vw" alt="' + esc(z.name.replace(/&amp;/g,'&')) + '" loading="lazy" decoding="async"></div>').join('');
+zspecs.innerHTML = ZONES.map((z,i) =>
+  '<article class="zitem' + (i===0?' on':'') + '" data-i="' + i + '" data-cat="' + z.cat + '">' +
+    '<button class="zthumb" data-cat="' + z.cat + '" aria-label="Open ' + esc(z.name.replace(/&amp;/g,'&')) + ' renders">' +
+      '<img src="' + src(z.img,'thumb') + '" alt="" loading="lazy" decoding="async"></button>' +
+    '<div class="label">' + z.label + '</div>' +
+    '<h3>' + z.name + '<small>' + z.sub + '</small></h3>' +
+    '<div class="zsize num">' + z.size + ' <span>' + z.unit + '</span></div>' +
+    '<dl>' + z.dl.map(r => '<dt>' + r[0] + '</dt><dd class="num">' + r[1] + '</dd>').join('') + '</dl>' +
+    '<p class="body">' + z.text + '</p>' +
+    '<button class="tlink" data-cat="' + z.cat + '">View the renders</button>' +
+  '</article>').join('');
+const zItems = [...zspecs.children], zLayers = [...zstack.children];
+let zActive = 0;
+const zObs = new IntersectionObserver(es => es.forEach(e => {
+  if (!e.isIntersecting) return;
+  zActive = +e.target.dataset.i;
+  zItems.forEach((it,k) => it.classList.toggle('on', k===zActive));
+  zLayers.forEach((l,k) => l.classList.toggle('on', k===zActive));
+}), {rootMargin:'-45% 0px -45% 0px'});
+zItems.forEach(it => zObs.observe(it));
+function openZone(){ openLB(ZONES[zActive].cat, 0); }
+zstack.addEventListener('click', openZone);
+zstack.addEventListener('keydown', e => {
+  if (e.key === 'Enter' || e.key === ' '){ e.preventDefault(); openZone(); }
+});
+zspecs.querySelectorAll('[data-cat]').forEach(b =>
+  b.addEventListener('click', () => openLB(b.dataset.cat, 0)));
+
+/* ---------- GALLERY ---------- */
+const chips = $('chips'), grid = $('grid');
+let cat = 'all', list = [];
+chips.innerHTML = ['all', ...Object.keys(CATS)].map(c =>
+  '<button class="chip" data-c="' + c + '" aria-pressed="' + (c==='all') + '">' +
+  (c==='all' ? 'All renders' : CATS[c]) + '</button>').join('');
+/* 12-column layout patterns, chosen so no row ends ragged */
+const SPANS = {
+  1:[[12,'16/9']], 2:[[6,'4/3'],[6,'4/3']],
+  3:[[8,'16/10'],[4,'16/10'],[12,'21/9']],
+  4:[[6,'4/3'],[6,'4/3'],[6,'4/3'],[6,'4/3']],
+  5:[[8,'16/10'],[4,'16/10'],[4,'1/1'],[4,'1/1'],[4,'1/1']],
+  6:[[4,'1/1'],[4,'1/1'],[4,'1/1'],[4,'1/1'],[4,'1/1'],[4,'1/1']],
+  9:[[4,'1/1'],[4,'1/1'],[4,'1/1'],[4,'1/1'],[4,'1/1'],[4,'1/1'],[4,'1/1'],[4,'1/1'],[4,'1/1']]
+};
+function spanFor(n, i){
+  const p = SPANS[n] || SPANS[6];
+  return p[i % p.length];
+}
+function draw(){
+  list = cat === 'all' ? RENDERS.slice() : RENDERS.filter(r => r[0] === cat);
+  grid.innerHTML = list.map((r,i) => {
+    const [c,f,title,cap] = r, sp = spanFor(list.length, i);
+    return '<button class="tile bw" data-i="' + i + '" style="grid-column:span ' + sp[0] + ';aspect-ratio:' + sp[1] + '">' +
+      '<img class="g" src="' + src(f,'thumb') + '" srcset="' + SET(f) + '" sizes="(max-width:760px) 86vw, 40vw" alt="' + esc(title) + ' — ' + esc(cap) + '" loading="lazy" decoding="async">' +
+      '<img class="c" src="' + src(f,'thumb') + '" srcset="' + SET(f) + '" sizes="(max-width:760px) 86vw, 40vw" alt="" aria-hidden="true" loading="lazy" decoding="async">' +
+      '<figcaption>' + title + '</figcaption></button>';
+  }).join('');
+  [...grid.children].forEach(t => t.addEventListener('click', () => openLB(cat, +t.dataset.i)));
+  if (touch) litObs.disconnect(), [...grid.children].forEach(t => litObs.observe(t));
+}
+chips.querySelectorAll('.chip').forEach(b => b.addEventListener('click', () => {
+  cat = b.dataset.c;
+  chips.querySelectorAll('.chip').forEach(o => o.setAttribute('aria-pressed', String(o === b)));
+  draw();
+}));
+/* touch: light up whatever reaches the middle of the screen */
+const litObs = new IntersectionObserver(es => es.forEach(e =>
+  e.target.classList.toggle('lit', e.isIntersecting)), {rootMargin:'-38% 0px -38% 0px'});
+draw();
+
+/* mouse: one delegated handler drives both the spotlight and the cursor */
+const vcur = $('vcur');
+if (!touch){
+  document.addEventListener('pointermove', e => {
+    vcur.style.transform = 'translate(' + e.clientX + 'px,' + e.clientY + 'px) translate(-50%,-50%)';
+    const t = e.target.closest('.bw');
+    document.querySelectorAll('.bw.hot').forEach(o => { if (o !== t) o.classList.remove('hot'); });
+    if (t){
+      const r = t.getBoundingClientRect();
+      t.style.setProperty('--x', ((e.clientX - r.left) / r.width * 100) + '%');
+      t.style.setProperty('--y', ((e.clientY - r.top) / r.height * 100) + '%');
+      t.classList.add('hot');
+      vcur.style.opacity = 1; vcur.classList.add('big');
+    } else {
+      vcur.style.opacity = 0; vcur.classList.remove('big');
+    }
+  }, {passive:true});
+}
+
+/* ---------- LIGHTBOX ---------- */
+const lb = $('lb'), lbImg = $('lbImg'), lbStrip = $('lbStrip');
+let lbList = [], lbI = 0, lastFocus = null;
+function openLB(c, i){
+  lbList = c === 'all' ? RENDERS.slice() : RENDERS.filter(r => r[0] === c);
+  if (!lbList.length) return;
+  lastFocus = document.activeElement;
+  lbStrip.innerHTML = lbList.map((r,k) =>
+    '<button class="lbthumb" data-i="' + k + '" aria-label="' + esc(r[2]) + '"><img src="' + src(r[1],'thumb') + '" alt=""></button>').join('');
+  [...lbStrip.children].forEach(t => t.addEventListener('click', () => lbShow(+t.dataset.i)));
+  lb.classList.add('open'); document.body.classList.add('lock');
+  lbShow(i);
+  $('lbClose').focus();
+}
+function lbShow(i){
+  lbI = (i + lbList.length) % lbList.length;
+  const r = lbList[lbI];
+  lbImg.src = src(r[1],'full'); lbImg.alt = r[2] + ' — ' + r[3];
+  $('lbTitle').textContent = r[2];
+  $('lbSub').textContent = r[3] + '  ·  ' + (lbI+1) + ' of ' + lbList.length;
+  [...lbStrip.children].forEach((t,k) => t.classList.toggle('on', k===lbI));
+  const on = lbStrip.querySelector('.lbthumb.on');
+  if (on) on.scrollIntoView({block:'nearest', inline:'center', behavior: slowMo ? 'auto' : 'smooth'});
+  const nx = lbList[(lbI+1) % lbList.length];
+  if (nx){ const p = new Image(); p.src = src(nx[1],'full'); }
+}
+function closeLB(){
+  lb.classList.remove('open'); document.body.classList.remove('lock');
+  if (lastFocus) lastFocus.focus();
+}
+$('lbClose').addEventListener('click', closeLB);
+$('lbPrev').addEventListener('click', () => lbShow(lbI-1));
+$('lbNext').addEventListener('click', () => lbShow(lbI+1));
+document.addEventListener('keydown', e => {
+  if (!lb.classList.contains('open')) return;
+  if (e.key === 'Escape') closeLB();
+  if (e.key === 'ArrowLeft') lbShow(lbI-1);
+  if (e.key === 'ArrowRight') lbShow(lbI+1);
+  if (e.key === 'Tab'){                       /* focus trap */
+    const f = lb.querySelectorAll('button');
+    const first = f[0], last = f[f.length-1];
+    if (e.shiftKey && document.activeElement === first){ e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement === last){ e.preventDefault(); first.focus(); }
+  }
+});
+let lbX = null;
+lb.addEventListener('touchstart', e => { lbX = e.touches[0].clientX; }, {passive:true});
+lb.addEventListener('touchend', e => {
+  if (lbX === null) return;
+  const dx = e.changedTouches[0].clientX - lbX;
+  if (Math.abs(dx) > 55) lbShow(lbI + (dx < 0 ? 1 : -1));
+  lbX = null;
+}, {passive:true});
+
+/* ---------- CLOSING BUTTONS ---------- */
+$('cbtns').innerHTML = (CONTACT.email || CONTACT.phone)
+  ? (CONTACT.email ? '<a class="btn btn-primary" href="mailto:' + CONTACT.email + '">Get in touch</a>' : '') +
+    (CONTACT.phone ? '<a class="btn btn-secondary" href="tel:' + CONTACT.phone + '">Call</a>' : '')
+  : '<a class="btn btn-primary" href="#filmsec" data-film="administration">Watch the film again</a>' +
+    '<a class="btn btn-secondary" href="#zones">Revisit the zones</a>';
+
+/* =====================================================================
+   FILM
+   ===================================================================== */
+(function(){
+const N = SHOTS.length;
+const TR_IN = touch ? .18 : .15;     /* handover inside a chapter */
+const TR_CH = touch ? .36 : .32;     /* handover that ends a chapter */
+const trOf  = i => SHOTS[i].end ? TR_CH : TR_IN;
+const SPAN  = SHOTS.map((s,i) => Math.max(touch ? 1.4 : 1.7, s.d * (touch ? .10 : .16)) / (1 - trOf(i)));
+const TOTAL = SPAN.reduce((a,b) => a+b, 0);
+const START = []; SPAN.reduce((a,v,i) => { START[i] = a; return a+v; }, 0);
+
+const scroller = $('filmScroll'), stage = $('fstage');
+stage.innerHTML = SHOTS.map((s,i) =>
+  '<div class="fshot" data-i="' + i + '">' +
+    '<div class="fmedia">' +
+      '<video muted playsinline preload="none"' + (touch ? ' loop' : '') + ' disablepictureinpicture></video>' +
+      '<img class="fposter" src="assets/film/' + s.f + '.jpg" alt="" loading="lazy" decoding="async">' +
+    '</div>' +
+    '<div class="ftint"></div>' +
+    '<div class="fcap"><div class="fk">' + CHAPTERS[s.ch].n + ' · ' + s.t + '</div>' +
+      '<h3>' + s.h + '</h3><p>' + s.c + '</p></div>' +
+  '</div>').join('')
++ '<div id="fcard"></div>'
++ '<div id="fcardin"><div class="ck"></div><div class="ct"></div><div class="cl"></div></div>'
++ '<div class="frail chrome-x" id="frail" role="tablist" aria-label="Film chapters"></div>'
++ '<div class="fhud chrome-x"><span class="fcount" id="fcount"></span>'
++   '<button class="iconbtn fpause" id="fpause" aria-label="Pause clip" hidden>❚❚</button></div>'
++ '<div class="fskip chrome-x"><a class="btn btn-secondary" href="#zones">Skip the film</a></div>'
++ '<div class="fhint" id="fhint"><i></i>Scroll to move the camera</div>'
++ '<div class="fbar"><i id="fbar"></i></div>';
+
+scroller.style.height = (TOTAL * 100) + 'vh';
+
+const rail = $('frail');
+rail.innerHTML = CHAPTERS.map((c,i) =>
+  '<button data-ch="' + i + '" aria-label="' + esc(c.t) + '"></button>').join('');
+const rails = [...rail.children];
+const firstOf = ch => SHOTS.findIndex(s => s.ch === ch);
+rails.forEach(b => b.addEventListener('click', () => go(firstOf(+b.dataset.ch), true)));
+
+const shots  = [...stage.querySelectorAll('.fshot')];
+const vids   = shots.map(s => s.querySelector('video'));
+const medias = shots.map(s => s.querySelector('.fmedia'));
+const caps   = shots.map(s => s.querySelector('.fcap'));
+const card   = $('fcard'), cardIn = $('fcardin');
+const ck = cardIn.querySelector('.ck'), ct = cardIn.querySelector('.ct'), cl = cardIn.querySelector('.cl');
+const hint = $('fhint'), bar = $('fbar'), count = $('fcount');
+
+const rectTop = () => scroller.getBoundingClientRect().top;
+function topFor(i){ return rectTop() + window.scrollY + START[i]*window.innerHeight + 4; }
+function go(i, smooth){
+  const top = topFor(i);
+  if (smooth){ window.scrollTo({top, behavior:'smooth'}); return; }
+  /* behavior:'auto' defers to html{scroll-behavior:smooth} — suspend it
+     so this is a true teleport, invisible behind the cover */
+  const root = document.documentElement, prev = root.style.scrollBehavior;
+  root.style.scrollBehavior = 'auto';
+  window.scrollTo(0, top);
+  root.style.scrollBehavior = prev;
+}
+
+const srcFor = i => 'assets/film/' + SHOTS[i].f + (touch ? '-m' : '') + '.mp4';
+function need(i, eager){
+  if (i < 0 || i >= N) return;
+  const v = vids[i]; if (!v) return;
+  if (!v.dataset.armed){
+    v.dataset.armed = '1';
+    v.preload = eager ? 'auto' : 'metadata';
+    v.src = srcFor(i);
+    v.load();
+    v.addEventListener('loadeddata', () => shots[i].classList.add('ready'), {once:true});
+  } else if (eager && v.preload !== 'auto'){
+    v.preload = 'auto';
+  }
+}
+
+let cur = -1, raf = 0, inRange = false;
+const easeIO = x => x < .5 ? 4*x*x*x : 1 - Math.pow(-2*x+2,3)/2;
+function setMedia(i, sc, bl){
+  const m = medias[i]; if (!m) return;
+  if (slowMo){ m.style.transform=''; m.style.filter=''; return; }
+  m.style.transform = sc === 1 ? '' : 'scale(' + sc.toFixed(4) + ')';
+  m.style.filter    = bl <= .1 ? '' : 'blur(' + bl.toFixed(2) + 'px)';
+}
+function clearMedia(i){ const m = medias[i]; if (m){ m.style.transform=''; m.style.filter=''; } }
+function setCap(i, o){ const c = caps[i]; if (c) c.style.opacity = o >= 1 ? '' : o.toFixed(3); }
+
+function apply(){
+  raf = 0;
+  const vh = window.innerHeight;
+  const y = -rectTop() / vh;
+  const active = y > -1.2 && y < TOTAL + .6;
+  if (active !== inRange){
+    inRange = active;
+    nav.classList.toggle('hidden-film', active);
+    if (!active && touch) vids.forEach(v => { if (!v.paused) v.pause(); });
+  }
+  if (!active) return;
+
+  const yy = Math.max(0, Math.min(TOTAL, y));
+  let seg = 0;
+  for (let i = 0; i < N; i++) if (yy >= START[i] - .001) seg = i;
+  const p = Math.max(0, Math.min(1, (yy - START[seg]) / SPAN[seg]));
+  const last = seg === N - 1;
+  const TR = trOf(seg);
+
+  const vp = last ? p : Math.min(1, p / (1 - TR));
+  const t  = (last || p <= 1 - TR) ? 0 : (p - (1 - TR)) / TR;
+  const idx = (t > .5 && !last) ? seg + 1 : seg;
+
+  if (idx !== cur){
+    shots.forEach((s,i) => s.classList.toggle('live', i === idx));
+    const ch = SHOTS[idx].ch;
+    rails.forEach((r,i) => r.classList.toggle('on', i === ch));
+    count.textContent = CHAPTERS[ch].n + ' / ' + CHAPTERS[CHAPTERS.length-1].n;
+    if (touch){
+      vids.forEach((v,i) => { if (i !== idx && !v.paused) v.pause(); });
+      const v = vids[idx];
+      if (v && v.dataset.armed){ v.currentTime = 0; const pr = v.play(); if (pr) pr.catch(()=>{}); }
+    }
+    cur = idx;
+  }
+
+  need(idx, true); need(idx+1, false); need(idx-1, false);
+
+  if (t <= 0 || last){
+    card.classList.remove('on'); card.style.opacity = 0;
+    cardIn.classList.remove('on'); cardIn.style.opacity = 0;
+    clearMedia(seg); clearMedia(seg+1); setCap(seg,1); setCap(seg+1,1);
+  } else {
+    const ends = !!SHOTS[seg].end;
+    card.classList.add('on');
+    /* inside a chapter: a plain dissolve. Ending one: black holds .3–.7
+       while the title card sits on screen. */
+    let dark;
+    if (!ends) dark = t < .5 ? easeIO(t/.5) : 1 - easeIO((t-.5)/.5);
+    else dark = t < .3 ? easeIO(t/.3) : (t < .7 ? 1 : 1 - easeIO((t-.7)/.3));
+    card.style.opacity = dark.toFixed(3);
+
+    if (t < .5){
+      const k = easeIO(Math.min(1, t/.5));
+      setMedia(seg, 1 + .05*k, 10*k);
+      setCap(seg, Math.max(0, 1 - k*1.8));
+      clearMedia(seg+1);
+    } else {
+      const k = easeIO(Math.min(1, (t-.5)/.5));
+      setMedia(seg+1, 1.05 - .05*k, 10*(1-k));
+      setCap(seg+1, Math.max(0, (k-.45)/.55));
+      clearMedia(seg); setCap(seg,1);
+    }
+
+    if (ends){
+      const nch = CHAPTERS[Math.min(CHAPTERS.length-1, SHOTS[seg].ch + 1)];
+      const scenes = SHOTS.filter(s => s.ch === Math.min(CHAPTERS.length-1, SHOTS[seg].ch + 1)).length;
+      ck.textContent = 'Chapter ' + nch.n + ' of ' + CHAPTERS[CHAPTERS.length-1].n;
+      ct.innerHTML = nch.t;
+      cl.textContent = scenes + (scenes === 1 ? ' scene' : ' scenes');
+      cardIn.classList.add('on');
+      cardIn.style.opacity = Math.max(0, Math.min(1, (dark - .6)/.35)).toFixed(3);
+    } else {
+      cardIn.classList.remove('on'); cardIn.style.opacity = 0;
+    }
+  }
+
+  const v = vids[idx];
+  if (v && !touch && v.readyState >= 1 && isFinite(v.duration)){
+    const want = (idx === seg ? vp : 0) * (v.duration - .05);
+    if (Math.abs(v.currentTime - want) > .015 && !v.seeking){
+      try { v.currentTime = want; } catch(e){}
+    }
+  }
+
+  bar.style.width = (Math.min(1, yy/TOTAL) * 100) + '%';
+  if (hint) hint.style.opacity = yy > .4 ? 0 : String(1 - yy/.4);
+}
+function tick(){ if (!raf) raf = requestAnimationFrame(apply); }
+window.addEventListener('scroll', tick, {passive:true});
+window.addEventListener('resize', tick);
+
+/* chrome shows on activity, hides after 2.4s (stays put on touch) */
+let chromeT = null;
+function wake(){
+  stage.classList.add('act');
+  clearTimeout(chromeT);
+  if (!touch) chromeT = setTimeout(() => stage.classList.remove('act'), 2400);
+}
+['pointermove','touchstart','scroll'].forEach(ev => window.addEventListener(ev, wake, {passive:true}));
+if (touch) stage.classList.add('act');
+
+/* pause control, for the phone playback path */
+const fpause = $('fpause');
+if (touch){
+  fpause.hidden = false;
+  fpause.addEventListener('click', () => {
+    const v = vids[cur]; if (!v) return;
+    if (v.paused){ v.play().catch(()=>{}); fpause.textContent = '❚❚'; fpause.setAttribute('aria-label','Pause clip'); }
+    else { v.pause(); fpause.textContent = '▶'; fpause.setAttribute('aria-label','Play clip'); }
+  });
+}
+
+shots[0].classList.add('live'); rails[0].classList.add('on'); cur = 0;
+count.textContent = CHAPTERS[0].n + ' / ' + CHAPTERS[CHAPTERS.length-1].n;
+new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting){ need(0,true); need(1,false); } }),
+  {rootMargin:'900px 0px'}).observe(scroller);
+
+/* ---------- CHAPTER JUMP COVER ---------- */
+const jump = $('fjump'), jImg = jump.querySelector('.jbg img');
+const jK = jump.querySelector('.jk'), jT = jump.querySelector('.jt');
+const jD = jump.querySelector('.jd'), jL = jump.querySelector('.jlist');
+const jBar = jump.querySelector('.jload i');
+let jumping = false;
+function handOff(i){
+  if (jumping) return;
+  const s = SHOTS[i], ch = CHAPTERS[s.ch];
+  need(i, true); need(i+1, false);
+  if (slowMo){ go(i,false); apply(); return; }
+
+  jumping = true;
+  jImg.src = 'assets/film/' + s.f + '.jpg';
+  jK.textContent = 'Chapter ' + ch.n + ' of ' + CHAPTERS[CHAPTERS.length-1].n;
+  jT.textContent = ch.t;
+  jD.textContent = ch.d;
+  jL.innerHTML = CHAPTERS.map((c,k) =>
+    '<span' + (k === s.ch ? ' class="cur"' : '') + '>' + c.n + ' ' + esc(c.t) + '</span>').join('');
+  jBar.style.width = '0%';
+  jump.classList.remove('out'); jump.classList.add('on');
+  requestAnimationFrame(() => { jBar.style.width = '88%'; });
+
+  const v = vids[i];
+  let placed = false, done = false;
+  function place(){ if (placed) return; placed = true; go(i,false); apply(); }
+  function reveal(){
+    if (done) return; done = true;
+    place(); apply();
+    jBar.style.width = '100%';
+    requestAnimationFrame(() => {
+      jump.classList.add('out');
+      setTimeout(() => { jump.classList.remove('on','out'); jumping = false; }, 700);
+    });
+  }
+  setTimeout(place, 520);
+  setTimeout(() => {
+    if (v && v.readyState >= 2) reveal();
+    else if (v) v.addEventListener('loadeddata', reveal, {once:true});
+    else reveal();
+  }, 620);
+  setTimeout(reveal, 2600);
+}
+document.querySelectorAll('[data-film]').forEach(el => el.addEventListener('click', e => {
+  e.preventDefault();
+  const i = SHOTS.findIndex(s => s.f === el.dataset.film);
+  if (i >= 0) handOff(i);
+}));
+
+apply();
+})();
+
+/* ---------- ANCHOR DISTANCE GUARD ----------
+   The film adds ~30 screens, so smooth scrolling to anything past it
+   would crawl. Smooth for short hops, instant beyond three screens. */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    if (a.hasAttribute('data-film')) return;
+    const id = a.getAttribute('href');
+    if (!id || id === '#') return;
+    const el = document.querySelector(id);
+    if (!el) return;
+    e.preventDefault();
+    const top = el.getBoundingClientRect().top + window.scrollY;
+    const root = document.documentElement;
+    if (Math.abs(top - window.scrollY) > window.innerHeight * 3 || slowMo){
+      const prev = root.style.scrollBehavior;
+      root.style.scrollBehavior = 'auto';
+      window.scrollTo(0, top);
+      root.style.scrollBehavior = prev;
+    } else {
+      window.scrollTo({top, behavior:'smooth'});
+    }
+  });
+});
+</script>
+</body>
+</html>
