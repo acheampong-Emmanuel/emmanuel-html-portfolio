@@ -168,7 +168,7 @@ nav.hidden-film{opacity:0;pointer-events:none}
 .hdots button{width:44px;height:44px;border:none;background:none;cursor:pointer;padding:0;display:grid;place-items:center}
 .hdots i{display:block;width:26px;height:2px;background:rgba(242,244,242,.3);transition:background var(--t-fast)}
 .hdots button[aria-current="true"] i{background:var(--accent)}
-@media(min-width:760px){.hdots button{width:30px}}
+@media(min-width:760px){.hdots button{width:44px}}
 
 /* ============ SECTION HEADS ============ */
 .shead{display:grid;gap:22px;margin-bottom:clamp(40px,6vw,72px)}
@@ -231,7 +231,7 @@ nav.hidden-film{opacity:0;pointer-events:none}
 .zitem dt{font-size:14px;color:var(--muted)}
 .zitem dd{font-size:15px;text-align:right;font-variant-numeric:tabular-nums}
 .zitem p{margin-bottom:18px}
-.zthumb{display:block;margin-bottom:22px;border-radius:var(--radius);overflow:hidden;aspect-ratio:4/3;background:var(--surface)}
+.zthumb{display:block;width:100%;margin-bottom:22px;border:0;padding:0;border-radius:var(--radius);overflow:hidden;aspect-ratio:4/3;background:var(--surface);cursor:pointer}
 .zthumb img{width:100%;height:100%;object-fit:cover}
 @media(min-width:900px){.zthumb{display:none}}
 
