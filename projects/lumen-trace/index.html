@@ -996,7 +996,7 @@ if (typeof module !== 'undefined' && module.exports) module.exports = PheromoneG
       const partner={rig:rigB,beads:beadsB,trace:traceB,markers:markersB,bridges:bridgesB,joints:jointsB,pins:jointsB.children.slice(0,8),jointLine:jointsB.children[8]};
       for(const [x,c] of [[0,0x75cdaa],[660,0xd6b36c]]){const ring=new THREE.Mesh(new THREE.RingGeometry(92,93.5,64),new THREE.MeshBasicMaterial({color:c}));ring.position.set(x,0,.1);scene.add(ring);}
       // A schematic human supervisor and review screen sit outside the robot work envelope.
-      const operator=new THREE.Group();operator.position.set(330,225,0);scene.add(operator);
+      const operator=new THREE.Group();operator.position.set(105,-300,0);scene.add(operator);
       const suit=new THREE.MeshStandardMaterial({color:0x52645d,roughness:.86}),vest=new THREE.MeshStandardMaterial({color:0xd6b36c,roughness:.72}),skin=new THREE.MeshStandardMaterial({color:0x98765c,roughness:.9});
       const personPart=(geometry,material,x,y,z)=>{const mesh=new THREE.Mesh(geometry,material);mesh.position.set(x,y,z);mesh.castShadow=true;operator.add(mesh);return mesh;};
       for(const x of [-12,12]){personPart(new THREE.CylinderGeometry(6,7,75,10),suit,x,0,41).rotation.x=Math.PI/2;personPart(new THREE.BoxGeometry(17,30,8),suit,x,-8,5);}
@@ -1005,11 +1005,11 @@ if (typeof module !== 'undefined' && module.exports) module.exports = PheromoneG
       personPart(new THREE.CylinderGeometry(5,5,13,10),skin,0,0,150).rotation.x=Math.PI/2;
       personPart(new THREE.SphereGeometry(12,16,10),skin,0,0,166);
       personPart(new THREE.SphereGeometry(12.5,16,10,0,Math.PI*2,0,Math.PI*.42),suit,0,0,170);
-      box([66,36,8],[418,210,88],0x303e38);
-      box([5,5,55],[418,210,57],0x303e38);
-      box([84,9,56],[418,190,123],0x333d39);
-      box([76,1,48],[418,184.8,123],0x10251f);
-      const reviewLine=new THREE.Line(new THREE.BufferGeometry().setFromPoints([[391,184,111],[403,184,117],[412,184,115],[422,184,130],[434,184,128],[448,184,139]].map(p=>new THREE.Vector3(...p))),new THREE.LineBasicMaterial({color:0x78e7d6}));scene.add(reviewLine);
+      box([66,36,8],[220,-300,88],0x303e38);
+      box([5,5,55],[220,-300,57],0x303e38);
+      box([84,9,56],[220,-320,123],0x333d39);
+      box([76,1,48],[220,-325.2,123],0x10251f);
+      const reviewLine=new THREE.Line(new THREE.BufferGeometry().setFromPoints([[193,-326,111],[205,-326,117],[214,-326,115],[224,-326,130],[236,-326,128],[250,-326,139]].map(p=>new THREE.Vector3(...p))),new THREE.LineBasicMaterial({color:0x78e7d6}));scene.add(reviewLine);
       state={asset,scene,camera,renderer,rig,beads,trace,markers,feedMaterials,bridges,joints,pins,jointLine,partner,dummy:new THREE.Object3D(),lastPose:'',lastColour:-1};
       stage.classList.add('webgl-ready');$('arm-fallback-note').hidden=true;resize();
     }catch(error){if(renderer)renderer.dispose();fallback('Model preview. The 3D view could not start; sequence readouts remain available.');console.error('A6 viewer could not initialise',error);}
