@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#171a19">
+  <meta name="description" content="An interactive architectural presentation for an events and hospitality campus in Koforidua, Ghana.">
+  <meta property="og:title" content="Koforidua Events Park">
+  <meta property="og:description" content="A destination for gathering, celebrating and staying in Koforidua.">
+  <meta property="og:image" content="assets/arrival-evening.webp">
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@90..110,400..700&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/arrival-evening.webp">
+  <link rel="stylesheet" href="styles.css">
+  <title>Koforidua Events Park — An architectural presentation</title>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="nav" id="nav">
+    <a class="brand" href="#top" aria-label="Koforidua Events Park, back to top">
+      <img src="assets/astrix-logo.png" width="480" height="263" alt="Astrix">
+      <span class="brand-divider" aria-hidden="true"></span>
+      <span>Koforidua Events Park</span>
+    </a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="#vision">The vision</a><a href="#masterplan">The campus</a><a href="#spaces">The spaces</a><a href="#plans">Plans</a>
+    </nav>
+    <a class="nav-cta" href="#tour">Explore the tour <span aria-hidden="true">↗</span></a>
+    <button class="menu-toggle icon-button" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <nav aria-label="Mobile navigation"><a href="#vision">The vision</a><a href="#masterplan">The campus</a><a href="#tour">Visual tour</a><a href="#spaces">The spaces</a><a href="#plans">Plans</a><a href="#closing">At a glance</a></nav>
+    <p>Koforidua · Eastern Region · Ghana</p>
+  </div>
+
+  <main id="main">
+    <section class="hero dark" id="top" aria-label="Introduction">
+      <div class="hero-images" aria-hidden="true">
+        <img class="hero-image active" src="assets/arrival-evening.webp" alt="" fetchpriority="high">
+        <img class="hero-image" data-src="assets/hotel-corner.webp" alt="">
+        <img class="hero-image" data-src="assets/frontage-dusk.webp" alt="">
+        <img class="hero-image" data-src="assets/arrival-day.webp" alt="">
+      </div>
+      <div class="hero-shade"></div>
+      <div class="hero-content shell">
+        <p class="eyebrow hero-kicker"><span class="eyebrow-rule"></span>Koforidua · Ghana</p>
+        <h1><span class="line-mask"><span>A place to</span></span><span class="line-mask"><span><em>gather.</em> A reason</span></span><span class="line-mask"><span>to stay.</span></span></h1>
+        <p class="hero-lede">An interconnected setting for landmark events, meaningful encounters and unhurried hospitality.</p>
+        <div class="hero-actions"><a class="btn btn-primary" href="#tour">Explore the visual tour <span aria-hidden="true">↗</span></a><a class="btn btn-secondary" href="#vision">Discover the vision <span aria-hidden="true">↓</span></a></div>
+      </div>
+      <div class="hero-bottom shell">
+        <div class="hero-shortcuts"><a href="#spaces"><span>01</span> Event spaces <b aria-hidden="true">↗</b></a><a href="#hospitality"><span>02</span> Hospitality <b aria-hidden="true">↗</b></a><a href="#masterplan"><span>03</span> Campus plan <b aria-hidden="true">↗</b></a></div>
+        <div class="hero-status"><span id="hero-caption">A new arrival for Koforidua</span><div class="hero-dots" aria-label="Hero images"></div><button class="hero-pause" id="hero-pause" type="button" aria-label="Pause image slideshow">Pause</button></div>
+      </div>
+      <a class="scroll-cue" href="#vision">Scroll to explore <span aria-hidden="true">↓</span></a>
+    </section>
+
+    <section class="vision light section" id="vision">
+      <div class="shell">
+        <div class="section-intro reveal"><p class="eyebrow">01 / The vision</p><div><h2>A campus made for <span class="quiet">coming together.</span></h2><p class="lede">What if every arrival felt like the beginning of something memorable?</p><p>The proposal brings events, guest accommodation and outdoor space into one walkable address. Each part can work on its own, while the whole campus supports a larger experience.</p></div></div>
+        <div class="principles reveal">
+          <article><span class="principle-index">01</span><h3>Approach.</h3><p>A clear main road arrival leads to a landscaped forecourt and dedicated drop-off.</p></article>
+          <article><span class="principle-index">02</span><h3>Threshold.</h3><p>Glazed frontage and sculpted V-columns mark the passage from city to venue.</p></article>
+          <article><span class="principle-index">03</span><h3>Release.</h3><p>Shaded walks, courts and a rooftop pool extend the visit beyond the event itself.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="masterplan light section" id="masterplan">
+      <div class="shell">
+        <div class="section-heading reveal"><div><p class="eyebrow">02 / The campus</p><h2>One address.<br><span class="quiet">Many possibilities.</span></h2></div><p>Hotel, event centre and shared outdoor spaces are arranged around a connected arrival sequence.</p></div>
+      </div>
+      <div class="masterplan-frame reveal">
+        <img src="assets/site-aerial-render-4k.webp" srcset="assets/site-aerial-render-4k-sm.webp 900w, assets/site-aerial-render-4k-md.webp 1920w, assets/site-aerial-render-4k.webp 3840w" sizes="(max-width:860px) 100vw, 92vw" alt="Aerial architectural rendering showing the hotel at left, event centre at right, rooftop pool and shared arrival courts" loading="lazy">
+        <a class="plan-pin pin-hotel" href="#hospitality" style="--px:47%;--py:45%"><span class="pin-number">01</span><span class="pin-label">Hotel & suites</span></a>
+        <a class="plan-pin pin-event" href="#spaces" style="--px:72%;--py:51%"><span class="pin-number">02</span><span class="pin-label">Event centre</span></a>
+        <a class="plan-pin pin-pool" href="#hospitality" style="--px:40%;--py:29%"><span class="pin-number">03</span><span class="pin-label">Rooftop pool</span></a>
+      </div>
+      <div class="shell">
+        <div class="pin-legend"><a href="#hospitality"><b>01</b> Hotel & suites</a><a href="#spaces"><b>02</b> Event centre</a><a href="#hospitality"><b>03</b> Rooftop pool</a></div>
+        <div class="facts reveal"><div><strong>1,500</strong><span>Grand hall guest capacity, up to</span></div><div><strong>3</strong><span>Medium conference halls</span></div><div><strong>30–50</strong><span>Proposed suites & studios</span></div><div><strong>2–3</strong><span>Events planned to run at once</span></div></div>
+        <p class="source-line">Figures are proposed capacities stated in the client presentation, not independently measured. See source notes below.</p>
+      </div>
+    </section>
+
+    <section class="tour dark" id="tour" aria-label="Visual tour">
+      <div class="tour-media" aria-hidden="true"><img id="tour-image" src="assets/main-gate.webp" alt=""></div><div class="tour-vignette"></div>
+      <div class="tour-top shell"><p class="eyebrow">03 / Visual tour</p><span>Architectural impressions</span></div>
+      <div class="tour-content shell"><div class="tour-copy"><p class="tour-count" id="tour-count">Scene 01 / 04</p><h2 id="tour-title">The arrival.</h2><p id="tour-description">A composed approach, set between landscape, water and architecture.</p></div><div class="tour-rail" id="tour-rail" role="tablist" aria-label="Tour scenes"></div></div>
+      <div class="tour-bottom shell"><div class="tour-progress"><span id="tour-progress"></span></div><div class="tour-controls"><span id="tour-caption">Arrival · Main entrance</span><button type="button" id="tour-prev" aria-label="Previous scene">←</button><button type="button" id="tour-next" aria-label="Next scene">→</button><button type="button" id="tour-pause" aria-label="Pause visual tour">Pause</button></div></div>
+    </section>
+
+    <section class="spaces dark section" id="spaces">
+      <div class="shell">
+        <div class="section-heading reveal"><div><p class="eyebrow">04 / The spaces</p><h2>Room for every<br><span class="quiet">scale of occasion.</span></h2></div><p>The programme pairs a flagship hall with smaller settings for focused meetings, performances and parallel events.</p></div>
+        <div class="space-layout">
+          <div class="space-image-stack" id="space-image-stack"><button class="space-image active" data-space="0" type="button" aria-label="View grand hall architectural image"><img src="assets/frontage-day.webp" alt="Event centre facade with sculpted structural columns"></button><button class="space-image" data-space="1" type="button" aria-label="View conference centre architectural image"><img src="assets/arrival-day.webp" alt="Event centre and hotel frontage"></button><button class="space-image" data-space="2" type="button" aria-label="View hotel architectural image"><img src="assets/hotel-corner.webp" alt="Hotel wing from landscaped driveway"></button></div>
+          <div class="space-specs">
+            <article class="spec-item active" data-space="0"><p class="eyebrow">01 / Flagship venue</p><h3>Grand Convention Hall.</h3><strong>1,200–1,500 <small>guests</small></strong><dl><div><dt>Format</dt><dd>Column-free, adaptable</dd></div><div><dt>Support</dt><dd>Stage and backstage provision</dd></div><div><dt>Use</dt><dd>Conferences, exhibitions, weddings</dd></div></dl><p>Designed for ceremonies and conventions that need both scale and clear sightlines.</p><a class="text-link" href="#plans">Explore the plans <span aria-hidden="true">›</span></a></article>
+            <article class="spec-item" data-space="1"><p class="eyebrow">02 / Flexible programme</p><h3>Conference & theatre spaces.</h3><strong>150–600 <small>people</small></strong><dl><div><dt>Theatre hall</dt><dd>500–600 seats</dd></div><div><dt>Conference halls</dt><dd>300, 200 & 150 guests</dd></div><div><dt>Boardrooms</dt><dd>10–40 guests</dd></div></dl><p>Partitionable rooms allow focused sessions to run alongside larger gatherings.</p><a class="text-link" href="#plans">Explore the plans <span aria-hidden="true">›</span></a></article>
+            <article class="spec-item" data-space="2" id="hospitality"><p class="eyebrow">03 / Stay on site</p><h3>Hotel & guest experience.</h3><strong>30–50 <small>keys</small></strong><dl><div><dt>Accommodation</dt><dd>Suites & studios</dd></div><div><dt>Outdoor space</dt><dd>Rooftop pool & lounge deck</dd></div><div><dt>Connection</dt><dd>Direct event-side access</dd></div></dl><p>Speakers, wedding parties and visiting teams can stay close to the programme.</p><a class="text-link" href="#gallery">View the architecture <span aria-hidden="true">›</span></a></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery-section light section" id="gallery">
+      <div class="shell"><div class="section-heading reveal"><div><p class="eyebrow">05 / The architecture</p><h2>Form, light<br><span class="quiet">and arrival.</span></h2></div><p>Ivory stone, charcoal V-columns, glass and warm timber establish a distinct architectural character.</p></div>
+        <div class="gallery-grid" id="gallery-grid">
+          <button class="gallery-tile tile-wide bw" data-large="assets/arrival-evening.webp" data-title="Arrival at dusk" type="button"><img class="g" src="assets/arrival-evening-sm.webp" alt="Warmly lit event centre arrival at dusk" loading="lazy"><img class="c" src="assets/arrival-evening-sm.webp" alt="" aria-hidden="true" loading="lazy"><span>01 / Arrival at dusk</span></button>
+          <button class="gallery-tile bw" data-large="assets/hotel-arrival.webp" data-title="Hotel approach" type="button"><img class="g" src="assets/hotel-arrival-sm.webp" alt="Hotel wing and entrance approach" loading="lazy"><img class="c" src="assets/hotel-arrival-sm.webp" alt="" aria-hidden="true" loading="lazy"><span>02 / Hotel approach</span></button>
+          <button class="gallery-tile bw" data-large="assets/frontage-wide.webp" data-title="The frontage" type="button"><img class="g" src="assets/frontage-wide-sm.webp" alt="Wide view of hotel and event centre frontages" loading="lazy"><img class="c" src="assets/frontage-wide-sm.webp" alt="" aria-hidden="true" loading="lazy"><span>03 / The frontage</span></button>
+          <button class="gallery-tile bw" data-large="assets/main-gate.webp" data-title="The main gate" type="button"><img class="g" src="assets/main-gate-sm.webp" alt="Main gate and arrival forecourt" loading="lazy"><img class="c" src="assets/main-gate-sm.webp" alt="" aria-hidden="true" loading="lazy"><span>04 / Main gate</span></button>
+          <button class="gallery-tile tile-wide bw" data-large="assets/hotel-corner.webp" data-title="The hotel wing" type="button"><img class="g" src="assets/hotel-corner-sm.webp" alt="Hotel wing and event centre in evening light" loading="lazy"><img class="c" src="assets/hotel-corner-sm.webp" alt="" aria-hidden="true" loading="lazy"><span>05 / The hotel wing</span></button>
+        </div><p class="swipe-note">Swipe for more images.</p>
+      </div>
+    </section>
+
+    <section class="plans light alt section" id="plans"><div class="shell"><div class="section-heading reveal"><div><p class="eyebrow">06 / The plans</p><h2>Designed to<br><span class="quiet">work beautifully.</span></h2></div><p>Explore the supplied schematic floor plans. Tap either image to view it in detail.</p></div>
+      <div class="plan-tabs" role="tablist" aria-label="Floor plans"><button type="button" role="tab" id="tab-ground" aria-selected="true" aria-controls="plan-ground" data-plan="ground">Ground floor</button><button type="button" role="tab" id="tab-first" aria-selected="false" aria-controls="plan-first" data-plan="first">First floor</button></div>
+      <div class="plan-panel" id="plan-ground" role="tabpanel" aria-labelledby="tab-ground"><button class="plan-viewer" type="button" data-large="assets/ground-floor-plan.webp" data-title="Ground floor plan"><img src="assets/ground-floor-plan.webp" srcset="assets/ground-floor-plan-sm.webp 900w, assets/ground-floor-plan.webp 957w" sizes="(max-width:860px) 100vw, 80vw" alt="Ground floor plan showing the convention hall, paddle court, restaurant, kitchens, drop-off and surface parking" loading="lazy"><span>Expand plan ↗</span></button><div class="plan-caption"><b>Ground floor</b><p>Grand Convention Hall, restaurant, industrial kitchens, paddle court, drop-off and surface parking.</p></div></div>
+      <div class="plan-panel" id="plan-first" role="tabpanel" aria-labelledby="tab-first" hidden><button class="plan-viewer" type="button" data-large="assets/first-floor-plan.webp" data-title="First floor plan"><img src="assets/first-floor-plan.webp" srcset="assets/first-floor-plan-sm.webp 900w, assets/first-floor-plan.webp 1130w" sizes="(max-width:860px) 100vw, 80vw" alt="First floor schematic plan showing the seating layout and circulation around the hall" loading="lazy"><span>Expand plan ↗</span></button><div class="plan-caption"><b>First floor</b><p>Upper-level schematic with hall seating, circulation and supporting rooms as shown in the supplied drawing.</p></div></div>
+      <p class="source-line">Plans are schematic. Room layouts and capacities should be confirmed during design development.</p>
+    </div></section>
+
+    <section class="closing dark" id="closing"><img src="assets/frontage-dusk.webp" alt="" aria-hidden="true" loading="lazy"><div class="closing-shade"></div><div class="shell closing-grid"><div><p class="eyebrow">Koforidua · Eastern Region</p><h2>A new setting for<br><span>what comes next.</span></h2><p>From the first arrival to the final conversation, every space is part of the experience.</p><div class="closing-actions" id="closing-actions"><a class="btn btn-primary" href="#tour">Revisit the visual tour <span aria-hidden="true">↗</span></a><a class="btn btn-secondary" href="#spaces">Explore the spaces <span aria-hidden="true">↗</span></a></div></div><aside class="glance"><p class="eyebrow">At a glance</p><a href="#spaces"><span>Grand Convention Hall</span><b>Up to 1,500 guests</b></a><a href="#spaces"><span>Conference & theatre</span><b>150–600 people</b></a><a href="#hospitality"><span>Hotel suites & studios</span><b>30–50 proposed keys</b></a><div class="glance-footer">Rooftop pool · Catering · Landscaped courts</div></aside></div></section>
+  </main>
+
+  <footer class="footer dark"><div class="shell"><div class="footer-main"><div><h2>Koforidua<br>Events Park.</h2><p>Koforidua, Eastern Region, Ghana</p></div><div><span class="footer-label">Explore</span><a href="#vision">The vision</a><a href="#masterplan">The campus</a><a href="#tour">Visual tour</a></div><div><span class="footer-label">Discover</span><a href="#spaces">The spaces</a><a href="#gallery">Architecture</a><a href="#plans">Floor plans</a></div><div class="footer-credit"><span class="footer-label">Presentation by</span><img src="assets/astrix-logo.png" width="480" height="263" alt="Astrix"></div></div><div class="footer-bottom"><p>Architectural images are artist's impressions. Programme and capacities are subject to confirmation.</p><a href="#top">Back to top ↑</a></div><details class="source-notes"><summary>Source notes and items to confirm</summary><p>Content is based on the supplied client presentation and schematic plans. The deck gives two different total parking figures: 83–140 cars on the facilities page and 500 cars on the arrival page. It also describes the hotel as five-star while a separate plan annotation refers to a four-star hotel. Neither claim is used here. The grand hall is given as 1,200–1,500 guests in its detailed section and 1,500 in the summary; this site presents the range or the stated upper limit accordingly. The 150–600 figure combines the smallest conference hall capacity with the theatre's upper capacity. No contact details or video footage were supplied.</p></details></div></footer>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" hidden><button class="lightbox-close icon-button" id="lightbox-close" type="button" aria-label="Close image viewer">×</button><button class="lightbox-arrow lightbox-prev" id="lightbox-prev" type="button" aria-label="Previous image">←</button><figure><img id="lightbox-image" alt=""><figcaption id="lightbox-caption"></figcaption></figure><button class="lightbox-arrow lightbox-next" id="lightbox-next" type="button" aria-label="Next image">→</button><div class="lightbox-thumbs" id="lightbox-thumbs"></div></div>
+  <script src="script.js" defer></script>
+</body>
+</html>
