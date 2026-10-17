@@ -923,7 +923,7 @@ if (typeof module !== 'undefined' && module.exports) module.exports = PheromoneG
     const simultaneous=s.robots.every(r=>r.move.kind==='deposit');
     $('arm-feed-state').textContent=s.complete?'Shared build complete':simultaneous?'Both robots depositing':s.robots.some(r=>r.move.phase==='join')?'Shared strip / one owner':'Coordinated travel';
     if(!s.complete&&(m.phase==='yield'||m.phase==='join'))$('arm-phase').textContent=`Robot ${joiner} joins / Robot ${observer} holds`;
-    if(reviewHold){$('arm-phase').textContent='Human review / both robots held';$('arm-feed-state').textContent='Operator hold / material flow off';}
+    if(reviewHold){$('arm-phase').textContent='Human review / both robots held';$('arm-feed-state').textContent='Operator hold / material flow off';$('arm-robot-a').textContent='Robot A · Held for review';$('arm-robot-b').textContent='Robot B · Held for review';}
     if(view==='nozzle')targetGoal=[s.local[0],s.local[1],s.local[2]+45];
     dirty=true;return s;
   }
