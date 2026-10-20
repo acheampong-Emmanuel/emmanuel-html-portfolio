@@ -103,6 +103,150 @@ new IntersectionObserver(([entry]) => {
 }, { threshold: .15 }).observe(hero);
 showHero(0);
 
+// The conceptual plan builds in four deliberate moves. Nothing advances on its own.
+const formationMoves = [
+  { title: 'Establish an address.', description: 'A clear street edge and one legible point of arrival orient the campus before the programme unfolds.' },
+  { title: 'Separate the anchors.', description: 'The hotel and event centre take distinct positions, giving each a recognisable identity and room to operate.' },
+  { title: 'Make a shared centre.', description: 'A sheltered link and open court turn the space between buildings into the heart of the destination.' },
+  { title: 'Connect through landscape.', description: 'Planted edges and pedestrian routes make movement across the site comfortable, clear and memorable.' }
+];
+const formationButtons = [...document.querySelectorAll('.formation-steps button')];
+function showFormation(index, focus = false) {
+  const step = (index + formationMoves.length) % formationMoves.length;
+  $('formation-canvas').dataset.step = String(step);
+  formationButtons.forEach((button, i) => button.setAttribute('aria-pressed', String(i === step)));
+  $('formation-count').textContent = `Move 0${step + 1} / 04`;
+  $('formation-step-title').textContent = formationMoves[step].title;
+  $('formation-step-description').textContent = formationMoves[step].description;
+  if (focus) formationButtons[step].focus();
+}
+formationButtons.forEach((button, index) => {
+  button.addEventListener('click', () => showFormation(index));
+  button.addEventListener('keydown', event => {
+    if (event.key === 'ArrowRight' || event.key === 'ArrowDown' || event.key === 'ArrowLeft' || event.key === 'ArrowUp') {
+      event.preventDefault();
+      showFormation(index + (event.key === 'ArrowRight' || event.key === 'ArrowDown' ? 1 : -1), true);
+    }
+  });
+});
+showFormation(0);
+
+// Explore the two supplied Koforidua studies through focus points on the drawings.
+const conceptDiagrams = {
+  campus: {
+    image: 'assets/concept-campus-diagram.webp',
+    alt: 'Annotated axonometric showing rooftop amenity, hotel wing, shared lobby, paddle court and event centre',
+    label: 'Campus organisation',
+    features: [
+      { x: 31, y: 23, name: 'Rooftop amenity', title: 'A hospitality layer above.', description: 'The upper terrace gives the guestroom wing its own leisure space and outlook.' },
+      { x: 64, y: 54, name: 'Shared lobby', title: 'A common threshold.', description: 'The lobby and circulation zone bind the two major volumes into one walkable destination.' },
+      { x: 55, y: 64, name: 'Paddle court', title: 'Recreation between destinations.', description: 'An outdoor recreation court occupies the space between the hotel and event centre.' },
+      { x: 79, y: 47, name: 'Event centre', title: 'A distinct gathering anchor.', description: 'The larger hall volume keeps a clear public identity beside the guestroom wing.' }
+    ]
+  },
+  arrival: {
+    image: 'assets/concept-arrival-diagram.webp',
+    alt: 'Annotated frontage study showing road approach, sheltered arrival canopy, landscape buffer, water feature and event entrance',
+    label: 'Arrival sequence',
+    features: [
+      { x: 82, y: 83, name: 'Road approach', title: 'A legible approach.', description: 'Vehicular movement is directed from the main road toward the arrival and drop-off.' },
+      { x: 46, y: 66, name: 'Arrival canopy', title: 'A sheltered transition.', description: 'The long canopy gives the frontage a protected arrival edge.' },
+      { x: 55, y: 79, name: 'Signage & water', title: 'A memorable threshold.', description: 'The sign wall and water feature mark the point of arrival.' },
+      { x: 76, y: 47, name: 'Event frontage', title: 'A visible public face.', description: 'Glazing and sculpted V-columns frame the entrance to the event centre.' }
+    ]
+  }
+};
+const diagramTabs = [...document.querySelectorAll('.diagram-tabs button')];
+const diagramImage = $('diagram-image');
+const diagramViewItem = { el: $('diagram-expand'), src: conceptDiagrams.campus.image, title: conceptDiagrams.campus.label, alt: conceptDiagrams.campus.alt };
+let activeDiagram = 'campus';
+let diagramImageRequest = 0;
+function showDiagramFeature(index, focus = false, pan = false) {
+  const data = conceptDiagrams[activeDiagram];
+  const feature = data.features[index];
+  $('diagram-counter').textContent = `0${index + 1} / 0${data.features.length}`;
+  $('diagram-feature-title').textContent = feature.title;
+  $('diagram-feature-description').textContent = feature.description;
+  document.querySelectorAll('.diagram-marker,.diagram-feature-list button').forEach(button => {
+    button.setAttribute('aria-pressed', String(Number(button.dataset.feature) === index));
+  });
+  if (pan) {
+    const viewport = document.querySelector('.diagram-viewport');
+    const stage = viewport.querySelector('.diagram-stage');
+    if (stage.offsetWidth > viewport.clientWidth) {
+      viewport.scrollTo({ left: stage.offsetWidth * feature.x / 100 - viewport.clientWidth / 2, behavior: reducedMotion ? 'auto' : 'smooth' });
+    }
+  }
+  if (focus) $('diagram-feature-list').querySelectorAll('button')[index].focus();
+}
+function showConceptDiagram(name, focus = false) {
+  activeDiagram = name;
+  const data = conceptDiagrams[name];
+  const request = ++diagramImageRequest;
+  diagramImage.classList.add('changing');
+  const next = new Image();
+  next.onload = () => {
+    if (request !== diagramImageRequest) return;
+    diagramImage.src = data.image;
+    diagramImage.alt = data.alt;
+    diagramImage.classList.remove('changing');
+  };
+  next.onerror = () => { if (request === diagramImageRequest) diagramImage.classList.remove('changing'); };
+  next.src = data.image;
+  diagramViewItem.src = data.image;
+  diagramViewItem.title = data.label;
+  diagramViewItem.alt = data.alt;
+  $('diagram-expand').setAttribute('aria-label', `Expand ${data.label.toLowerCase()} diagram`);
+  diagramTabs.forEach(tab => {
+    const selected = tab.dataset.diagram === name;
+    tab.setAttribute('aria-selected', String(selected));
+    tab.tabIndex = selected ? 0 : -1;
+  });
+  $('diagram-panel').setAttribute('aria-labelledby', `diagram-tab-${name}`);
+  const markers = $('diagram-markers');
+  const list = $('diagram-feature-list');
+  document.querySelector('.diagram-viewport').scrollLeft = 0;
+  markers.replaceChildren();
+  list.replaceChildren();
+  data.features.forEach((feature, index) => {
+    const marker = document.createElement('button');
+    marker.type = 'button';
+    marker.className = 'diagram-marker';
+    marker.dataset.feature = String(index);
+    marker.style.setProperty('--x', `${feature.x}%`);
+    marker.style.setProperty('--y', `${feature.y}%`);
+    marker.setAttribute('aria-label', `Show ${feature.name}`);
+    marker.textContent = String(index + 1);
+    marker.addEventListener('click', () => showDiagramFeature(index, false, true));
+    markers.appendChild(marker);
+    const control = document.createElement('button');
+    control.type = 'button';
+    control.dataset.feature = String(index);
+    control.textContent = feature.name;
+    control.addEventListener('click', () => showDiagramFeature(index, false, true));
+    control.addEventListener('keydown', event => {
+      if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
+        event.preventDefault();
+        showDiagramFeature((index + (event.key === 'ArrowRight' ? 1 : -1) + data.features.length) % data.features.length, true, true);
+      }
+    });
+    list.appendChild(control);
+  });
+  showDiagramFeature(0);
+  if (focus) diagramTabs.find(tab => tab.dataset.diagram === name).focus();
+}
+diagramTabs.forEach((tab, index) => {
+  tab.addEventListener('click', () => showConceptDiagram(tab.dataset.diagram));
+  tab.addEventListener('keydown', event => {
+    if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
+      event.preventDefault();
+      const next = (index + (event.key === 'ArrowRight' ? 1 : -1) + diagramTabs.length) % diagramTabs.length;
+      showConceptDiagram(diagramTabs[next].dataset.diagram, true);
+    }
+  });
+});
+showConceptDiagram('campus');
+
 // A tour of still renders because no video files were supplied.
 const tourScenes = [
   { title: 'The arrival.', desc: 'A composed approach, set between landscape, water and architecture.', caption: 'Arrival · Main entrance', image: 'assets/main-gate.webp', alt: 'Main entrance and arrival forecourt' },
@@ -240,6 +384,7 @@ if (touch) {
 // Shared gallery, plan and specification viewer.
 const lightbox = $('lightbox');
 const viewItems = [
+  diagramViewItem,
   ...[...document.querySelectorAll('.gallery-tile')].map(el => ({ el, src: el.dataset.large, title: el.dataset.title, alt: el.querySelector('.g').alt })),
   ...[...document.querySelectorAll('.plan-viewer')].map(el => ({ el, src: el.dataset.large, title: el.dataset.title, alt: el.querySelector('img').alt })),
   ...spaceImages.map((el, index) => ({ el, src: el.querySelector('img').src, title: ['Grand Convention Hall exterior', 'Conference centre exterior', 'Hotel wing exterior'][index], alt: el.querySelector('img').alt }))
