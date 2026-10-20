@@ -969,7 +969,7 @@ PROJECTS.forEach((p,i)=>{
     el.setAttribute('aria-label', `View ${p.t}, ${p.cat}`);
   }
   el.innerHTML=`<span class="corner">${p.url?'Interactive site ↗':String(i+1).padStart(2,'0')}</span>
-    <img src="${p.img.startsWith('assets/')?p.img:'data:image/jpeg;base64,'+p.img}" alt="${p.t} — ${p.cat}" loading="lazy">
+    <img src="${(p.img.startsWith('assets/')||p.img.startsWith('projects/'))?p.img:'data:image/jpeg;base64,'+p.img}" alt="${p.t} — ${p.cat}" loading="lazy">
     <div class="ov"><span class="cat">${p.cat}</span><span class="ttl">${p.t}</span><span class="meta">${p.m}${p.y!=="—"?" · "+p.y:""}</span></div>`;
   if(!p.url){
     el.addEventListener('click',()=>{if(window.openProject)window.openProject('work',i);else openLightbox(i);});
@@ -982,7 +982,7 @@ PROJECTS.forEach((p,i)=>{
 const LB={box:document.getElementById('lightbox'),img:document.getElementById('lbImg'),cat:document.getElementById('lbCat'),title:document.getElementById('lbTitle'),meta:document.getElementById('lbMeta'),idx:0,lastFocus:null};
 function renderLB(){
   const p=PROJECTS[LB.idx];
-  LB.img.src=p.img.startsWith('assets/')?p.img:'data:image/jpeg;base64,'+p.img;
+  LB.img.src=(p.img.startsWith('assets/')||p.img.startsWith('projects/'))?p.img:'data:image/jpeg;base64,'+p.img;
   LB.img.alt=p.t+' — '+p.cat;
   LB.cat.textContent=p.cat;
   LB.title.textContent=p.t;
@@ -1351,7 +1351,7 @@ const COMPWORKS=[];
 /* ============ COMPUTATIONAL WORKS ============ */
 (function(){
   if(typeof COMPWORKS==='undefined')return;
-  var src=function(b){return b.startsWith('assets/')?b:'data:image/jpeg;base64,'+b;};
+  var src=function(b){return (b.startsWith('assets/')||b.startsWith('projects/'))?b:'data:image/jpeg;base64,'+b;};
   var grid=document.getElementById('cwgrid');
 
   COMPWORKS.forEach(function(p,i){
@@ -1694,7 +1694,7 @@ html.modal-lock,body.modal-lock{overscroll-behavior:none}
 (function(){
 "use strict";
 if(window.__projInit) return; window.__projInit=1;
-function DURI(b){return b.startsWith('assets/')?b:'data:image/jpeg;base64,'+b;}
+function DURI(b){return (b.startsWith('assets/')||b.startsWith('projects/'))?b:'data:image/jpeg;base64,'+b;}
 function esc(t){return String(t==null?'':t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
 function pad(n){return ('0'+n).slice(-2);}
 function rm(){return window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;}
