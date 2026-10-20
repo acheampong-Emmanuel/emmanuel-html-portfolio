@@ -131,7 +131,7 @@ formationButtons.forEach((button, index) => {
 });
 showFormation(0);
 
-// Explore the two supplied Koforidua studies through focus points on the drawings.
+// Explore supplied studies and clearly labelled conceptual diagrams through focus points.
 const conceptDiagrams = {
   campus: {
     image: 'assets/concept-campus-diagram.webp',
@@ -153,6 +153,28 @@ const conceptDiagrams = {
       { x: 46, y: 66, name: 'Arrival canopy', title: 'A sheltered transition.', description: 'The long canopy gives the frontage a protected arrival edge.' },
       { x: 55, y: 79, name: 'Signage & water', title: 'A memorable threshold.', description: 'The sign wall and water feature mark the point of arrival.' },
       { x: 76, y: 47, name: 'Event frontage', title: 'A visible public face.', description: 'Glazing and sculpted V-columns frame the entrance to the event centre.' }
+    ]
+  },
+  programme: {
+    image: 'assets/concept-programme.svg',
+    alt: 'Conceptual programme diagram showing hotel and event spaces as separate anchors around a shared lobby and open court',
+    label: 'Programme and shared space',
+    features: [
+      { x: 24, y: 47, name: 'Hotel & suites', title: 'A quieter place to stay.', description: 'The guestroom wing has a distinct identity while remaining connected to the event programme.' },
+      { x: 76, y: 46, name: 'Event centre', title: 'A public gathering anchor.', description: 'The convention and meeting spaces form the campus\' larger public destination.' },
+      { x: 44, y: 43, name: 'Shared threshold', title: 'A common threshold.', description: 'The linked lobby makes movement between hospitality and events clear and sheltered.' },
+      { x: 50, y: 69, name: 'Open court', title: 'Breathing room between buildings.', description: 'A landscaped court gives the two anchors a shared outdoor centre.' }
+    ]
+  },
+  movement: {
+    image: 'assets/concept-movement.svg',
+    alt: 'Conceptual movement diagram tracing the road approach, sheltered arrival, connections between buildings and landscape route',
+    label: 'Movement and landscape',
+    features: [
+      { x: 50, y: 83, name: 'Road edge', title: 'Begin with a clear address.', description: 'The main road and entry point establish a legible first move into the campus.' },
+      { x: 43, y: 64, name: 'Sheltered arrival', title: 'Arrive under cover.', description: 'The drop-off and canopy make the transition from vehicle to venue comfortable.' },
+      { x: 44, y: 43, name: 'Walkable link', title: 'Connect the destinations.', description: 'A pedestrian route joins the hotel, shared lobby and event centre.' },
+      { x: 71, y: 65, name: 'Landscape loop', title: 'Make the journey part of the place.', description: 'Planting and outdoor space soften the edges of the route between buildings.' }
     ]
   }
 };
@@ -182,6 +204,7 @@ function showDiagramFeature(index, focus = false, pan = false) {
 function showConceptDiagram(name, focus = false) {
   activeDiagram = name;
   const data = conceptDiagrams[name];
+  document.querySelector('.diagram-stage').classList.toggle('is-study', name === 'campus' || name === 'arrival');
   const request = ++diagramImageRequest;
   diagramImage.classList.add('changing');
   const next = new Image();
