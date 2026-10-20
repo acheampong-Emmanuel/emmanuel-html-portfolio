@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Programme and shared space</title>
+  <desc id="desc">An interpretive diagram showing the hotel and event centre as separate anchors around a linked lobby and landscaped court. It is not a measured plan.</desc>
+  <defs>
+    <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M50 0H0V50" fill="none" stroke="#a9b4aa" stroke-opacity=".24" stroke-width="1"/></pattern>
+    <pattern id="rooms" width="60" height="70" patternUnits="userSpaceOnUse"><path d="M60 0H0V70" fill="none" stroke="#69808a" stroke-opacity=".55" stroke-width="2"/></pattern>
+    <pattern id="halls" width="124" height="124" patternUnits="userSpaceOnUse"><path d="M124 0H0V124" fill="none" stroke="#9d765e" stroke-opacity=".5" stroke-width="2"/></pattern>
+  </defs>
+  <g font-family="Arial,Helvetica,sans-serif">
+    <text x="92" y="98" font-size="24" font-weight="700" letter-spacing="5" fill="#6b756b">03 / PROGRAMME</text>
+    <text x="1508" y="98" text-anchor="end" font-size="20" letter-spacing="2" fill="#6b756b">CONCEPT STUDY · NOT TO SCALE</text>
+    <path d="M96 128H1504" stroke="#9da99d" stroke-opacity=".52" stroke-width="2"/>
+    <rect x="100" y="170" width="1400" height="550" rx="48" fill="url(#grid)"/>
+    <path d="M135 690Q800 736 1465 690" fill="none" stroke="#86a386" stroke-opacity=".54" stroke-width="48" stroke-linecap="round"/>
+    <path d="M140 689Q800 735 1460 689" fill="none" stroke="#dce3d5" stroke-width="15" stroke-linecap="round"/>
+    <g fill="#7f9c7f" opacity=".9"><circle cx="191" cy="681" r="15"/><circle cx="248" cy="704" r="13"/><circle cx="323" cy="709" r="16"/><circle cx="1270" cy="707" r="14"/><circle cx="1351" cy="700" r="17"/><circle cx="1425" cy="678" r="13"/></g>
+    <rect x="176" y="244" width="440" height="356" rx="30" fill="#b9c9cb" fill-opacity=".8" stroke="#6e8588" stroke-width="3"/>
+    <rect x="202" y="271" width="388" height="302" rx="16" fill="url(#rooms)"/>
+    <path d="M203 325H590M203 413H590M203 501H590" stroke="#6e8588" stroke-opacity=".52" stroke-width="2"/>
+    <text x="222" y="301" font-size="27" font-weight="700" letter-spacing="3" fill="#324849">HOTEL + SUITES</text>
+    <text x="222" y="558" font-size="19" fill="#41585b">Stay · lounge · rooftop amenity</text>
+    <rect x="984" y="244" width="440" height="356" rx="30" fill="#d9c7b4" fill-opacity=".9" stroke="#9d765e" stroke-width="3"/>
+    <rect x="1010" y="271" width="388" height="302" rx="16" fill="url(#halls)"/>
+    <path d="M1010 432H1398" stroke="#9d765e" stroke-opacity=".55" stroke-width="2"/>
+    <text x="1030" y="301" font-size="27" font-weight="700" letter-spacing="3" fill="#654e40">EVENT CENTRE</text>
+    <text x="1030" y="558" font-size="19" fill="#735846">Gather · meet · celebrate</text>
+    <path d="M616 338H984" stroke="#ae8b69" stroke-opacity=".34" stroke-width="105" stroke-linecap="round"/>
+    <path d="M616 338H984" stroke="#a87f5d" stroke-width="5" stroke-dasharray="16 15"/>
+    <rect x="690" y="267" width="220" height="142" rx="28" fill="#c2a083" stroke="#977154" stroke-width="3"/>
+    <text x="800" y="304" text-anchor="middle" font-size="20" font-weight="700" letter-spacing="2" fill="#493b31">SHARED</text>
+    <text x="800" y="334" text-anchor="middle" font-size="20" font-weight="700" letter-spacing="2" fill="#493b31">THRESHOLD</text>
+    <rect x="663" y="474" width="274" height="180" rx="44" fill="#bccba9" stroke="#7e9a78" stroke-width="3"/>
+    <path d="M690 622Q800 530 910 622" fill="none" stroke="#f0efe4" stroke-width="12" stroke-linecap="round"/>
+    <g fill="#77946d"><circle cx="700" cy="514" r="16"/><circle cx="748" cy="493" r="12"/><circle cx="852" cy="493" r="12"/><circle cx="900" cy="514" r="16"/></g>
+    <text x="800" y="648" text-anchor="middle" font-size="19" font-weight="700" letter-spacing="2" fill="#3e5a3f">OPEN COURT</text>
+    <path d="M800 720V814" stroke="#a87f5d" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="800" cy="776" r="10" fill="#a87f5d"/>
+    <text x="800" y="853" text-anchor="middle" font-size="20" font-weight="700" letter-spacing="3" fill="#69736a">MAIN ROAD / ARRIVAL</text>
+  </g>
+</svg>
