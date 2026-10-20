@@ -447,7 +447,11 @@
 #assembly .assembly-3d{position:relative;height:clamp(330px,calc(100svh - 330px),650px);background:var(--surface);overflow:hidden}
 #assembly .assembly-3d[hidden],#assembly [hidden]{display:none!important}
 #assembly-canvas{position:absolute;inset:72px 0 0;display:block;width:100%;height:calc(100% - 72px)}
-#assembly .assembly-scene-caption{position:absolute;inset:24px 28px auto;display:flex;align-items:flex-start;justify-content:space-between;gap:20px;pointer-events:none}
+#assembly .assembly-drawing-preview{position:absolute;inset:72px 0 0;display:grid;place-items:center;overflow:hidden;background:#252b2b}
+#assembly .assembly-drawing-preview img{display:block;width:min(88%,900px);max-height:82%;object-fit:contain;filter:contrast(1.05) brightness(.88);will-change:transform;transition:transform .25s linear}
+#assembly .assembly-drawing-preview::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 0%,rgba(199,225,216,.11) 50%,transparent 100%);width:24%;transform:translateX(var(--scan,-120%));pointer-events:none}
+#assembly .assembly-drawing-preview-label{position:absolute;left:28px;bottom:24px;color:#d4e2da;font-size:12px;letter-spacing:.08em;text-transform:uppercase;background:rgba(27,35,34,.88);padding:8px 11px}
+#assembly .assembly-scene-caption{position:absolute;z-index:2;inset:24px 28px auto;display:flex;align-items:flex-start;justify-content:space-between;gap:20px;pointer-events:none}
 #assembly .assembly-scene-caption h3{font-size:clamp(20px,2.2vw,30px);font-weight:500;letter-spacing:-.025em;margin:0 0 6px;color:#f0f3ed}
 #assembly .assembly-scene-caption p{font-size:13px;color:#c2ccc5;max-width:44ch;margin:0}
 #assembly-clock{font-size:12px;white-space:nowrap;color:#c2ccc5;font-variant-numeric:tabular-nums}
@@ -1099,18 +1103,18 @@ window.VelocityAssemblyModel={"source":"C:\\Users\\achea\\Desktop\\Projects\\Emm
   function createScene(canvas,options={}){
     const T=global.THREE,data=global.VelocityAssemblyModel;
     if(!T||!data)throw new Error('The embedded assembly model is unavailable.');
-    const renderer=new T.WebGLRenderer({canvas,antialias:true,alpha:false,preserveDrawingBuffer:!!options.capture,powerPreference:'low-power'});
-    renderer.setPixelRatio(options.pixelRatio||Math.min(global.devicePixelRatio||1,1.75));
+    const renderer=new T.WebGLRenderer({canvas,antialias:!options.lightweight,alpha:false,preserveDrawingBuffer:!!options.capture,powerPreference:'low-power'});
+    renderer.setPixelRatio(options.pixelRatio||(options.lightweight?1:Math.min(global.devicePixelRatio||1,1.75)));
     const linear=css=>new T.Color(css).convertSRGBToLinear();
     renderer.outputEncoding=T.sRGBEncoding;renderer.toneMapping=T.ACESFilmicToneMapping;renderer.toneMappingExposure=.94;
-    renderer.shadowMap.enabled=true;renderer.shadowMap.type=T.PCFSoftShadowMap;
+    renderer.shadowMap.enabled=!options.lightweight;renderer.shadowMap.type=T.PCFSoftShadowMap;
     // r149's solid background is a clear color (not a lit/encoded material).
     const scene=new T.Scene();scene.background=new T.Color('#2c2c2c');
     const camera=new T.OrthographicCamera(-6,6,4,-4,.1,60);
     const direction=new T.Vector3(7,5.5,8).normalize(),target=new T.Vector3(0,1.1,0);
     const ambient=new T.HemisphereLight('#e6eeef','#263334',.3);scene.add(ambient);
     const key=new T.DirectionalLight('#fff2dd',1.05);key.position.set(-3,8,5);key.castShadow=true;
-    key.shadow.mapSize.set(options.shadowSize||(canvas.clientWidth<600?1024:2048),options.shadowSize||(canvas.clientWidth<600?1024:2048));Object.assign(key.shadow.camera,{left:-7,right:7,top:7,bottom:-7,near:.1,far:25});key.shadow.bias=-.0002;key.shadow.normalBias=.008;scene.add(key);
+    key.shadow.mapSize.set(options.shadowSize||(canvas.clientWidth<600?1024:2048),options.shadowSize||(canvas.clientWidth<600?1024:2048));Object.assign(key.shadow.camera,{left:-7,right:7,top:7,bottom:-7,near:.1,far:25});key.shadow.bias=-.0002;key.shadow.normalBias=.008;key.castShadow=!options.lightweight;scene.add(key);
     const rim=new T.DirectionalLight('#c7e1ec',.7);rim.position.set(6,3,-7);scene.add(rim);
     const fill=new T.DirectionalLight('#ecf1e7',.3);fill.position.set(3,2,7);scene.add(fill);
     // Broad studio cards give metal real reflections, rather than painted highlights.
@@ -1118,7 +1122,9 @@ window.VelocityAssemblyModel={"source":"C:\\Users\\achea\\Desktop\\Projects\\Emm
     const studio=new T.Scene();studio.background=linear('#283236');
     function card(x,y,z,w,h,color,intensity){const material=new T.MeshBasicMaterial({color:linear(color).multiplyScalar(intensity),side:T.DoubleSide});const plane=new T.Mesh(new T.PlaneGeometry(w,h),material);plane.position.set(x,y,z);plane.lookAt(0,0,0);studio.add(plane)}
     card(-5,7,4,7,5,'#fff0db',3);card(5,3,-5,3,8,'#c2e3f0',2.4);card(3,4,7,5,4,'#ffffff',1.4);card(0,-5,0,7,7,'#9caca8',.35);
-    const pmrem=new T.PMREMGenerator(renderer),environment=pmrem.fromScene(studio,.03,.1,40);scene.environment=environment.texture;pmrem.dispose();studio.traverse(o=>{o.geometry?.dispose();o.material?.dispose()});
+    let environment=null;
+    if(!options.lightweight){const pmrem=new T.PMREMGenerator(renderer);environment=pmrem.fromScene(studio,.03,.1,40);scene.environment=environment.texture;pmrem.dispose()}
+    studio.traverse(o=>{o.geometry?.dispose();o.material?.dispose()});
     const finishes={
       shell:{color:'#b5c137',roughness:.38,metalness:.2,clearcoat:.4,clearcoatRoughness:.28,envMapIntensity:.85},
       duct:{color:'#4b5960',roughness:.4,metalness:.68,clearcoat:.12,envMapIntensity:1},
@@ -1127,6 +1133,7 @@ window.VelocityAssemblyModel={"source":"C:\\Users\\achea\\Desktop\\Projects\\Emm
     };
     function finishMaterial(category){
       const finish=finishes[category]||finishes.rotor;
+      if(options.lightweight)return new T.MeshStandardMaterial({color:finish.color,roughness:.6,metalness:.12,side:T.DoubleSide});
       const material=new T.MeshPhysicalMaterial({...finish,color:linear(finish.color),emissive:linear('#a8d6c4'),emissiveIntensity:0,side:T.DoubleSide});
       // Object-space microfinish follows each part; UV-less Rhino meshes stay seamless.
       material.onBeforeCompile=shader=>{
@@ -1153,7 +1160,7 @@ window.VelocityAssemblyModel={"source":"C:\\Users\\achea\\Desktop\\Projects\\Emm
     data.components.forEach((c,index)=>{
       const geometry=new T.BufferGeometry();geometry.setAttribute('position',new T.BufferAttribute(decode(c.positions,Float32Array),3));geometry.setAttribute('normal',new T.BufferAttribute(decode(c.normals,Int8Array),3,true));geometry.setIndex(new T.BufferAttribute(decode(c.indices,Uint32Array),1));geometry.computeBoundingBox();geometry.computeBoundingSphere();
       const material=finishMaterial(c.category);
-      const mesh=new T.Mesh(geometry,material);mesh.name=c.name;mesh.castShadow=true;mesh.receiveShadow=true;mesh.layers.enable(2);mesh.position.fromArray(c.final);scene.add(mesh);
+      const mesh=new T.Mesh(geometry,material);mesh.name=c.name;mesh.castShadow=!options.lightweight;mesh.receiveShadow=!options.lightweight;mesh.layers.enable(2);mesh.position.fromArray(c.final);scene.add(mesh);
       const curve=new T.CubicBezierCurve3(...c.controls.map(v=>new T.Vector3(...v).add(mesh.position)));
       const pathMaterial=new T.LineBasicMaterial({color:'#c8e4d8',transparent:true,opacity:0,depthWrite:false});
       const path=new T.Line(new T.BufferGeometry().setFromPoints(curve.getPoints(100)),pathMaterial);path.frustumCulled=false;scene.add(path);
@@ -1179,9 +1186,10 @@ window.VelocityAssemblyModel={"source":"C:\\Users\\achea\\Desktop\\Projects\\Emm
     const blurScene=new T.Scene(),blurCamera=new T.OrthographicCamera(-1,1,1,-1,0,1);
     const blurMaterial=new T.ShaderMaterial({depthTest:false,depthWrite:false,uniforms:{map:{value:null},step:{value:new T.Vector2()}},vertexShader:'varying vec2 vUv; void main(){vUv=uv;gl_Position=vec4(position.xy,0.0,1.0);}',fragmentShader:'uniform sampler2D map; uniform vec2 step; varying vec2 vUv; void main(){vec4 c=texture2D(map,vUv)*.227027; c+=(texture2D(map,vUv+step*1.384615)+texture2D(map,vUv-step*1.384615))*.316216; c+=(texture2D(map,vUv+step*3.230769)+texture2D(map,vUv-step*3.230769))*.070270; gl_FragColor=c;}'});
     const quad=new T.Mesh(new T.PlaneGeometry(2,2),blurMaterial);blurScene.add(quad);
-    const contactPlane=new T.Mesh(new T.PlaneGeometry(12,12),new T.MeshBasicMaterial({map:contactTarget.texture,transparent:true,opacity:.72,depthWrite:false,toneMapped:false,side:T.DoubleSide}));contactPlane.rotation.x=-Math.PI/2;contactPlane.scale.y=-1;contactPlane.position.y=-1.125;scene.add(contactPlane);
+    const contactPlane=new T.Mesh(new T.PlaneGeometry(12,12),new T.MeshBasicMaterial({map:contactTarget.texture,transparent:true,opacity:.72,depthWrite:false,toneMapped:false,side:T.DoubleSide}));contactPlane.rotation.x=-Math.PI/2;contactPlane.scale.y=-1;contactPlane.position.y=-1.125;contactPlane.visible=!options.lightweight;scene.add(contactPlane);
     let seconds=0,width=1,height=1,pathsVisible=true,span=8,shadowTime=-1,currentReturn=null;
     function updateContact(){
+      if(options.lightweight)return;
       if(Math.abs(seconds-shadowTime)<1/24)return;shadowTime=seconds;
       const background=scene.background,renderTarget=renderer.getRenderTarget(),clearColor=renderer.getClearColor(new T.Color()),clearAlpha=renderer.getClearAlpha(),shadowAuto=renderer.shadowMap.autoUpdate;
       scene.background=null;scene.overrideMaterial=contactDepth;renderer.shadowMap.autoUpdate=false;renderer.setClearColor(0,0);
@@ -1229,16 +1237,31 @@ window.VelocityAssemblyModel={"source":"C:\\Users\\achea\\Desktop\\Projects\\Emm
     function render(){updateContact();renderer.render(scene,camera)}
     function resize(w,h){width=Math.max(1,w);height=Math.max(1,h);renderer.setSize(width,height,false);setTime(seconds,currentReturn);render()}
     function setPaths(visible){pathsVisible=visible;setTime(seconds,currentReturn);render()}
-    function dispose(){scene.traverse(o=>{o.geometry?.dispose();if(o.material){for(const m of Array.isArray(o.material)?o.material:[o.material])m.dispose()}});environment.dispose();contactTarget.dispose();blurTarget.dispose();contactDepth.dispose();quad.geometry.dispose();blurMaterial.dispose();renderer.dispose()}
+    function dispose(){scene.traverse(o=>{o.geometry?.dispose();if(o.material){for(const m of Array.isArray(o.material)?o.material:[o.material])m.dispose()}});environment?.dispose();contactTarget.dispose();blurTarget.dispose();contactDepth.dispose();quad.geometry.dispose();blurMaterial.dispose();renderer.dispose()}
     return {setTime,render,resize,setPaths,dispose,renderer,scene,camera,parts,stages,duration:data.duration,get time(){return seconds}};
+  }
+  function createDrawingScene(host){
+    const source=document.getElementById('assembly-image');
+    const preview=document.createElement('div');preview.className='assembly-drawing-preview';
+    const image=document.createElement('img');image.src=source.src;image.alt='Original exploded drone drawing from the project submission';
+    const label=document.createElement('span');label.className='assembly-drawing-preview-label';label.textContent='Original drawing / animated walkthrough';
+    preview.append(image,label);host.append(preview);
+    function setTime(seconds){
+      const progress=clamp(seconds/27,0,1),stage=stages.findLast(item=>seconds>=item.at)||stages[0];
+      image.style.transform=`translate3d(${(progress-.5)*-6}%,${Math.sin(progress*Math.PI)*-2}%,0) scale(${(1.02+Math.sin(progress*Math.PI)*.08).toFixed(3)})`;
+      preview.style.setProperty('--scan',`${-120+progress*600}%`);
+      return {stage:stage.title,detail:`Source drawing walkthrough / ${stage.detail}`};
+    }
+    return {setTime,render(){},resize(){},setPaths(){},dispose(){preview.remove()},duration:27};
   }
   global.createVelocityAssemblyScene=createScene;
   global.mountVelocityAssembly=function(){
     const root=document.getElementById('assembly'),host=document.getElementById('assembly-3d');if(!root||!host)return;
-    const canvas=host.querySelector('canvas'),play=document.getElementById('assembly-play'),replay=document.getElementById('assembly-replay'),slider=document.getElementById('assembly-time'),clock=document.getElementById('assembly-clock'),status=document.getElementById('assembly-motion-status'),heading=document.getElementById('assembly-stage-title'),detail=document.getElementById('assembly-stage-detail'),drawing=document.getElementById('assembly-drawing'),drawingToggle=document.getElementById('assembly-drawing-toggle'),pathToggle=document.getElementById('assembly-paths'),loading=document.getElementById('assembly-loading');
+    let canvas=host.querySelector('canvas');const play=document.getElementById('assembly-play'),replay=document.getElementById('assembly-replay'),slider=document.getElementById('assembly-time'),clock=document.getElementById('assembly-clock'),status=document.getElementById('assembly-motion-status'),heading=document.getElementById('assembly-stage-title'),detail=document.getElementById('assembly-stage-detail'),drawing=document.getElementById('assembly-drawing'),drawingToggle=document.getElementById('assembly-drawing-toggle'),pathToggle=document.getElementById('assembly-paths'),loading=document.getElementById('assembly-loading');
     const loopToggle=document.getElementById('assembly-loop'),reduced=matchMedia('(prefers-reduced-motion: reduce)'),viewer=document.getElementById('viewer');
+    const preferLite=matchMedia('(max-width: 850px)').matches||(navigator.deviceMemory||8)<=4;
     const rate=1.5,duration=27,returnDuration=3.6;
-    let api=null,playing=false,time=0,raf=0,last=0,visible=false,failed=false,lastStage='',manualPause=false,looping=!reduced.matches,returning=false,returnTime=0;
+    let api=null,playing=false,time=0,raf=0,last=0,visible=false,failed=false,lastStage='',manualPause=false,looping=!reduced.matches,returning=false,returnTime=0,drawingPreview=false;
     loopToggle.setAttribute('aria-pressed',String(looping));
     loopToggle.textContent=looping?'Loop on':'Loop off';
     function available(){return visible&&!document.hidden&&!host.hidden&&(!viewer||viewer.hidden)&&!failed}
@@ -1250,7 +1273,7 @@ window.VelocityAssemblyModel={"source":"C:\\Users\\achea\\Desktop\\Projects\\Emm
     }
     function draw(value,resetProgress=null){time=clamp(value,0,duration);if(api){sync(api.setTime(time,resetProgress));api.render()}}
     function seek(value){returning=false;returnTime=0;api?.setPaths(pathToggle.getAttribute('aria-pressed')==='true');draw(value)}
-    function pause(message,manual=true){if(manual)manualPause=true;playing=false;cancelAnimationFrame(raf);raf=0;play.textContent=time>=duration?'Replay assembly':'Play assembly';play.setAttribute('aria-pressed','false');if(message)status.textContent=message}
+    function pause(message,manual=true){if(manual)manualPause=true;playing=false;cancelAnimationFrame(raf);raf=0;play.textContent=time>=duration?`Replay ${drawingPreview?'drawing tour':'assembly'}`:`Play ${drawingPreview?'drawing tour':'assembly'}`;play.setAttribute('aria-pressed','false');if(message)status.textContent=message}
     function tick(now){
       if(!playing)return;
       if(!available()){pause('Assembly paused off screen',false);return}
@@ -1269,19 +1292,44 @@ window.VelocityAssemblyModel={"source":"C:\\Users\\achea\\Desktop\\Projects\\Emm
     }
     function start(automatic=false){
       if(!api||failed||playing||!available()||(automatic&&(manualPause||reduced.matches)))return;
-      manualPause=false;if(time>=duration&&!returning)seek(0);playing=true;last=performance.now();play.textContent='Pause assembly';play.setAttribute('aria-pressed','true');status.textContent='Assembly playing · 1.5× speed';raf=requestAnimationFrame(tick);
+      manualPause=false;if(time>=duration&&!returning)seek(0);playing=true;last=performance.now();play.textContent=drawingPreview?'Pause drawing tour':'Pause assembly';play.setAttribute('aria-pressed','true');status.textContent=drawingPreview?'Drawing walkthrough playing · 1.5× speed':'Assembly playing · 1.5× speed';raf=requestAnimationFrame(tick);
     }
     function updateVisibility(){if(available())start(true);else if(playing)pause('Assembly paused while out of view',false)}
     function toggleDrawing(show){pause();drawing.hidden=!show;host.hidden=show;document.getElementById('assembly-controls').hidden=show;drawingToggle.setAttribute('aria-pressed',String(show));drawingToggle.textContent=show?'Return to 3D assembly':'Original drawing';if(!show&&api)resize()}
     function resize(){if(api&&!host.hidden){const r=canvas.getBoundingClientRect();api.resize(r.width,r.height)}}
-    function initialize(){if(api||failed)return;try{api=createScene(canvas);root.classList.add('has-assembly-3d');loading.hidden=true;play.disabled=replay.disabled=slider.disabled=pathToggle.disabled=loopToggle.disabled=false;root.querySelectorAll('[data-assembly-time]').forEach(b=>b.disabled=false);resize();seek(0);status.textContent=reduced.matches?'Reduced motion: use the chapter buttons or timeline. Playback is optional.':'Autoplays in view · 18 seconds · loops continuously';global.VelocityAssembly={get scene(){return api},seek,play:()=>start(),pause,get playing(){return playing},get time(){return time},get looping(){return looping},get returning(){return returning},rate};updateVisibility()}catch(error){failed=true;loading.textContent='3D assembly could not start. The original drawing is available below.';drawing.hidden=false;status.textContent='3D unavailable · original drawing shown';console.warn('Assembly renderer:',error.message)}}
+    function freshCanvas(){const next=canvas.cloneNode(false);canvas.replaceWith(next);canvas=next;bindContextLoss(canvas)}
+    function initialize(){if(api||failed)return;try{
+      try{api=createScene(canvas,{lightweight:preferLite});resize();seek(0)}catch(fullError){
+        console.warn('Assembly primary renderer:',fullError);
+        try{api?.dispose()}catch(_){}api=null;
+        if(!preferLite){
+          freshCanvas();
+          try{api=createScene(canvas,{lightweight:true});resize();seek(0)}catch(lightError){
+            console.warn('Assembly light renderer:',lightError);
+            try{api?.dispose()}catch(_){}api=null;
+          }
+        }
+        if(!api){canvas.hidden=true;api=createDrawingScene(host);drawingPreview=true}
+      }
+      root.classList.add('has-assembly-3d');loading.hidden=true;play.disabled=replay.disabled=slider.disabled=loopToggle.disabled=false;pathToggle.disabled=drawingPreview;
+      root.querySelectorAll('[data-assembly-time]').forEach(b=>b.disabled=false);resize();seek(0);
+      status.textContent=reduced.matches?'Reduced motion: use the chapter buttons or timeline. Playback is optional.':drawingPreview?'Original drawing walkthrough autoplays in view · 18 seconds · loops continuously':'Autoplays in view · 18 seconds · loops continuously';
+      global.VelocityAssembly={get scene(){return api},seek,play:()=>start(),pause,get playing(){return playing},get time(){return time},get looping(){return looping},get returning(){return returning},rate};updateVisibility();
+    }catch(error){failed=true;loading.textContent='The assembly could not start. Open the original drawing below.';drawing.hidden=false;status.textContent='Assembly unavailable · original drawing shown';console.warn('Assembly renderer:',error)}}
     play.addEventListener('click',()=>playing?pause('Assembly paused'):start());replay.addEventListener('click',()=>{pause();seek(0);if(!reduced.matches)start()});
     slider.addEventListener('pointerdown',()=>pause());slider.addEventListener('input',()=>{pause();seek(+slider.value*rate)});
     root.querySelectorAll('[data-assembly-time]').forEach(button=>button.addEventListener('click',()=>{pause();seek(+button.dataset.assemblyTime)}));
     pathToggle.addEventListener('click',()=>{const on=pathToggle.getAttribute('aria-pressed')!=='true';pathToggle.setAttribute('aria-pressed',String(on));api?.setPaths(on&&!returning)});
     loopToggle.addEventListener('click',()=>{looping=!looping;loopToggle.setAttribute('aria-pressed',String(looping));loopToggle.textContent=looping?'Loop on':'Loop off';status.textContent=looping?'Loop on · assembly repeats while in view':'Loop off · sequence will hold at completion'});
     drawingToggle.addEventListener('click',()=>toggleDrawing(drawingToggle.getAttribute('aria-pressed')!=='true'));
-    canvas.addEventListener('webglcontextlost',event=>{event.preventDefault();pause('3D display interrupted · original drawing available');loading.textContent='The 3D display was interrupted. Reload to restore it, or open the original drawing.';loading.hidden=false;play.disabled=replay.disabled=true});
+    function bindContextLoss(target){target.addEventListener('webglcontextlost',event=>{
+      event.preventDefault();if(target!==canvas||drawingPreview||!api)return;
+      pause('3D display interrupted; switching to the drawing walkthrough',false);
+      try{api?.dispose()}catch(_){}
+      target.hidden=true;api=createDrawingScene(host);drawingPreview=true;pathToggle.disabled=true;
+      seek(time);loading.hidden=true;status.textContent='Original drawing walkthrough ready';updateVisibility();
+    })}
+    bindContextLoss(canvas);
     document.addEventListener('visibilitychange',updateVisibility);
     reduced.addEventListener('change',()=>{if(reduced.matches){pause('Reduced motion: use the chapter buttons or timeline.');looping=false;loopToggle.setAttribute('aria-pressed','false');loopToggle.textContent='Loop off'}});
     if(viewer)new MutationObserver(updateVisibility).observe(viewer,{attributes:true,attributeFilter:['hidden']});
@@ -1835,7 +1883,7 @@ window.VelocityAssemblyModel={"source":"C:\\Users\\achea\\Desktop\\Projects\\Emm
       const span=Math.max(size.x,size.z)*.62||1,camera=new THREE.OrthographicCamera(-span,span,span,-span,.01,Math.max(100,size.y*12));camera.position.set(0,Math.max(size.x,size.y,size.z)*4||12,0);camera.up.set(0,0,-1);camera.lookAt(0,0,0);scene.add(camera);renderer.render(scene,camera);
       const composite=document.createElement('canvas');composite.width=composite.height=256;const compositeContext=composite.getContext('2d');compositeContext.shadowColor='rgba(210,255,248,.9)';compositeContext.shadowBlur=8;compositeContext.globalAlpha=.82;compositeContext.drawImage(renderer.domElement,8,8,240,240);compositeContext.shadowBlur=0;compositeContext.globalAlpha=1;compositeContext.drawImage(renderer.domElement,8,8,240,240);window.velocityDroneTopViewSrc=composite.toDataURL('image/png');mapDroneTopArtwork.src=window.velocityDroneTopViewSrc;
     }catch(error){console.warn('Velocity Vortex top-view artwork fallback',error)}
-    finally{model?.geometry?.dispose?.();model?.material?.dispose?.();renderer?.dispose?.()}
+    finally{model?.geometry?.dispose?.();model?.material?.dispose?.();renderer?.forceContextLoss?.();renderer?.dispose?.()}
   }
   mapBuildModelTopArtwork();
   let mapRouteHover=null,mapFlightFrame=0,mapFlightLast=0,mapFlightLastDraw=0,mapFlightInView=false,mapRoutesVisible=true;
