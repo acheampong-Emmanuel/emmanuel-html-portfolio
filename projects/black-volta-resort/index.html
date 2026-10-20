@@ -34,6 +34,10 @@
     @media(hover:none){.render-card:hover img{transform:none}}
     .closing{position:relative;min-height:700px;display:flex;align-items:center;overflow:hidden;background:#172321}.closing>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.closing::before{content:"";position:absolute;z-index:1;inset:0;background:linear-gradient(90deg,rgba(8,21,18,.93),rgba(8,21,18,.65) 55%,rgba(8,21,18,.24))}.closing-inner{position:relative;z-index:2;display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(40px,8vw,130px);align-items:end;padding-block:110px}.closing h2{max-width:11ch}.closing p{max-width:40ch;color:#dce4db}.closing .pill-row{margin-top:34px}.glance{border:1px solid rgba(255,255,255,.16);background:rgba(235,243,235,.11);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);border-radius:16px;padding:32px}.glance h3{font-size:24px;margin-bottom:18px}.glance a{display:flex;justify-content:space-between;gap:20px;padding:15px 0;border-top:1px solid rgba(255,255,255,.19);font-size:15px;font-weight:600}.glance a::after{content:"↗";color:var(--accent)}.glance small{display:block;color:#d3dfd3;font-size:13px;line-height:1.5;margin-top:18px}.footer{padding:64px var(--gut) calc(28px + env(safe-area-inset-bottom));background:#111c1a;color:#f5f3ee}.footer-inner{max-width:var(--max);margin:auto}.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px;padding-bottom:58px}.footer-brand{font-family:var(--display);font-size:clamp(31px,3.7vw,48px);font-weight:650;letter-spacing:-.045em;line-height:1}.footer p,.footer a{font-size:14px;color:#bdcbbf}.footer-col{display:flex;flex-direction:column;gap:10px}.footer-col strong,.credit strong{font-size:13px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px}.credit img{height:44px;width:auto;max-width:128px;object-fit:contain;margin-top:6px}.footer-bottom{display:flex;justify-content:space-between;gap:24px;padding-top:20px;border-top:1px solid rgba(255,255,255,.15);color:#b4c1b7;font-size:13px}.footer-bottom a{white-space:nowrap}
     .dialog{position:fixed;z-index:1000;inset:0;background:rgba(8,16,14,.96);color:#fff;display:flex;flex-direction:column;padding:calc(14px + env(safe-area-inset-top)) max(16px,env(safe-area-inset-right)) calc(14px + env(safe-area-inset-bottom)) max(16px,env(safe-area-inset-left))}.dialog-top{display:flex;align-items:center;gap:20px;min-height:50px}.dialog-title{font-size:14px;font-weight:650;margin-right:auto}.dialog-top .round{background:rgba(255,255,255,.16)}.dialog-stage{flex:1;min-height:0;position:relative;display:grid;place-items:center}.dialog-stage img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;border-radius:8px}.dialog-caption{font-size:13px;color:#d5dfd5;margin:8px auto 0;text-align:center}.dialog-arrow{position:absolute;z-index:2;top:50%;transform:translateY(-50%)}.dialog-arrow.prev{left:10px}.dialog-arrow.next{right:10px}.thumbstrip{display:flex;justify-content:center;gap:7px;overflow-x:auto;padding:15px 0 0;scrollbar-width:none}.thumbstrip button{border:2px solid transparent;border-radius:7px;background:transparent;padding:0;flex:none;width:66px;height:47px;opacity:.55;overflow:hidden}.thumbstrip button.active{border-color:var(--accent);opacity:1}.thumbstrip img{width:100%;height:100%;object-fit:cover}.plan-tabs{display:flex;gap:7px;overflow-x:auto;padding:12px 0 6px;scrollbar-width:none}.plan-tabs button{flex:none;min-height:44px;padding:0 16px;border:0;border-radius:30px;background:#2a3a35;color:#dde7df;font-size:13px;font-weight:600}.plan-tabs button.active{background:#f5f3ee;color:#172321}.plan-dialog .dialog-stage img{max-height:100%}.plan-full{align-self:center;color:var(--accent);font-size:13px;font-weight:600;margin-top:5px;min-height:32px}
+    .dialog{opacity:0;pointer-events:none;transition:opacity .24s cubic-bezier(.55,0,.8,.3)}
+    .dialog.is-open{opacity:1;pointer-events:auto;transition:opacity .32s cubic-bezier(.22,1,.36,1)}
+    #galleryDialog .dialog-stage img{opacity:0;transform:scale(.92);transition:opacity .2s ease-in,transform .24s cubic-bezier(.55,0,.8,.3)}
+    #galleryDialog.is-open .dialog-stage img{opacity:1;transform:scale(1);transition:opacity .28s ease-out,transform .38s cubic-bezier(.22,1,.36,1)}
     .plan-toolbar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:8px 1px 10px}.plan-intro{display:flex;align-items:baseline;gap:13px;font-size:13px;color:#d5dfd5}.plan-sheet{color:var(--accent);font-weight:700;white-space:nowrap;font-variant-numeric:tabular-nums}.plan-tools{display:flex;align-items:center;gap:5px;flex:none}.plan-tools button{min-width:44px;min-height:44px;border:0;border-radius:22px;background:#2a3a35;color:#f5f3ee;font-size:18px;font-weight:600}.plan-tools button:disabled{opacity:.4;cursor:default}.plan-tools .plan-fit{padding:0 16px;font-size:13px}.plan-zoom-value{min-width:54px;text-align:center;font-size:13px;font-weight:650;font-variant-numeric:tabular-nums}.plan-dialog .plan-stage{display:block;overflow:auto;overscroll-behavior:contain;touch-action:pan-x pan-y;background:#e4e6de;border-radius:12px;scrollbar-color:#8a9b8c transparent;cursor:default}.plan-dialog .plan-stage.can-pan{cursor:grab}.plan-dialog .plan-stage.dragging{cursor:grabbing;user-select:none}.plan-canvas{display:grid;place-items:center;width:max-content;height:max-content;min-width:100%;min-height:100%;padding:20px}.plan-dialog .plan-stage img{display:block;max-width:none;max-height:none;width:auto;height:auto;border-radius:2px;box-shadow:0 12px 35px rgba(25,37,33,.13);user-select:none}.plan-full{display:inline-flex;align-items:center;justify-content:center;min-height:44px;margin:2px auto 0}
     @media(max-width:650px){.plan-toolbar{align-items:stretch;flex-direction:column;gap:7px;padding-top:6px}.plan-intro{justify-content:space-between}.plan-intro span:last-child{max-width:65%;text-align:right}.plan-tools{justify-content:flex-end}.plan-canvas{padding:12px}.plan-dialog .plan-stage{border-radius:8px}}
     .concept-entry{display:inline-flex;align-items:center;min-height:44px;margin-top:13px}
@@ -284,8 +288,41 @@
       const gallerySets={experience:gallery,concept:concepts,renders:renders};
       let activeGallery=gallery;
       let galleryIndex=0;
-      function openDialog(dialog){returnFocus=document.activeElement;activeDialog=dialog;dialog.hidden=false;lock(true);dialog.querySelector('button').focus();}
-      function closeDialog(){if(!activeDialog)return;activeDialog.hidden=true;activeDialog=null;lock(false);if(returnFocus&&returnFocus.focus)returnFocus.focus();}
+      let dialogCloseTimer=0,dialogOpenFrame=0;
+      function openDialog(dialog,source){
+        clearTimeout(dialogCloseTimer);
+        cancelAnimationFrame(dialogOpenFrame);
+        for(const other of [$('galleryDialog'),$('planDialog')])if(other!==dialog){other.classList.remove('is-open');other.hidden=true;}
+        returnFocus=source||document.activeElement;
+        activeDialog=dialog;
+        dialog.classList.remove('is-open');
+        dialog.hidden=false;
+        lock(true);
+        if(source&&dialog===$('galleryDialog')){
+          const sourceRect=source.querySelector('img')?.getBoundingClientRect()||source.getBoundingClientRect();
+          const imageRect=$('galleryImage').getBoundingClientRect();
+          if(imageRect.width&&imageRect.height){
+            const x=Math.max(0,Math.min(100,((sourceRect.left+sourceRect.width/2-imageRect.left)/imageRect.width)*100));
+            const y=Math.max(0,Math.min(100,((sourceRect.top+sourceRect.height/2-imageRect.top)/imageRect.height)*100));
+            $('galleryImage').style.transformOrigin=x+'% '+y+'%';
+          }else $('galleryImage').style.transformOrigin='center';
+        }
+        void dialog.offsetWidth;
+        if(reduced)dialog.classList.add('is-open');
+        else dialogOpenFrame=requestAnimationFrame(()=>{if(activeDialog===dialog)dialog.classList.add('is-open');});
+        dialog.querySelector('button').focus();
+      }
+      function closeDialog(){
+        if(!activeDialog)return;
+        const dialog=activeDialog;
+        cancelAnimationFrame(dialogOpenFrame);
+        dialog.classList.remove('is-open');
+        activeDialog=null;
+        lock(false);
+        if(returnFocus&&returnFocus.focus)returnFocus.focus();
+        if(reduced)dialog.hidden=true;
+        else dialogCloseTimer=setTimeout(()=>{if(activeDialog!==dialog)dialog.hidden=true;},260);
+      }
       function showGallery(i){
         galleryIndex=(i+activeGallery.length)%activeGallery.length;
         const item=activeGallery[galleryIndex];$('galleryImage').src='assets/'+item.image+'.jpg';$('galleryImage').alt=item.caption;$('galleryTitle').textContent=item.title;$('galleryCaption').textContent=(galleryIndex+1)+' / '+activeGallery.length+' · '+item.caption;
@@ -293,15 +330,15 @@
         if(!$('galleryDialog').hidden)$('galleryThumbs').children[galleryIndex]?.scrollIntoView({block:'nearest',inline:'center',behavior:reduced?'auto':'smooth'});
         const preload=new Image();preload.src='assets/'+activeGallery[(galleryIndex+1)%activeGallery.length].image+'.jpg';
       }
-      function openGallery(set,i){
+      function openGallery(set,i,source){
         activeGallery=gallerySets[set];
         $('galleryDialog').setAttribute('aria-label',set==='concept'?'Conceptual sketches':set==='renders'?'All architectural renders':'Project image gallery');
         $('galleryThumbs').replaceChildren();
         activeGallery.forEach((item,n)=>{const b=document.createElement('button');b.setAttribute('aria-label','View '+item.title);const img=document.createElement('img');img.src='assets/'+item.image+'-t.jpg';img.alt='';b.append(img);b.addEventListener('click',()=>showGallery(n));$('galleryThumbs').append(b);});
-        showGallery(i);openDialog($('galleryDialog'));
+        showGallery(i);openDialog($('galleryDialog'),source);
         $('galleryThumbs').children[galleryIndex]?.scrollIntoView({block:'nearest',inline:'center',behavior:'auto'});
       }
-      document.querySelectorAll('[data-gallery]').forEach(b=>b.addEventListener('click',()=>openGallery(b.dataset.gallerySet||'experience',Number(b.dataset.gallery))));
+      document.querySelectorAll('[data-gallery]').forEach(b=>b.addEventListener('click',()=>openGallery(b.dataset.gallerySet||'experience',Number(b.dataset.gallery),b)));
       $('galleryClose').addEventListener('click',closeDialog);
       $('galleryPrev').addEventListener('click',()=>showGallery(galleryIndex-1));
       $('galleryNext').addEventListener('click',()=>showGallery(galleryIndex+1));
