@@ -103,7 +103,7 @@ new IntersectionObserver(([entry]) => {
 }, { threshold: .15 }).observe(hero);
 showHero(0);
 
-// The conceptual plan builds in four deliberate moves. Nothing advances on its own.
+// The conceptual plan builds in four deliberate moves and starts when it enters view.
 const formationMoves = [
   { title: 'Establish an address.', description: 'A clear street edge and one legible point of arrival orient the campus before the programme unfolds.' },
   { title: 'Separate the anchors.', description: 'The hotel and event centre take distinct positions, giving each a recognisable identity and room to operate.' },
