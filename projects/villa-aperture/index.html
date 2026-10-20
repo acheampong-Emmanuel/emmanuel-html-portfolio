@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#181c1c">
+  <meta name="description" content="An interactive presentation of Villa Aperture, a five bedroom private residence presented by Astrix.">
+  <meta property="og:title" content="Villa Aperture — Astrix">
+  <meta property="og:description" content="Explore the concept, plans and views of a five bedroom private residence.">
+  <meta property="og:image" content="assets/share.webp">
+  <title>Villa Aperture — Astrix</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=20261020-2">
+</head>
+<body>
+  <svg class="svg-filters" width="0" height="0" aria-hidden="true" focusable="false"><filter id="planLinework" x="-2%" y="-2%" width="104%" height="104%" color-interpolation-filters="sRGB"><feColorMatrix in="SourceGraphic" type="saturate" values="0" result="planGray"/><feMorphology in="planGray" operator="dilate" radius="1.5" result="planDilated"/><feBlend in="planDilated" in2="planGray" mode="difference" result="planEdges"/><feColorMatrix in="planEdges" type="matrix" values="0 0 0 0 .12  0 0 0 0 .18  0 0 0 0 .17  1.25 1.25 1.25 0 -.16"/></filter></svg>
+  <a class="skip" href="#overview">Skip to the presentation</a>
+  <header class="nav" id="nav">
+    <a class="brand" href="#top" aria-label="Astrix, Villa Aperture, back to top"><img src="assets/astrix-logo.png" alt="Astrix" width="480" height="263"><span class="brand-sep"></span><span>Villa Aperture</span></a>
+    <nav class="desktop-nav" aria-label="Main navigation"><a href="#overview">The idea</a><a href="#concept">Massing evolution</a><a href="#site">The site</a><a href="#plans">Plans</a><a href="#gallery">Views</a></nav>
+    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false"><span></span><span></span></button>
+  </header>
+  <div class="mobile-menu" id="mobileMenu" hidden><nav aria-label="Mobile navigation"><a href="#overview">The idea</a><a href="#concept">Massing evolution</a><a href="#site">The site</a><a href="#plans">Plans</a><a href="#gallery">Views</a></nav><p>Villa Aperture · Presented by Astrix</p></div>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="hero-slides" id="heroSlides"><img class="active" src="assets/hero-front.webp" alt="Front view of the proposed residence" fetchpriority="high"><img data-src="assets/hero-angle.webp" alt="Oblique view of the front facade"><img data-src="assets/hero-garden.webp" alt="Garden side of the residence"><img data-src="assets/hero-night.webp" alt="Aerial view of the residence at night"></div>
+      <div class="hero-shade"></div>
+      <div class="hero-copy wrap"><p class="eyebrow light-text">A private residence · Five bedrooms</p><h1 id="heroTitle"><span>Space to</span><br><em>live fully.</em></h1><p class="hero-lede">A composed home where generous shared spaces meet quiet rooms, open views and the garden.</p><div class="hero-actions"><a class="btn btn-primary" href="#overview">Explore the design <span aria-hidden="true">↗</span></a><a class="btn btn-glass" href="#plans">Explore the plans <span aria-hidden="true">↗</span></a></div></div>
+      <div class="hero-bottom wrap"><div class="hero-index"><span class="tiny-rule"></span><span>Villa Aperture</span><span class="dot-sep">·</span><span>Concept presentation</span></div><div class="slideshow-controls"><span id="slideCounter" aria-live="polite">01 / 04</span><div class="slide-dots" id="slideDots" aria-label="Choose image"><button type="button" class="active" aria-label="Show image 1" aria-current="true"></button><button type="button" aria-label="Show image 2"></button><button type="button" aria-label="Show image 3"></button><button type="button" aria-label="Show image 4"></button></div><button class="pause-button" id="slidePause" type="button" aria-label="Pause slideshow">Ⅱ</button></div></div>
+    </section>
+
+    <section class="section light overview" id="overview" aria-labelledby="overviewTitle">
+      <div class="wrap overview-grid"><div><p class="eyebrow">01 / The idea</p><h2 id="overviewTitle">A home with room to breathe.</h2></div><div class="overview-side"><p class="lede">The design brings everyday life into one clear sequence: arrival, gathering, retreat.</p><p>Living and dining spaces form the social heart. A guest suite and gym sit on the ground floor, while four further bedrooms occupy the upper level around an open void and balcony. The pool and planted edges extend the house outward.</p><a class="text-link" href="#concept">See the massing evolution <span aria-hidden="true">↗</span></a></div></div>
+      <div class="wrap fact-row" aria-label="Project at a glance"><div><strong>05</strong><span>Bedrooms</span></div><div><strong>02</strong><span>Levels</span></div><div><strong>01</strong><span>Swimming pool</span></div><div><strong>01</strong><span>Home gym</span></div></div>
+    </section>
+
+    <section class="section dark concept" id="concept" aria-labelledby="conceptTitle">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">02 / Massing evolution</p>
+          <h2 id="conceptTitle">A simple form, carefully opened.</h2>
+          <p class="section-intro">Select a stage to see how the footprint, upper rooms and defining facade come together.</p>
+        </div>
+        <div class="concept-layout">
+          <div class="move-list" role="group" aria-label="Massing evolution stages">
+            <button class="move-button active" type="button" data-move="0" aria-pressed="true"><span class="move-num">01</span><span><strong>Establish the base.</strong><small>The broad ground-floor footprint gathers the living spaces around the road-facing entrance terrace.</small></span><span class="move-arrow" aria-hidden="true">↗</span></button>
+            <button class="move-button" type="button" data-move="1" aria-pressed="false"><span class="move-num">02</span><span><strong>Lift around the void.</strong><small>The bedroom level occupies the left and rear, leaving the large central opening and front balcony clear.</small></span><span class="move-arrow" aria-hidden="true">↗</span></button>
+            <button class="move-button" type="button" data-move="2" aria-pressed="false"><span class="move-num">03</span><span><strong>Frame the elevation.</strong><small>The tall entry frame, extended roof line and recessed glazing give the street facade its final composition.</small></span><span class="move-arrow" aria-hidden="true">↗</span></button>
+          </div>
+          <div class="concept-visual">
+            <div class="diagram-top"><span id="diagramFloor">01 / Grounded base</span><span>Massing study / 01—03</span></div>
+            <div class="massing-frame">
+              <svg class="massing-svg" id="massingSvg" viewBox="0 0 800 600" role="img" aria-label="Stage one: ground-floor footprint shown as an axonometric mass">
+                <path class="mass-ground-line" d="M58 492H742 M130 475L20 556 M544 475L677 556 M262 379L152 460 M676 379L786 460"/>
+                <g class="mass-base">
+                  <polygon class="mass-side" points="544,368 676,272 676,379 544,475"/>
+                  <polygon class="mass-front" points="130,368 544,368 544,475 130,475"/>
+                  <polygon class="mass-top" points="130,368 544,368 676,272 262,272"/>
+                  <path class="mass-edge" d="M130 475V368L262 272H676V379L544 475H130 M130 368H544L676 272 M544 368V475"/>
+                </g>
+                <g class="mass-upper">
+                  <polygon class="mass-side" points="268,256 400,160 400,272 268,368"/>
+                  <polygon class="mass-front" points="130,256 268,256 268,368 130,368"/>
+                  <polygon class="mass-top" points="130,256 268,256 400,160 262,160"/>
+                  <path class="mass-edge" d="M130 368V256L262 160H400V272L268 368 M130 256H268L400 160"/>
+                  <polygon class="mass-side" points="610,208 676,160 676,272 610,320"/>
+                  <polygon class="mass-front" points="334,208 610,208 610,320 334,320"/>
+                  <polygon class="mass-top" points="334,208 610,208 676,160 400,160"/>
+                  <path class="mass-edge" d="M334 320V208L400 160H676V272L610 320 M334 208H610L676 160"/>
+                  <path class="mass-void" d="M268 368L544 368L610 320L334 320Z"/>
+                  <path class="mass-balcony" d="M268 332H544L610 284"/>
+                </g>
+                <g class="mass-finish">
+                  <polygon class="mass-roof-side" points="544,260 676,164 676,175 544,271"/>
+                  <polygon class="mass-roof-top" points="268,260 544,260 676,164 400,164"/>
+                  <polygon class="mass-roof-front" points="268,260 544,260 544,271 268,271"/>
+                  <path class="mass-entry-recess" d="M157 282H239V462H157Z"/>
+                  <path class="mass-entry-frame" d="M145 466V270H251V466"/>
+                  <path class="mass-glazing" d="M287 383H524V463H287Z M351 227H596V307H351Z"/>
+                  <path class="mass-mullion" d="M343 383V463 M400 383V463 M461 383V463 M421 227V307 M489 227V307 M553 227V307"/>
+                  <path class="mass-terrace-band" d="M278 369H535 M278 378H535"/>
+                  <path class="mass-rail" d="M274 333H544L605 289 M274 318H544L605 274 M274 318V333 M544 318V333 M605 274V289"/>
+                </g>
+                <text class="mass-axis-label" x="606" y="530">FRONT / ARRIVAL</text>
+                <text class="mass-axis-label" x="607" y="114">REAR / POOL</text>
+              </svg>
+              <div class="massing-stage-key" aria-hidden="true"><span class="active">01 / Base</span><span>02 / Upper level</span><span>03 / Facade</span></div>
+            </div>
+            <div class="diagram-caption"><span id="diagramCount">01 / 03</span><p id="diagramCaption" aria-live="polite">The ground floor establishes the main volume and its relationship to the entrance side of the site.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section light site" id="site" aria-labelledby="siteTitle">
+      <div class="wrap">
+        <div class="section-head split"><div><p class="eyebrow">03 / On the site</p><h2 id="siteTitle">The residence within its grounds.</h2></div><p class="section-intro">The drawing places the house on the left, parking and the security post on the right, and the pool along the rear edge.</p></div>
+        <div class="site-layout">
+          <div class="site-map">
+            <div class="site-map-top"><span>Ground floor and site drawing</span><button type="button" class="enlarge-inline" id="enlargeSite" aria-label="Enlarge ground floor and site drawing">Enlarge drawing ↗</button><span>N ↑</span></div>
+            <div class="site-plan-wrap">
+              <img src="assets/ground-plan.webp" alt="Ground floor and site drawing showing the residence, pool, parking court, security post and front entrance terrace" loading="lazy">
+              <svg class="site-overlay" viewBox="0 0 2610 1718" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+                <defs><marker id="arrivalArrow" viewBox="0 0 24 24" refX="21" refY="12" markerWidth="50" markerHeight="50" markerUnits="userSpaceOnUse" orient="auto"><path d="M2 2L21 12L2 22" fill="none" stroke="#a95235" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+                <g class="site-zone site-zone-arrival"><path d="M995 1200H1630V1350H995Z"/><path class="site-route" d="M1320 1630V1270" marker-end="url(#arrivalArrow)"/></g>
+                <g class="site-zone site-zone-home"><path d="M640 470H1360V620H1630V1350H640Z"/><path class="site-route" d="M1310 1260V990H1120"/></g>
+                <g class="site-zone site-zone-outdoor"><path d="M1440 290H2000V530H1440Z M1360 620H1630V775H1360Z M1740 600H2245V675H1740Z"/><path class="site-route" d="M1500 930V700L1700 530"/></g>
+              </svg>
+              <button type="button" class="site-pin active" data-site-pin="0" style="--x:51%;--y:83%" aria-label="Show the front arrival steps and entrance terrace" aria-pressed="true">01</button>
+              <button type="button" class="site-pin" data-site-pin="1" style="--x:53%;--y:58%" aria-label="Show the residence" aria-pressed="false">02</button>
+              <button type="button" class="site-pin" data-site-pin="2" style="--x:66%;--y:24%" aria-label="Show the pool and garden" aria-pressed="false">03</button>
+            </div>
+            <p id="siteDiagramCaption" aria-live="polite">01 / The front steps lead up to the entrance terrace. The vehicle gate and parking court are to the right.</p>
+          </div>
+          <div class="site-notes" role="group" aria-label="Explore the site">
+            <button type="button" class="site-step active" data-site="0" aria-pressed="true"><span>01</span><strong>Arrival</strong><small>The front steps lead directly to the entrance terrace. The vehicle gate and parking court sit to the right.</small></button>
+            <button type="button" class="site-step" data-site="1" aria-pressed="false"><span>02</span><strong>The residence</strong><small>Living and dining occupy the centre. The ground floor guest room and gym sit to the left.</small></button>
+            <button type="button" class="site-step" data-site="2" aria-pressed="false"><span>03</span><strong>Pool & garden</strong><small>The pool is behind the parking court, beside the exit terrace and planted edge.</small></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section light alt plans" id="plans" aria-labelledby="plansTitle"><div class="wrap"><div class="section-head split"><div><p class="eyebrow">04 / Plans</p><h2 id="plansTitle">Two levels, one connected home.</h2></div><p class="section-intro">Explore the actual 2D plans. Select a level, then choose a room to see how each space fits the whole.</p></div><div class="plan-toolbar"><div class="segmented" role="group" aria-label="Select floor"><button type="button" class="active" data-floor="ground" aria-pressed="true">Ground floor</button><button type="button" data-floor="first" aria-pressed="false">First floor</button></div><div class="plan-tools"><label for="planZoom">Zoom</label><button id="zoomOut" type="button" aria-label="Zoom out">−</button><input id="planZoom" type="range" min="100" max="300" value="100" aria-label="Plan zoom"><button id="zoomIn" type="button" aria-label="Zoom in">+</button><button id="resetPlan" class="reset-plan" type="button">Reset view</button></div></div><div class="plan-layout"><div class="plan-stage" id="planStage"><button type="button" class="enlarge-plan" id="enlargePlan" aria-label="Enlarge current floor plan">Enlarge plan ↗</button><div class="plan-viewport" id="planViewport"><div class="plan-art" id="planArt"><img id="planImage" src="assets/ground-plan.webp" alt="Ground floor plan showing the guest bedroom, gym, living and dining, kitchen, pool, front entrance terrace and parking court"><div id="planPins" class="plan-pins"></div></div></div><span class="plan-north">N ↑</span><p class="plan-hint">Choose a numbered point · Use zoom to inspect the drawing</p></div><aside class="plan-panel"><div class="plan-panel-top"><span id="planLevel">GROUND FLOOR</span><span id="planPinCount">01 / 05</span></div><div class="plan-panel-copy"><span class="panel-marker" id="planMarker">01</span><h3 id="planRoom">Living & dining.</h3><p id="planDescription">A shared centre for everyday life, between the entrance terrace, kitchen and garden side of the house.</p></div><div class="plan-legend"><span><i class="legend-dot"></i> Selected space</span><span>Selected room</span></div></aside></div></div></section>
+
+    <section class="section dark gallery-section" id="gallery" aria-labelledby="galleryTitle"><div class="wrap"><div class="section-head split"><div><p class="eyebrow">05 / Views</p><h2 id="galleryTitle">Architecture from every side.</h2></div><p class="section-intro">A sequence of exterior views, from the composed street facade to the more open pool edge.</p></div><div class="gallery-grid"><button type="button" class="gallery-tile wide" data-full="assets/hero-front.webp" data-caption="Front elevation" aria-label="Open front elevation image"><img src="assets/hero-front-t.webp" alt="Front facade of Villa Aperture" loading="lazy"><span>01 / Front elevation ↗</span></button><button type="button" class="gallery-tile" data-full="assets/entry.webp" data-caption="Arrival and entry" aria-label="Open arrival and entry image"><img src="assets/entry-t.webp" alt="Entry court and front facade" loading="lazy"><span>02 / Arrival ↗</span></button><button type="button" class="gallery-tile" data-full="assets/terrace.webp" data-caption="Garden side and terrace" aria-label="Open garden side image"><img src="assets/terrace-t.webp" alt="Garden side of the residence" loading="lazy"><span>03 / Garden side ↗</span></button><button type="button" class="gallery-tile" data-full="assets/pool-side.webp" data-caption="Pool side terrace" aria-label="Open pool side image"><img src="assets/pool-side-t.webp" alt="Pool beside the residence" loading="lazy"><span>04 / Pool edge ↗</span></button><button type="button" class="gallery-tile" data-full="assets/pool-evening.webp" data-caption="Pool and outdoor seating" aria-label="Open pool and seating image"><img src="assets/pool-evening-t.webp" alt="Pool and outdoor seating area" loading="lazy"><span>05 / Outdoor room ↗</span></button><button type="button" class="gallery-tile wide" data-full="assets/hero-night.webp" data-caption="Aerial view at dusk" aria-label="Open aerial view image"><img src="assets/hero-night-t.webp" alt="Aerial view at dusk" loading="lazy"><span>06 / Whole composition ↗</span></button></div><p class="gallery-note">Select any image to view it full screen.</p></div></section>
+
+    <section class="closing" aria-labelledby="closingTitle"><img src="assets/hero-night.webp" alt="" loading="lazy"><div class="closing-shade"></div><div class="wrap closing-content"><div><p class="eyebrow light-text">Villa Aperture</p><h2 id="closingTitle">A place to come together. A place to step away.</h2><a class="btn btn-primary" href="#plans">Revisit the plans <span aria-hidden="true">↗</span></a></div><div class="closing-card"><span>At a glance</span><div><strong>Five bedrooms</strong><p>One on the ground floor, four above.</p></div><div><strong>Social heart</strong><p>Living, dining and kitchen linked to the terraces.</p></div><div><strong>Outdoor life</strong><p>Pool, balcony and planted edges.</p></div></div></div></section>
+  </main>
+
+  <footer class="footer"><div class="wrap footer-grid"><div><h2>Villa Aperture.</h2><p>Private residence · Concept presentation</p></div><div><span>Explore</span><a href="#overview">The idea</a><a href="#concept">Massing evolution</a><a href="#site">The site</a><a href="#plans">Plans</a><a href="#gallery">Views</a></div><div class="footer-credit"><span>Presentation and design by</span><img src="assets/astrix-logo.png" alt="Astrix" width="480" height="263"><p>Sol Fractals was a project partner.</p></div></div><div class="wrap footer-bottom"><p>© 2026 Astrix. This presentation and its contents are the intellectual property of Astrix. They may not be copied, shared, or adapted without Astrix's prior knowledge and consent.</p><a href="#top">Back to top ↑</a></div></footer>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" hidden><button class="lightbox-close" id="lightboxClose" type="button" aria-label="Close image viewer">×</button><button class="lightbox-arrow prev" id="lightboxPrev" type="button" aria-label="Previous image">‹</button><div class="lightbox-media"><img id="lightboxImage" alt="" decoding="async"><div class="lightbox-status" id="lightboxStatus" role="status" aria-live="polite"><span class="lightbox-spinner" aria-hidden="true"></span><span id="lightboxStatusText">Loading image…</span><button id="lightboxRetry" type="button" hidden>Retry</button></div></div><button class="lightbox-arrow next" id="lightboxNext" type="button" aria-label="Next image">›</button><div class="lightbox-caption"><span id="lightboxCount"></span><span id="lightboxText"></span></div></div>
+  <script src="script.js?v=20261020-2" defer></script>
+</body>
+</html>
